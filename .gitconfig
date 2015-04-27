@@ -1,0 +1,13 @@
+[user]
+	name = Balaji Sivaraman
+	email = balaji@balajisivaraman.com
+[alias]
+	st = status
+[merge]
+	tool = kdiff3
+[diff]
+	guitool = kdiff3
+[difftool "kdiff3"]
+	path = /usr/bin/kdiff3
+[core]
+	excludesfile = ~/.gitignore_global

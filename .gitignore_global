@@ -1,0 +1,95 @@
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Packages #
+############
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+
+# Scala & SBT #
+###############
+sbt specific
+.cache/
+.history/
+.lib/
+dist/*
+target/
+lib_managed/
+src_managed/
+project/boot/
+project/plugins/project/
+
+# IDEs and Editors #
+####################
+.idea
+*.iml
+
+# Clojure & Leningen #
+######################
+*jar
+/lib/
+/classes/
+/target/
+/checkouts/
+.lein-deps-sum
+.lein-repl-history
+.lein-plugins/
+.lein-failures
+
+# Latex #
+#########
+*.aux
+*.log
+*.out
+
+# Haskell & Cabal #
+###################
+dist
+cabal-dev
+*.o
+*.hi
+*.chi
+*.chs.h
+.virtualenv
+.hsenv
+.cabal-sandbox/
+cabal.sandbox.config
+cabal.config
+
+# MacOSX #
+##########
+.CFUserTextEncoding
+.MacOSX/
+.Trash/
+Desktop/
+Documents/
+Library/
+Movies/
+Music/
+Pictures/
+Public/
+Software/
+*.DS_Store
+Downloads/
+Personal/
+ownCloud/
