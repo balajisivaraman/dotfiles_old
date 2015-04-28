@@ -109,7 +109,7 @@ Software/
 #Linux#
 #######
 /.Skype*
-/.config*
+/.config/*
 /.local*
 /.Xauthority
 /*spell*
@@ -195,3 +195,15 @@ ansible_hosts
 #Python#
 ########
 .python_history
+
+#Fish Shell#
+##########################
+!/.config/fish
+/.config/fish/*
+!/.config/fish/config.fish
+
+# Dotfiles Gitignore #
+######################
+.emacs.d
+.oh-my-fish
+.vim
