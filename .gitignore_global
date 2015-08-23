@@ -30,6 +30,7 @@
 sbt specific
 .cache/
 .history/
+.pry_history
 .lib/
 dist/*
 target/
@@ -92,3 +93,14 @@ Software/
 Downloads/
 Personal/
 ownCloud/
+Projects/
+TWProjects/
+Applications/
+News/
+VMs/
+Virtualbox VMs/
+
+
+# NodeJS #
+##########
+node_modules/
