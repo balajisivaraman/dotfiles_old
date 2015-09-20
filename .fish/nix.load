@@ -1,0 +1,23 @@
+if status --is-login
+
+    if [ -n $HOME ]
+
+        # NIX PROFILE
+        set -l NIX_LINK $HOME/.nix-profile
+        if [ ! -l $NIX_LINK ]
+            set -l _NIX_DEF_LINK /nix/var/nix/profiles/default
+            $_NIX_DEF_LINK/bin/ln -s $_NIX_DEF_LINK $NIX_LINK
+        end
+        set PATH $NIX_LINK/bin $NIX_LINK/sbin $PATH
+
+        # NIX CHANNELS
+        if [ ! -e $HOME/.nix-channels ]
+            echo 'http://nixos.org/channels/nixpkgs-unstable nixpkgs' >$HOME/.nix-channels
+        end
+
+        # NIX PATH
+        set -x NIX_PATH $NIX_PATH nixpkgs=$HOME/Projects/nix/nixpkgs
+
+    end
+
+end
