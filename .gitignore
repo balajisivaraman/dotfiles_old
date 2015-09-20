@@ -131,11 +131,13 @@ Software/
 /.pki
 .recently-used
 *.desktop
+gPodder/
 
 #X-Related#
 ###########
 .xinitrc
 .xsession-errors*
+.Xdefaults
 
 #KDE#
 #####
@@ -175,6 +177,7 @@ Software/
 ########
 .cabal/
 .cabal.bak/
+.stack/
 
 #R
 ##
@@ -209,3 +212,11 @@ ansible_hosts
 .emacs.d
 .oh-my-fish
 .vim
+
+# Purescript #
+##############
+.purescript/
+
+# XFCE #
+########
+.xfce4-session.verbose-*
