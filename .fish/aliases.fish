@@ -12,6 +12,7 @@ alias gd 'git diff'
 alias gf 'git fetch'
 alias gm 'git merge'
 alias ga 'git add'
+alias gl 'git log --graph --pretty=oneline'
 
 #Arch
 alias pacin 'sudo pacman -S $argv'
