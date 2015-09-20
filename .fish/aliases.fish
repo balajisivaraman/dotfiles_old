@@ -12,3 +12,10 @@ alias gd 'git diff'
 alias gf 'git fetch'
 alias gm 'git merge'
 alias ga 'git add'
+
+#Arch
+alias pacin 'sudo pacman -S $argv'
+alias pacrem 'sudo pacman -Rns $argv'
+alias y 'yaourt'
+alias ys 'yaourt -S $argv'
+alias yr 'yaourt -R $argv'
