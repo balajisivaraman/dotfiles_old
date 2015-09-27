@@ -4,12 +4,14 @@ end
 
 function fish_prompt
     set_prompt_colors
-    git_prompt
-
     set -l cwd $colcyan(prompt_pwd)
     set -l prompt_string $colnormal"\$ "
-
-    echo $cwd $git_prompt $prompt_string
+    if test -d '.git'
+        git_prompt
+        echo $cwd $git_prompt $prompt_string
+    else
+        echo $cwd $prompt_string
+    end
 end
 
 function git_prompt
@@ -22,6 +24,11 @@ function git_check_untracked_files
     if git status --porcelain | grep '??' > /dev/null
         echo '?'
     end
+end
+
+function check_git_repo
+    test -d .git
+    return $status
 end
 
 function set_prompt_colors
