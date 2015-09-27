@@ -1,13 +1,49 @@
 [user]
-	name = Balaji Sivaraman
-	email = balaji@balajisivaraman.com
+    name = Balaji Sivaraman
+    email = balaji@balajisivaraman.com
 [alias]
-	st = status
+    st = status
+    ci = commit --verbose
+    co = checkout
+    di = diff
+    dc = diff --cached
+    amend = commit --amend
+    aa = add --all
+    ff = merge --ff-only
+    pullff = pull --ff-only
+    noff = merge --no-ff
+    fa = fetch --all
+    pom = push origin master
+    b = branch
+    ds = diff --stat=160,120
+    dh1 = diff HEAD~1
+
+    # Fancy logging.
+    #   h = head
+    #   hp = head with patch
+    #   r = recent commits, only current branch
+    #   ra = recent commits, all reachable refs
+    #   l = all commits, only current branch
+    #   la = all commits, all reachable refs
+    head = !git r -1
+    h = !git head
+    hp = "!. ~/.githelpers && show_git_head"
+    r = !GIT_NO_PAGER=1 git l -30
+    ra = !git r --all
+    l = "!. ~/.githelpers && pretty_git_log"
+    la = !git l --all
+
+    # Divergence (commits we added and commits remote added)
+    # div = divergence
+
+    # Goodness (summary of diff lines added/removed/total)
+    # gn = goodness
+    # gnc = goodness --cached
 [merge]
-	tool = kdiff3
+    tool = kdiff3
 [diff]
-	guitool = kdiff3
+    guitool = kdiff3
 [difftool "kdiff3"]
-	path = /usr/bin/kdiff3
+    path = /usr/bin/kdiff3
 [core]
-	excludesfile = ~/.gitignore_global
+    excludesfile = ~/.gitignore_global
