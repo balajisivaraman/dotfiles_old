@@ -28,7 +28,7 @@
 # Scala & SBT #
 ###############
 sbt specific
-.cache/
+#.cache/
 .history/
 .pry_history
 .lib/
@@ -47,7 +47,7 @@ project/plugins/project/
 # Clojure & Leningen #
 ######################
 *jar
-/lib/
+#/lib/
 /classes/
 /target/
 /checkouts/
@@ -83,7 +83,7 @@ cabal.config
 .Trash/
 Desktop/
 Documents/
-Library/
+~/Library/
 Movies/
 Music/
 Pictures/
