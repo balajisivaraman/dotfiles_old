@@ -9,7 +9,7 @@ if uname -a | grep Darwin > /dev/null
   set -x PATH $HOME/Projects/haskell/stack-ide/.stack-work/install/x86_64-osx/nightly-2015-08-06/7.10.2/bin $PATH
 
   set -x GRADLE_HOME ~/Software/coding/java/gradle-2.4/
-  set -x PATH /usr/local/Cellar/git/2.5.1/bin $PATH
+  set -x PATH /usr/local/Cellar/git/2.6.2/bin $PATH
   set -x PATH $GRADLE_HOME/bin $PATH
   set -x PATH $HOME/.bin $PATH
 
