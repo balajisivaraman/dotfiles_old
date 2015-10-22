@@ -11,6 +11,7 @@ if uname -a | grep Darwin > /dev/null
   set -x GRADLE_HOME ~/Software/coding/java/gradle-2.4/
   set -x PATH /usr/local/Cellar/git/2.5.1/bin $PATH
   set -x PATH $GRADLE_HOME/bin $PATH
+  set -x PATH $HOME/.bin $PATH
 
   set -x JAVA_HOME /Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home
   set -x JAVA_8_HOME /Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home
