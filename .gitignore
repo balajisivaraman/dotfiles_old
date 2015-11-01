@@ -53,6 +53,7 @@ logs/
 .node-gyp
 .p7zip
 azScript
+.adobe
 
 #XMonad#
 ########
@@ -220,3 +221,7 @@ ansible_hosts
 # XFCE #
 ########
 .xfce4-session.verbose-*
+
+# Idris #
+#########
+.idris
