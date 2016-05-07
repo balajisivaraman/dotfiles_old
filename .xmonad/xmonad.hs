@@ -20,8 +20,7 @@ myWorkspaces :: [String]
 myWorkspaces = ["web","term","emacs","dev","misc"]
 
 main :: IO()
-main = do
-  xmonad $ xfceConfig
+main = xmonad $ xfceConfig
     { terminal = myTerminal
     , borderWidth = myBorderWidth
     , modMask = myModMask
@@ -30,10 +29,13 @@ main = do
     , layoutHook = smartBorders $ avoidStruts $ layoutHook xfceConfig
     , handleEventHook = fullscreenEventHook <+> ewmhDesktopsEventHook
     , startupHook = ewmhDesktopsStartup <+> setWMName "LG3D"
+    , normalBorderColor = "#ABABAB"
+    , focusedBorderColor = "#800000"
     } `additionalKeys`
     [ ((mod4Mask .|. shiftMask, xK_e), spawn "thunar")
     , ((mod4Mask .|. shiftMask, xK_c), spawn "firefox")
     , ((mod4Mask .|. shiftMask, xK_v), spawn "vlc")
     , ((mod4Mask .|. shiftMask, xK_k), kill)
+    , ((mod4Mask .|. shiftMask, xK_t), spawn myTerminal)
     , ((mod4Mask .|. shiftMask, xK_r), spawn "xfce4-appfinder")
     ]
