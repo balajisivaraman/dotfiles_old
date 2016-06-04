@@ -17,4 +17,4 @@ alias rc 'rails console'
 alias rs 'rails server'
 
 #Pam
-alias lb 'sh build_scripts/local_build.sh'
+alias lb './build_scripts/local_build.sh'
