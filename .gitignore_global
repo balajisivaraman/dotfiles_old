@@ -25,56 +25,11 @@
 *.log
 *.sqlite
 
-# Scala & SBT #
-###############
-sbt specific
-#.cache/
-.history/
-.pry_history
-.lib/
-dist/*
-target/
-lib_managed/
-src_managed/
-project/boot/
-project/plugins/project/
-
-# IDEs and Editors #
-####################
-.idea
-*.iml
-
-# Clojure & Leningen #
-######################
-*jar
-#/lib/
-/classes/
-/target/
-/checkouts/
-.lein-deps-sum
-.lein-repl-history
-.lein-plugins/
-.lein-failures
-
 # Latex #
 #########
 *.aux
 *.log
 *.out
-
-# Haskell & Cabal #
-###################
-dist
-cabal-dev
-*.o
-*.hi
-*.chi
-*.chs.h
-.virtualenv
-.hsenv
-.cabal-sandbox/
-cabal.sandbox.config
-cabal.config
 
 # MacOSX #
 ##########
@@ -99,8 +54,3 @@ Applications/
 News/
 VMs/
 Virtualbox VMs/
-
-
-# NodeJS #
-##########
-node_modules/
