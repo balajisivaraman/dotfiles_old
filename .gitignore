@@ -16,10 +16,8 @@
 Personal
 .gnupg
 .FontForge/
-.IntelliJIdea13/
-.IntelliJIdea14/
 .IntelliJIdea15/
-.RubyMine70/
+.RubyMine80
 .Xresources
 .fonts.conf
 .httpie/
@@ -54,6 +52,8 @@ logs/
 .p7zip
 azScript
 .adobe
+/.JAuth.rc
+/.anyconnect
 
 #XMonad#
 ########
@@ -67,6 +67,8 @@ azScript
 !/.sbt/plugins/plugins.sbt
 /.sbt/*
 .activator
+/.coursier
+.spark_history
 
 #MySQL#
 ######
@@ -91,6 +93,9 @@ azScript
 /IdeaProjects
 .gradle/
 .rnd
+.cvecheck
+.oracle_jre_usage
+.neo4j_shell_history
 
 #MacOSX#
 ########
@@ -108,6 +113,7 @@ Software/
 .eclipse*
 .eclimrc
 *.DS_Store
+Google Drive
 
 #Linux#
 #######
@@ -123,6 +129,7 @@ Software/
 /tmp
 /.ssh
 /bin
+/.bin
 /.ICEauthority
 /*audacity*
 /.qt
@@ -156,6 +163,9 @@ gPodder/
 ##############
 /.gem
 /.rvm
+/.berkshelf
+/.invoker
+.pry_history
 
 #NodeJS#
 ########
@@ -179,6 +189,9 @@ gPodder/
 .cabal/
 .cabal.bak/
 .stack/
+.ghc-mod
+.elm
+.psci_modules
 
 #R
 ##
@@ -213,6 +226,17 @@ ansible_hosts
 .emacs.d
 .oh-my-fish
 .vim
+.sh_history
+.tldr
+.wget-hsts
+.rediscli_history
+.parallel
+.profile
+.pgpass
+.zlogin
+.cups
+.dbvis
+.mkshrc
 
 # Purescript #
 ##############
@@ -225,3 +249,8 @@ ansible_hosts
 # Idris #
 #########
 .idris
+
+#JavaScript#
+############
+.grunt-init
+/node_modules
