@@ -1,5 +1,5 @@
 #General
-alias l 'ls -alrt'
+alias l 'ls -alhFrt'
 
 #Git
 alias g git
