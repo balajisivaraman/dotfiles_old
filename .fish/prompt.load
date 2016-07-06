@@ -1,9 +1,10 @@
 function fish_prompt
     set_prompt_colors
+    set -l user_host_name $colgreen(echo $USER)$colnormal@$colred(hostname | cut -d'.' -f 1)
     set -l cwd $colcyan(prompt_pwd)
     set -l prompt_string $colnormal"\$ "
     set -l git_prompt $colblue(githud_prompt)$colnormal
-    echo $cwd $git_prompt $prompt_string
+    echo $user_host_name $cwd $git_prompt $prompt_string
 end
 
 function githud_prompt
