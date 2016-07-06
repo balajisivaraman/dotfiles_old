@@ -166,6 +166,7 @@ gPodder/
 /.berkshelf
 /.invoker
 .pry_history
+/.bundle
 
 #NodeJS#
 ########
