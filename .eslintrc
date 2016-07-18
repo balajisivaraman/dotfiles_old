@@ -1,0 +1,17 @@
+{
+  "parserOptions": {
+    "ecmaVersion": 5,
+    "sourceType": "script",
+    "ecmaFeatures": {
+      "impliedStrict": true
+    }
+  },
+  "rules": {
+    "indent": [
+      "error",
+      2, {
+        "SwitchCase": 2
+      }
+    ]
+  }
+}
