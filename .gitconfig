@@ -1,6 +1,7 @@
 [user]
     name = Balaji Sivaraman
     email = balaji@balajisivaraman.com
+    signingkey = 48AEBD08561BC452
 [alias]
     st = status
     ci = commit --verbose
