@@ -1,5 +1,3 @@
-rvm default
-
 #General
 alias l 'ls -alhFrt'
 alias twp 'cd $HOME/TWProjects/'
@@ -38,3 +36,5 @@ end
 
 set -x PATH ~/bin/ $PATH
 set -x PATH $HOME/.local/bin/ $PATH
+
+rvm default
