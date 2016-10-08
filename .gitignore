@@ -54,6 +54,7 @@ azScript
 .adobe
 /.JAuth.rc
 /.anyconnect
+/.sqldeveloper
 
 #XMonad#
 ########
