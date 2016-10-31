@@ -240,6 +240,7 @@ ansible_hosts
 .cups
 .dbvis
 .mkshrc
+.hplip
 
 # Purescript #
 ##############
