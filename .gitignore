@@ -55,6 +55,7 @@ azScript
 /.JAuth.rc
 /.anyconnect
 /.sqldeveloper
+/.osquery
 
 #XMonad#
 ########
