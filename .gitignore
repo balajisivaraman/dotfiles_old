@@ -57,6 +57,8 @@ azScript
 /.sqldeveloper
 /.osquery
 /.squirrel-sql
+/.embedmysql.lock
+/_GOBBLIN_TRASH
 
 #XMonad#
 ########
