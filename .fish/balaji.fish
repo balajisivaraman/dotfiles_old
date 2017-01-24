@@ -6,7 +6,6 @@ if uname -a | grep Darwin > /dev/null
 end
 
 if uname -a | grep GNU/Linux > /dev/null
-    set -x PATH $HOME/Projects/elm-lang/elm-bin/.cabal-sandbox/bin $PATH
     set -x PATH $HOME/.gem/ruby/2.2.0/bin $PATH
 end
 

@@ -31,7 +31,6 @@ if uname -a | grep Darwin > /dev/null
 end
 
 if uname -a | grep GNU/Linux > /dev/null
-    set -x PATH $HOME/Projects/elm-lang/elm-bin/.cabal-sandbox/bin $PATH
 end
 
 set -x PATH ~/bin/ $PATH
