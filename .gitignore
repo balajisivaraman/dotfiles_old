@@ -262,3 +262,8 @@ ansible_hosts
 ############
 .grunt-init
 /node_modules
+
+
+#Rust#
+######
+.cargo
