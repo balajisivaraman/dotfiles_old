@@ -267,3 +267,5 @@ ansible_hosts
 #Rust#
 ######
 .cargo
+.multirust
+.rustup

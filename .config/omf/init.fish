@@ -31,6 +31,7 @@ if uname -a | grep Darwin > /dev/null
 end
 
 if uname -a | grep GNU/Linux > /dev/null
+    set -x PATH  ~/.cargo/bin $PATH
 end
 
 set -x PATH ~/bin/ $PATH
