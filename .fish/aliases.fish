@@ -18,3 +18,9 @@ alias rs 'rails server'
 
 #Pam
 alias lb './build_scripts/local_build.sh'
+
+#Convenience
+alias twp 'cd $HOME/TWProjects/'
+alias pam 'cd $HOME/TWProjects/pam'
+alias p 'cd $HOME/Projects/'
+alias emacsd 'cd $HOME/.emacs.d'
