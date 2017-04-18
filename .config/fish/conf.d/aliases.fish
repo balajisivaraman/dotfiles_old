@@ -24,3 +24,6 @@ alias twp 'cd $HOME/TWProjects/'
 alias pam 'cd $HOME/TWProjects/pam'
 alias p 'cd $HOME/Projects/'
 alias emacsd 'cd $HOME/.emacs.d'
+
+#NVim
+alias v 'nvim'
