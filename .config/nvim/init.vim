@@ -85,3 +85,15 @@ nnoremap <leader>qq :confirm quit<cr>
 
 nnoremap <leader>gs :Magit<cr>
 " }}}
+
+" {{{ Custom Functions
+function! CycleThemes()
+  let current_background = &background
+  if current_background == "dark"
+    set background=light
+  else
+    set background=dark
+  endif
+endfunction
+nnoremap <leader>Tn :call CycleThemes()<cr>
+" }}}
