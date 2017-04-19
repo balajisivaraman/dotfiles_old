@@ -50,6 +50,17 @@ syntax enable
 
 "End dein Scripts-------------------------
 
+" {{{ Sensible Defaults
+set autoread
+set autoindent
+set backspace=indent,eol,start
+set complete-=i
+set smarttab
+set incsearch
+set visualbell " Don't beep, please
+set display+=lastline
+" }}}
+
 " {{{ UI Settings
 set termguicolors
 set background=dark
@@ -60,7 +71,6 @@ colorscheme NeoSolarized
 let g:airline_theme='solarized'
 let g:airline#extensions#tabline#enabled = 1
 
-set visualbell " Don't beep, please
 set relativenumber " Show relative line numbers
 " }}}
 
