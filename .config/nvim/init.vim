@@ -72,6 +72,7 @@ let g:airline_theme='solarized'
 let g:airline#extensions#tabline#enabled = 1
 
 set relativenumber " Show relative line numbers
+set number " Show absolute number on current line
 " }}}
 
 " {{[ Global Bindings
