@@ -32,7 +32,10 @@ if dein#load_state('~/.config/nvim/dein')
   call dein#add ('vim-airline/vim-airline')
   call dein#add ('vim-airline/vim-airline-themes')
   call dein#add ('airblade/vim-gitgutter')
-  call dein#add('jreybert/vimagit')
+  call dein#add ('jreybert/vimagit')
+  call dein#add ('justinmk/vim-sneak')
+  call dein#add ('Shougo/denite.nvim')
+  call dein#add ('ledger/vim-ledger')
 
   if dein#check_install()
     call dein#install()
@@ -40,6 +43,7 @@ if dein#load_state('~/.config/nvim/dein')
   endif
 
   " Required:
+  call dein#remote_plugins()
   call dein#end()
   call dein#save_state()
 endif
@@ -59,10 +63,13 @@ set smarttab
 set incsearch
 set visualbell " Don't beep, please
 set display+=lastline
+let g:python2_host_prog = '/usr/local/bin/python'
+let g:python3_host_prog = '/usr/local/bin/python3'
 " }}}
 
 " {{{ UI Settings
 set termguicolors
+set guicursor=n-v-c:block-Cursor/lCursor-blinkon0,i-ci:ver25-Cursor/lCursor,r-cr:hor20-Cursor/lCursor
 set background=dark
 let g:neosolarized_bold = 1
 let g:neosolarized_underline = 1
@@ -89,7 +96,24 @@ nnoremap <leader>fR :source ~/.config/nvim/init.vim<cr>
 nnoremap <leader>bd :bd<cr>
 nnoremap <leader>qq :confirm quit<cr>
 
+" Magit
 nnoremap <leader>gs :Magit<cr>
+
+" Buffers
+nnoremap <leader>bb :Denite buffer<cr>
+
+" Dein
+nnoremap <leader>Pu :call dein#update()<cr>
+
+" Files
+nnoremap <leader>ff :Denite
+\ `finddir('.git', ';') != '' ? 'file_rec/git' : 'file_rec'`<cr>
+" }}}
+
+" {{{ Files
+call denite#custom#alias('source', 'file_rec/git', 'file_rec')
+call denite#custom#var('file_rec/git', 'command',
+\ ['git', 'ls-files', '-co', '--exclude-standard'])
 " }}}
 
 " {{{ Custom Functions
