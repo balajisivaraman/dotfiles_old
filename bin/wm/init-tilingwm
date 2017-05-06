@@ -1,0 +1,3 @@
+#!/bin/sh
+
+~/bin/wm/init-keyboard
