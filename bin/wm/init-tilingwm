@@ -2,3 +2,4 @@
 
 ~/bin/wm/init-keyboard
 ~/bin/wm/init-wallpaper
+nvidia-settings --load-config-only &
