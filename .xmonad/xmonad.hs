@@ -1,7 +1,7 @@
 import XMonad
 
 -- Custom Configuration
-myTerminal = "urxvt"
+myTerminal = "/usr/bin/st"
 myModMask = mod4Mask
 
 myStartupHook = do
