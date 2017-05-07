@@ -59,6 +59,7 @@ azScript
 /.squirrel-sql
 /.embedmysql.lock
 /_GOBBLIN_TRASH
+.fehbg
 
 #XMonad#
 ########
@@ -133,7 +134,6 @@ Google Drive
 /.thunderbird
 /tmp
 /.ssh
-/bin
 /.bin
 /.ICEauthority
 /*audacity*
