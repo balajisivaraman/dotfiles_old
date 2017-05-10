@@ -11,7 +11,6 @@ myModMask = mod4Mask
 myLauncher = "rofi -matching fuzzy -modi combi -show combi -combi-modi run,drun"
 
 myStartupHook = do
-    spawn "~/bin/wm/init-tilingwm"
     setDefaultCursor xC_left_ptr
 
 myKeys conf = let
