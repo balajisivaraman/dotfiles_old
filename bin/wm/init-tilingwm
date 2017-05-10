@@ -1,6 +1,8 @@
 #!/bin/sh
 
-~/bin/wm/init-keyboard
-~/bin/wm/init-wallpaper
+start-pulseaudio-x11 &
 nvidia-settings --load-config-only &
 compton -bCG
+
+~/bin/wm/init-keyboard
+~/bin/wm/init-wallpaper
