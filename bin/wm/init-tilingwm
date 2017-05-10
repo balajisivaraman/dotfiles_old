@@ -1,6 +1,7 @@
 #!/bin/sh
 
 start-pulseaudio-x11 &
+unclutter -idle 2 &
 nvidia-settings --load-config-only &
 compton -bCG
 
