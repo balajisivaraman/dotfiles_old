@@ -8,6 +8,7 @@ import XMonad.Layout.Spacing
 import XMonad.Layout.NoFrillsDecoration
 import XMonad.Layout.Decoration
 import System.IO
+import XMonad.Layout.Fullscreen (fullscreenSupport)
 
 -------------------------------------------------------------------------
 -- Config Init                                                          {{{
@@ -15,6 +16,7 @@ import System.IO
 main :: IO()
 main = do
     xmonad
+       $ fullscreenSupport
        $ addDescrKeys ((myModMask, xK_F1), showKeybindings) myKeys
        $ myConfig
 
