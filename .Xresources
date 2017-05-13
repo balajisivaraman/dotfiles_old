@@ -1,3 +1,4 @@
+#include ".config/.Xresources.d/fonts"
 #include ".config/.Xresources.d/solarized"
 #include ".config/.Xresources.d/rxvt-unicode"
 #include ".config/.Xresources.d/st"
