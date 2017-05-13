@@ -1,0 +1,17 @@
+Config
+    { font              = "xft:xos4 Terminus:pixelsize=10:antialias=true:hinting=true"
+    , additionalFonts   = [ "xft:FontAwesome:pixelsize=14:antialias=true:hinting=true" ]
+    , position          = Top
+    , bgColor           = "#000000"
+    , fgColor           = "#586e75"
+    , allDesktops       = True
+    , alpha             = 100
+    , commands          = [
+        Run Date "<fc=#268bd2><fn=1>\xf073</fn> %a %_d %b %Y | d.%j w.%W</fc>   <fc=#2AA198><fn=1></fn> %H:%M:%S</fc>" "date" 10
+      , Run Network "enp3s0" [ "-t", "<fc=#6c71c4><fn=1>\xf1e6</fn> <rx>|<tx></fc>", "-S" , "True" ] 10
+      , Run StdinReader
+                          ]
+    , sepChar           = "%"
+    , alignSep          = "}{"
+    , template          = " %StdinReader% }{ %date%   %enp3s0% "
+    }

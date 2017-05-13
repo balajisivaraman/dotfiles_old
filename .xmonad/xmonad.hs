@@ -3,7 +3,8 @@ import XMonad.Config
 import XMonad.Util.Cursor
 import XMonad.Util.NamedActions
 import XMonad.Util.EZConfig
-import XMonad.Util.Run (spawnPipe)
+import XMonad.Util.Run (spawnPipe, hPutStrLn)
+import XMonad.Hooks.DynamicLog
 import XMonad.Layout.Spacing
 import XMonad.Layout.NoFrillsDecoration
 import XMonad.Layout.Decoration
@@ -15,18 +16,20 @@ import XMonad.Layout.Fullscreen (fullscreenSupport)
 -------------------------------------------------------------------------
 main :: IO()
 main = do
+    xmproc <- spawnPipe myStatusBar
     xmonad
        $ fullscreenSupport
        $ addDescrKeys ((myModMask, xK_F1), showKeybindings) myKeys
-       $ myConfig
+       $ myConfig xmproc
 
-myConfig = def
+myConfig p = def
     { borderWidth = myBorder
     , terminal = myTerminal
     , modMask = myModMask
     , startupHook = myStartupHook
     , focusFollowsMouse = myFocusFollowsMouse
     , layoutHook = myLayoutHook
+    , logHook = dynamicLogWithPP $ def { ppOutput = hPutStrLn p }
     }
 
 ------------------------------------------------------------------------}}}
@@ -38,6 +41,7 @@ myModMask = mod4Mask
 myLauncher = "rofi -matching fuzzy -modi combi -show combi -combi-modi run,drun"
 myFocusFollowsMouse = False
 myBrowser = "firefox"
+myStatusBar = "xmobar -x1"
 
 ------------------------------------------------------------------------}}}
 -- Theme                                                                {{{
