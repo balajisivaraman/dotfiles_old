@@ -2,4 +2,4 @@
 #include ".config/.Xresources.d/solarized"
 #include ".config/.Xresources.d/rxvt-unicode"
 #include ".config/.Xresources.d/st"
-
+#include ".config/.Xresources.d/rofi"
