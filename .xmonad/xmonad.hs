@@ -5,6 +5,7 @@ import XMonad.Util.NamedActions
 import XMonad.Util.EZConfig
 import XMonad.Util.Run (spawnPipe, hPutStrLn)
 import XMonad.Hooks.DynamicLog
+import XMonad.Hooks.ManageDocks (docks, manageDocks, avoidStruts)
 import XMonad.Layout.Spacing
 import XMonad.Layout.NoFrillsDecoration
 import XMonad.Layout.Decoration
@@ -18,18 +19,20 @@ main :: IO()
 main = do
     xmproc <- spawnPipe myStatusBar
     xmonad
+       $ docks -- XMobar is overlaid by other windows without this
        $ fullscreenSupport
        $ addDescrKeys ((myModMask, xK_F1), showKeybindings) myKeys
        $ myConfig xmproc
 
 myConfig p = def
-    { borderWidth = myBorder
-    , terminal = myTerminal
-    , modMask = myModMask
-    , startupHook = myStartupHook
+    { borderWidth       = myBorder
+    , terminal          = myTerminal
+    , modMask           = myModMask
+    , startupHook       = myStartupHook
     , focusFollowsMouse = myFocusFollowsMouse
-    , layoutHook = myLayoutHook
-    , logHook = dynamicLogWithPP $ def { ppOutput = hPutStrLn p }
+    , manageHook        = myManageHook
+    , layoutHook        = myLayoutHook
+    , logHook           = myLogHook p
     }
 
 ------------------------------------------------------------------------}}}
@@ -94,10 +97,26 @@ topBarTheme = def
     }
 
 addTopBar = noFrillsDeco shrinkText topBarTheme
-myLayoutHook = addTopBar $ mySpacing $ Tall 1 (3/100) (1/2)
+myLayoutHook = addTopBar $ avoidStruts $ mySpacing $ layoutHook defaultConfig
 
 myStartupHook = do
     setDefaultCursor xC_left_ptr
+
+------------------------------------------------------------------------}}}
+-- Log                                                                  {{{
+---------------------------------------------------------------------------
+myLogHook h = do
+    dynamicLogWithPP $ def
+        { ppOutput = hPutStrLn h
+        }
+
+------------------------------------------------------------------------}}}
+-- New Window Actions                                                   {{{
+---------------------------------------------------------------------------
+myManageHook :: ManageHook
+myManageHook =
+        manageDocks
+    <+> manageHook defaultConfig
 
 ------------------------------------------------------------------------}}}
 -- Keybindings                                                          {{{
