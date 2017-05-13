@@ -88,6 +88,8 @@ nnoremap <leader>fR :source ~/.config/nvim/init.vim<cr>
 nnoremap <leader>bd :bd<cr>
 nnoremap <leader>qq :confirm quit<cr>
 
+" Dein
+nnoremap <leader>Pu :call dein#update()<cr>
 " }}}
 
 " {{{ Custom Functions
