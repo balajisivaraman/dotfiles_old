@@ -32,7 +32,6 @@ if dein#load_state('~/.config/nvim/dein')
   call dein#add ('vim-airline/vim-airline')
   call dein#add ('vim-airline/vim-airline-themes')
   call dein#add ('airblade/vim-gitgutter')
-  call dein#add('jreybert/vimagit')
 
   if dein#check_install()
     call dein#install()
@@ -89,7 +88,6 @@ nnoremap <leader>fR :source ~/.config/nvim/init.vim<cr>
 nnoremap <leader>bd :bd<cr>
 nnoremap <leader>qq :confirm quit<cr>
 
-nnoremap <leader>gs :Magit<cr>
 " }}}
 
 " {{{ Custom Functions
