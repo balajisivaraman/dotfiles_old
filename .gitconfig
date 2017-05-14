@@ -34,6 +34,7 @@
     ra = !git r --all
     l = "!. ~/.githelpers && pretty_git_log"
     la = !git l --all
+	ls-files-root = ! git ls-files
 
     # Divergence (commits we added and commits remote added)
     # div = divergence
