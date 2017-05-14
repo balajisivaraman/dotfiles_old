@@ -42,6 +42,10 @@ if dein#load_state('~/.config/nvim/dein')
   " Essential Plugins for all languages
   call dein#add ('Shougo/deoplete.nvim')
 
+  " Languages
+  call dein#add ('derekwyatt/vim-scala')
+  call dein#add ('ensime/ensime-vim')
+
   if dein#check_install()
     call dein#install()
     let pluginsExist=1
@@ -176,4 +180,9 @@ function! CycleThemes()
   endif
 endfunction
 nnoremap <leader>Tn :call CycleThemes()<cr>
+" }}}
+
+" {{{ Scala
+let ensime_server_v2 = 1
+autocmd BufWritePost *.scala silent :EnTypeCheck
 " }}}
