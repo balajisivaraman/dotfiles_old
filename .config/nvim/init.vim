@@ -32,6 +32,7 @@ if dein#load_state('~/.config/nvim/dein')
   call dein#add ('vim-airline/vim-airline')
   call dein#add ('vim-airline/vim-airline-themes')
   call dein#add ('airblade/vim-gitgutter')
+  call dein#add ('Shougo/denite.nvim')
 
   if dein#check_install()
     call dein#install()
@@ -39,6 +40,7 @@ if dein#load_state('~/.config/nvim/dein')
   endif
 
   " Required:
+  call dein#remote_plugins()
   call dein#end()
   call dein#save_state()
 endif
@@ -90,6 +92,51 @@ nnoremap <leader>qq :confirm quit<cr>
 
 " Dein
 nnoremap <leader>Pu :call dein#update()<cr>
+" }}}
+
+" {{{ Denite
+call denite#custom#alias('source', 'file_rec/git', 'file_rec')
+call denite#custom#alias('source', 'file_rec/rg', 'file_rec')
+call denite#custom#var('file_rec/git', 'command',
+      \ ['git', 'ls-files-root', '--full-name', '-co', '--exclude-standard'])
+call denite#custom#var('file_rec/rg', 'command',
+      \ ['rg', '--files', '-uuu', '--maxdepth', '1'])
+call denite#custom#var('file_rec', 'command',
+      \ ['rg', '--files', '--glob', '!.git', ''])
+nnoremap <leader>ph :DeniteProjectDir file_rec/git<cr>
+nnoremap <leader>bb :Denite buffer<cr>
+nnoremap <leader>ff :DeniteBufferDir file_rec/rg<cr>
+nnoremap <leader>fF :DeniteBufferDir file_rec<cr>
+call denite#custom#map(
+      \ 'insert',
+      \ '<Down>',
+      \ '<denite:move_to_next_line>',
+      \ 'noremap'
+      \)
+call denite#custom#map(
+      \ 'insert',
+      \ '<Up>',
+      \ '<denite:move_to_previous_line>',
+      \ 'noremap'
+      \)
+call denite#custom#map(
+      \ 'insert',
+      \ '<C-j>',
+      \ '<denite:move_to_next_line>',
+      \ 'noremap'
+      \)
+call denite#custom#map(
+      \ 'insert',
+      \ '<C-k>',
+      \ '<denite:move_to_previous_line>',
+      \ 'noremap'
+      \)
+call denite#custom#map(
+      \ 'insert',
+      \ '<C-g>',
+      \ '<denite:leave_mode>',
+      \ 'noremap'
+      \)
 " }}}
 
 " {{{ Custom Functions
