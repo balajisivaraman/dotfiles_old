@@ -44,6 +44,7 @@ if dein#load_state('~/.config/nvim/dein')
 
   " Editing
   call dein#add ('Shougo/deoplete.nvim')
+  call dein#add ('jiangmiao/auto-pairs')
   call dein#add ('ntpeters/vim-better-whitespace')
 
   " Languages
