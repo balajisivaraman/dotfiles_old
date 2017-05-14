@@ -42,8 +42,9 @@ if dein#load_state('~/.config/nvim/dein')
   call dein#add ('Xuyuanp/nerdtree-git-plugin')
   call dein#add ('Shougo/denite.nvim')
 
-  " Essential Plugins for all languages
+  " Editing
   call dein#add ('Shougo/deoplete.nvim')
+  call dein#add ('ntpeters/vim-better-whitespace')
 
   " Languages
   call dein#add ('derekwyatt/vim-scala')
@@ -91,6 +92,7 @@ let g:deoplete#complete_method = "omnifunc"
 " Remap ctrl-c for this issue:
 " https://github.com/Shougo/deoplete.nvim/issues/460
 inoremap <C-c> <Esc>
+autocmd BufEnter * EnableStripWhitespaceOnSave
 " }}}
 
 " {{{ UI Settings
