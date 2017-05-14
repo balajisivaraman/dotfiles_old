@@ -48,6 +48,7 @@ if dein#load_state('~/.config/nvim/dein')
   call dein#add ('Shougo/deoplete.nvim')
   call dein#add ('jiangmiao/auto-pairs')
   call dein#add ('ntpeters/vim-better-whitespace')
+  call dein#add ('scrooloose/nerdcommenter')
 
   " Languages
   call dein#add ('derekwyatt/vim-scala')
@@ -96,6 +97,11 @@ let g:deoplete#complete_method = "omnifunc"
 " https://github.com/Shougo/deoplete.nvim/issues/460
 inoremap <C-c> <Esc>
 autocmd BufEnter * EnableStripWhitespaceOnSave
+" Comments with NerdCommenter: Add spaces after delimiters, allow to comment
+" empty lines and automatically trim trailing whitespaces when uncommenting
+let g:NERDSpaceDelims = 1
+let g:NERDCommentEmptyLines = 1
+let g:NERDTrimTrailingWhitespace = 1
 " }}}
 
 " {{{ UI Settings
