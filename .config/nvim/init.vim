@@ -32,7 +32,10 @@ if dein#load_state('~/.config/nvim/dein')
   call dein#add ('icymind/neosolarized')
   call dein#add ('vim-airline/vim-airline')
   call dein#add ('vim-airline/vim-airline-themes')
+
+  " Git/VCS
   call dein#add ('airblade/vim-gitgutter')
+  call dein#add ('tpope/vim-fugitive')
 
   " Navigation
   call dein#add ('scrooloose/nerdtree')
@@ -121,6 +124,19 @@ nnoremap <leader>qq :confirm quit<cr>
 " Dein
 nnoremap <leader>Pu :call dein#update()<cr>
 nnoremap <leader>Pr :call map(dein#check_clean(), "delete(v:val, 'rf')")<cr>
+
+" Git
+nmap gp <Plug>GitGutterPrevHunk
+nmap gn <Plug>GitGutterNextHunk
+nmap ga <Plug>GitGutterStageHunk
+nmap gr <Plug>GitGutterUndoHunk
+nmap gv <Plug>GitGutterPreviewHunk
+nnoremap <leader>gc :Gcommit<cr>
+nnoremap <leader>gd :Gdiff<cr>
+nnoremap <leader>gs :Gstatus<cr>
+nnoremap <leader>gl :Glog<cr>
+nnoremap <leader>gP :Gpull<cr>
+nnoremap <leader>gp :Gpush<cr>
 " }}}
 
 " {{{ Nerdtree
