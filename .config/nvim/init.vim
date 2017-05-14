@@ -44,6 +44,7 @@ if dein#load_state('~/.config/nvim/dein')
 
   " Editing
   call dein#add ('tpope/vim-surround')
+  call dein#add ('easymotion/vim-easymotion')
   call dein#add ('Shougo/deoplete.nvim')
   call dein#add ('jiangmiao/auto-pairs')
   call dein#add ('ntpeters/vim-better-whitespace')
@@ -142,6 +143,13 @@ nnoremap <leader>gs :Gstatus<cr>
 nnoremap <leader>gl :Glog<cr>
 nnoremap <leader>gP :Gpull<cr>
 nnoremap <leader>gp :Gpush<cr>
+
+" Easymotion
+map <Leader>j <Plug>(easymotion-prefix)
+map <Leader>jf <Plug>(easymotion-lineforward)
+map <Leader>jj <Plug>(easymotion-j)
+map <Leader>jk <Plug>(easymotion-k)
+map <Leader>jb <Plug>(easymotion-linebackward)
 
 " Simpler navigation for splits
 nnoremap <C-J> <C-W><C-J>
