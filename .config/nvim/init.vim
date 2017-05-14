@@ -28,13 +28,19 @@ if dein#load_state('~/.config/nvim/dein')
   " Required:
   call dein#add('~/.config/nvim/dein/repos/github.com/Shougo/dein.vim')
 
+  " User Interface
   call dein#add ('icymind/neosolarized')
   call dein#add ('vim-airline/vim-airline')
   call dein#add ('vim-airline/vim-airline-themes')
   call dein#add ('airblade/vim-gitgutter')
+
+  " Navigation
   call dein#add ('scrooloose/nerdtree')
   call dein#add ('Xuyuanp/nerdtree-git-plugin')
   call dein#add ('Shougo/denite.nvim')
+
+  " Essential Plugins for all languages
+  call dein#add ('Shougo/deoplete.nvim')
 
   if dein#check_install()
     call dein#install()
@@ -63,6 +69,14 @@ set incsearch
 set visualbell " Don't beep, please
 set display+=lastline
 set expandtab
+" }}}
+
+" {{{ Editing Settings
+let g:deoplete#enable_at_startup = 1 " Enable completion with deoplete
+let g:deoplete#complete_method = "omnifunc"
+" Remap ctrl-c for this issue:
+" https://github.com/Shougo/deoplete.nvim/issues/460
+inoremap <C-c> <Esc>
 " }}}
 
 " {{{ UI Settings
