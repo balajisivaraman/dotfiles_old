@@ -118,6 +118,7 @@ nnoremap ; :
 
 " {{{ Leader Bindings
 let mapleader = ' '
+let maplocalleader = ','
 nnoremap <leader>fd :e ~/.config/nvim/init.vim<cr>
 nnoremap <leader>fs :w<cr>
 nnoremap <leader>fR :source ~/.config/nvim/init.vim<cr>
