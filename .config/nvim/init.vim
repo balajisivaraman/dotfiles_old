@@ -49,6 +49,7 @@ if dein#load_state('~/.config/nvim/dein')
   call dein#add ('jiangmiao/auto-pairs')
   call dein#add ('ntpeters/vim-better-whitespace')
   call dein#add ('scrooloose/nerdcommenter')
+  call dein#add ('justinmk/vim-sneak')
 
   " Languages
   call dein#add ('derekwyatt/vim-scala')
@@ -102,6 +103,7 @@ autocmd BufEnter * EnableStripWhitespaceOnSave
 let g:NERDSpaceDelims = 1
 let g:NERDCommentEmptyLines = 1
 let g:NERDTrimTrailingWhitespace = 1
+let g:sneak#s_next = 1
 " }}}
 
 " {{{ UI Settings
