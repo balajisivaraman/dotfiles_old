@@ -120,6 +120,7 @@ nnoremap <leader>qq :confirm quit<cr>
 
 " Dein
 nnoremap <leader>Pu :call dein#update()<cr>
+nnoremap <leader>Pr :call map(dein#check_clean(), "delete(v:val, 'rf')")<cr>
 " }}}
 
 " {{{ Nerdtree
