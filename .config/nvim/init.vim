@@ -32,6 +32,8 @@ if dein#load_state('~/.config/nvim/dein')
   call dein#add ('vim-airline/vim-airline')
   call dein#add ('vim-airline/vim-airline-themes')
   call dein#add ('airblade/vim-gitgutter')
+  call dein#add ('scrooloose/nerdtree')
+  call dein#add ('Xuyuanp/nerdtree-git-plugin')
   call dein#add ('Shougo/denite.nvim')
 
   if dein#check_install()
@@ -92,6 +94,16 @@ nnoremap <leader>qq :confirm quit<cr>
 
 " Dein
 nnoremap <leader>Pu :call dein#update()<cr>
+" }}}
+
+" {{{ Nerdtree
+" Below lines will load NERDTree when Vim starts if no file is specified
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+" Close NERDTree when it is the only buffer remaining in Vim
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+let NERDTreeShowHidden = 1
+map <C-n> :NERDTreeToggle<CR>
 " }}}
 
 " {{{ Denite
