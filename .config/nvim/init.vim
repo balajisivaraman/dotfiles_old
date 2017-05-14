@@ -62,6 +62,7 @@ set smarttab
 set incsearch
 set visualbell " Don't beep, please
 set display+=lastline
+set expandtab
 " }}}
 
 " {{{ UI Settings
