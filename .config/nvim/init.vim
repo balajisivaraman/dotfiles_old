@@ -43,6 +43,7 @@ if dein#load_state('~/.config/nvim/dein')
   call dein#add ('Shougo/denite.nvim')
 
   " Editing
+  call dein#add ('tpope/vim-surround')
   call dein#add ('Shougo/deoplete.nvim')
   call dein#add ('jiangmiao/auto-pairs')
   call dein#add ('ntpeters/vim-better-whitespace')
