@@ -243,4 +243,8 @@ nnoremap <leader>Tn :call CycleThemes()<cr>
 " {{{ Scala
 let ensime_server_v2 = 1
 autocmd BufWritePost *.scala silent :EnTypeCheck
+au FileType scala nnoremap <localleader>t :EnTypeCheck<CR>
+au FileType scala nnoremap <localleader>df :EnDeclaration<CR>
+au FileType scala nnoremap <localleader>db :EnDocBrowse<CR>
+let g:deoplete#omni_patterns.scala='[^. *\t]\.\w*'
 " }}}
