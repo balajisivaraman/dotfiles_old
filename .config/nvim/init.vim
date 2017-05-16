@@ -93,7 +93,10 @@ endif
 
 " {{{ Editing Settings
 let g:deoplete#enable_at_startup = 1 " Enable completion with deoplete
-let g:deoplete#complete_method = "omnifunc"
+call g:deoplete#enable()
+let g:deoplete#sources={}
+let g:deoplete#sources._=['buffer', 'member', 'tag', 'file', 'omni', 'ultisnips']
+let g:deoplete#omni_patterns={}
 " Remap ctrl-c for this issue:
 " https://github.com/Shougo/deoplete.nvim/issues/460
 inoremap <C-c> <Esc>
