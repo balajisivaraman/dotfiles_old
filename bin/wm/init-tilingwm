@@ -5,6 +5,7 @@ unclutter -idle 2 &
 /usr/bin/xsettingsd &
 nvidia-settings --load-config-only &
 compton -bCG
+owncloud &
 
 ~/bin/wm/init-keyboard
 ~/bin/wm/init-wallpaper
