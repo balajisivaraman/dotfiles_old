@@ -59,7 +59,7 @@ azScript
 /.embedmysql.lock
 /_GOBBLIN_TRASH
 .fehbg
-
+.dbeaver4
 #XMonad#
 ########
 .xmonad/*
@@ -119,6 +119,7 @@ Software/
 .eclimrc
 *.DS_Store
 Google Drive
+.cisco/
 
 #Linux#
 #######
