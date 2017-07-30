@@ -54,6 +54,7 @@ if dein#load_state('~/.config/nvim/dein')
   " Languages
   call dein#add ('derekwyatt/vim-scala')
   call dein#add ('ensime/ensime-vim')
+  call dein#add ('rust-lang/rust.vim')
 
   if dein#check_install()
     call dein#install()
