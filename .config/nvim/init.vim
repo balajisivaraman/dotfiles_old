@@ -29,10 +29,9 @@ if dein#load_state('~/.config/nvim/dein')
   call dein#add('~/.config/nvim/dein/repos/github.com/Shougo/dein.vim')
 
   " User Interface
-  call dein#add ('icymind/neosolarized')
   call dein#add ('vim-airline/vim-airline')
   call dein#add ('vim-airline/vim-airline-themes')
-  call dein#add ('morhetz/gruvbox')
+  call dein#add ('dracula/vim')
 
   " Git/VCS
   call dein#add ('airblade/vim-gitgutter')
@@ -112,11 +111,8 @@ let g:sneak#s_next = 1
 
 " {{{ UI Settings
 set termguicolors
-set background=dark
-colorscheme gruvbox
-let g:gruvbox_contrast_dark = 1
-let g:gruvbox_bold = 1
-let g:airline_theme='gruvbox'
+colorscheme dracula
+let g:airline_theme='dracula'
 let g:airline#extensions#tabline#enabled = 1
 
 set relativenumber " Show relative line numbers
