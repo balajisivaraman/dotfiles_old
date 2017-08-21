@@ -22,7 +22,7 @@ set surround " Surround text with quotes, parens, etc.
 nmap <Enter> :nohlsearch<cr>
 
 " Quickly go to normal mode
-imap ue <esc>
+imap fd <esc>
 
 " Jumping
 nnoremap <Space>jj :action AceAction<CR>
