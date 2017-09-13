@@ -26,4 +26,4 @@ xkb_symbols "hypers" {
 EOF
 
 xkbcomp -synch -w3 -I$XKBDIR $XKBDIR/keymap/custom.xkb $DISPLAY &>/dev/null
-(exec killall -q xcape)
+(exec pkill -x xcape)
