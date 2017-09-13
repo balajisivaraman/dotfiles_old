@@ -5,7 +5,7 @@ After=graphical.target
 [Service]
 Type=forking
 Environment=DISPLAY=:0
-ExecStart=/usr/bin/xcape -e "Hyper_L=slash;Hyper_R=backslash"
+ExecStart=xcape -e "Hyper_L=slash;Hyper_R=backslash"
 Restart=always
 RestartSec=1
 
