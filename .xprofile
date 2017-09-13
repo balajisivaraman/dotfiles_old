@@ -1,1 +1,2 @@
 xrdb -DSOLARIZED_DARK -load ~/.Xresources
+~/bin/wm/init-tilingwm
