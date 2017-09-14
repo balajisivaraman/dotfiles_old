@@ -39,7 +39,7 @@ myConfig p = def
 -- Custom Overrides                                                     {{{
 -------------------------------------------------------------------------
 
-myTerminal = "/usr/bin/st"
+myTerminal = "/run/current-system/sw/bin/alacritty"
 myModMask = mod4Mask
 myLauncher = "rofi -matching fuzzy -modi combi -show combi -combi-modi run,drun"
 myFocusFollowsMouse = False
