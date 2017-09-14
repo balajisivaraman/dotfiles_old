@@ -8,7 +8,7 @@ function fish_prompt
 end
 
 function githud_prompt
-  echo -n (/usr/local/bin/gitHUD)
+  echo -n (gitHUD)
 end
 
 function set_prompt_colors
