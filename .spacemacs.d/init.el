@@ -41,6 +41,8 @@ This function should only modify configuration layer settings."
      finance
      (git :variables
           git-magit-status-fullscreen t)
+     (ibuffer :variables
+              ibuffer-group-buffers-by 'projects)
      helm
      markdown
      org
