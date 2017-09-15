@@ -350,6 +350,8 @@ configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
   (require 'init-pragmata-pro)
+  (use-package init-org
+    :after org)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
