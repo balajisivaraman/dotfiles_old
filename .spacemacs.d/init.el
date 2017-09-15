@@ -344,6 +344,8 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
   (setq user-mail-address "balaji@balajisivaraman.com")
   (defvar balaji/lisp-dir (expand-file-name "lisp" dotspacemacs-directory))
   (add-to-list 'load-path balaji/lisp-dir)
+  (desktop-save-mode t)
+  (desktop-read)
   )
 
 (defun dotspacemacs/user-config ()
