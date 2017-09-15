@@ -35,12 +35,13 @@ This function should only modify configuration layer settings."
      ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
      ;; `M-m f e R' (Emacs style) to install them.
      ;; ----------------------------------------------------------------
-     helm
      auto-completion
      better-defaults
      emacs-lisp
+     finance
      (git :variables
           git-magit-status-fullscreen t)
+     helm
      markdown
      org
      (shell :variables
