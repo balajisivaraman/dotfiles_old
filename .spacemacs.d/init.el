@@ -48,6 +48,7 @@ This function should only modify configuration layer settings."
      org
      (rust :variables
            rust-format-on-save t)
+     scala
      (shell :variables
             shell-default-height 30
             shell-default-position 'bottom)
@@ -346,6 +347,8 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
   (add-to-list 'load-path balaji/lisp-dir)
   (desktop-save-mode t)
   (desktop-read)
+  (push '("melpa-stable" . "stable.melpa.org/packages/") configuration-layer--elpa-archives)
+  (push '(ensime . "melpa-stable") package-pinned-packages)
   )
 
 (defun dotspacemacs/user-config ()
