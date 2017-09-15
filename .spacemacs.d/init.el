@@ -357,6 +357,7 @@ before packages are loaded."
   (require 'init-pragmata-pro)
   (use-package init-org
     :after org)
+  (bind-key ";" 'evil-ex evil-normal-state-map)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
