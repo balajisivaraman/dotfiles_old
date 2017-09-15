@@ -226,7 +226,6 @@ ansible_hosts
 # Dotfiles Gitignore #
 ######################
 .emacs.d
-.spacemacs.d
 .oh-my-fish
 .vim
 .sh_history
