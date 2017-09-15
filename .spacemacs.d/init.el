@@ -358,6 +358,7 @@ before packages are loaded."
   (use-package init-org
     :after org)
   (bind-key ";" 'evil-ex evil-normal-state-map)
+  (bind-key "<RET>" 'spacemacs/evil-search-clear-highlight evil-normal-state-map)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
