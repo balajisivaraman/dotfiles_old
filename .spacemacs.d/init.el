@@ -45,6 +45,7 @@ This function should only modify configuration layer settings."
               ibuffer-group-buffers-by 'projects)
      helm
      markdown
+     nixos
      org
      (rust :variables
            rust-format-on-save t)
