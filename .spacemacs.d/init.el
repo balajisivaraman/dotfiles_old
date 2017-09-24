@@ -359,6 +359,7 @@ configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
   (require 'init-pragmata-pro)
+  (require 'init-finance)
   (use-package init-org
     :after org)
   (bind-key ";" 'evil-ex evil-normal-state-map)
