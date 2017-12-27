@@ -1,5 +1,5 @@
 Config
-    { font              = "xft:Terminus:pixelsize=10:antialias=true:hinting=true"
+    { font              = "xft:xos4 Terminus:pixelsize=10:antialias=true:hinting=true"
     , additionalFonts   = [ "xft:FontAwesome:pixelsize=14:antialias=true:hinting=true" ]
     , position          = Top
     , bgColor           = "#000000"

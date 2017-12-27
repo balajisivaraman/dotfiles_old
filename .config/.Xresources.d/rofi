@@ -1,4 +1,4 @@
-rofi.font: Terminus 12
+rofi.font: xos4 Terminus 12
 rofi.hide-scrollbar: true
 rofi.color-enabled: true
 rofi.color-window: S_base03, S_base01, S_base02

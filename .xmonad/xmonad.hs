@@ -39,11 +39,11 @@ myConfig p = def
 -- Custom Overrides                                                     {{{
 -------------------------------------------------------------------------
 
-myTerminal = "/run/current-system/sw/bin/alacritty"
+myTerminal = "/usr/local/bin/alacritty"
 myModMask = mod4Mask
 myLauncher = "rofi -matching fuzzy -modi combi -show combi -combi-modi run,drun"
 myFocusFollowsMouse = False
-myBrowser = "firefox"
+myBrowser = "firefox-nightly"
 myStatusBar = "xmobar -x1"
 
 ------------------------------------------------------------------------}}}
