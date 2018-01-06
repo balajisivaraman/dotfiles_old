@@ -1,6 +1,6 @@
 Config
     { font              = "xft:xos4 Terminus:pixelsize=10:antialias=true:hinting=true"
-    , additionalFonts   = [ "xft:FontAwesome:pixelsize=14:antialias=true:hinting=true" ]
+    , additionalFonts   = [ "xft:Font Awesome 5 Free Solid:pixelsize=11:antialias=true:hinting=true" ]
     , position          = Top
     , bgColor           = "#000000"
     , fgColor           = "#586e75"
