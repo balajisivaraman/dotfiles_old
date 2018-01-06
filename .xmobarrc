@@ -7,11 +7,11 @@ Config
     , allDesktops       = True
     , alpha             = 100
     , commands          = [
-        Run Date "<fc=#268bd2><fn=1>\xf073</fn> %a %_d %b %Y | d.%j w.%W</fc>   <fc=#2AA198><fn=1></fn> %H:%M:%S</fc>" "date" 10
-      , Run Network "enp3s0" [ "-t", "<fc=#6c71c4><fn=1>\xf1e6</fn> <rx>|<tx></fc>", "-S" , "True" ] 10
+        Run Com "/home/balaji/bin/wm/init-network" [] "net" 10
+      , Run Date "<fc=#268bd2><fn=1>\xf073</fn> %a %_d %b %Y | d.%j w.%W</fc>   <fc=#2AA198><fn=1></fn> %H:%M:%S</fc>" "date" 10
       , Run StdinReader
                           ]
     , sepChar           = "%"
     , alignSep          = "}{"
-    , template          = " %StdinReader% }{ %date%   %enp3s0% "
+    , template          = " %StdinReader% }{ %net%   %date% "
     }
