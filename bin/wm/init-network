@@ -55,7 +55,7 @@ then
         1000) speed="Gigabit" ;;
         *) speed="UNKNOWN $speed" ;;
     esac
-    eth_status=" <fn=1></fn> $speed"
+    eth_status=" <fn=1></fn> $speed"
 fi
 
 # ssid="$(iw dev $dev_wifi link | grep -i SSID)"
