@@ -127,6 +127,12 @@ bindsym $mod+Shift+0 move container to workspace 10
 # lock the screen
 bindsym $mod+Shift+o exec light-locker-command -l
 
+# volume control
+bindsym $mod+period exec --no-startup-id pactl set-sink-volume 0 +5% &>/dev/null || : ;;
+bindsym $mod+comma exec --no-startup-id pactl set-sink-volume 0 -5% &>/dev/null || : ;;
+bindsym $mod+Shift+period exec --no-startup-id pactl set-sink-volume 0 +1% &>/dev/null || : ;;
+bindsym $mod+Shift+comma exec --no-startup-id pactl set-sink-volume 0 -1% &>/dev/null || : ;;
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
