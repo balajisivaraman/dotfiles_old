@@ -2,4 +2,4 @@
 
 [ -f /etc/xprofile ] && . /etc/xprofile
 [ -f ~/.xprofile ] && . ~/.xprofile
-~/bin/wm/init-tilingwm
+[[ -f ~/.Xresources ]] && xrdb -I$HOME ~/.Xresources
