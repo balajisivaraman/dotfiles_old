@@ -23,6 +23,7 @@ set $mod Mod4
 set $myLauncher exec ~/bin/wm/init-launcher
 set $myTerminal exec alacritty
 set $myBrowser exec firefox-nightly
+set $myFileManager exec nautilus
 
 font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 font pango:xos4 Terminus 11px
@@ -42,6 +43,9 @@ bindsym $mod+space $myLauncher
 
 # start my browser
 bindsym $mod+b $myBrowser
+
+# start my file manager
+bindsym $mod+f $myFileManager
 
 # change focus
 bindsym $mod+j focus left
@@ -74,7 +78,7 @@ bindsym $mod+h split h
 bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
+bindsym $mod+Shift+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
