@@ -1,3 +1,6 @@
+exec --no-startup-id /usr/lib/gnome-settings-daemon/gsd-xsettings
+exec_always --no-startup-id gnome-power-manager
+
 # Variables
 set $mod Mod4
 set $myLauncher exec ~/bin/wm/init-launcher
