@@ -1,5 +1,22 @@
+# some startup stuff that I'll need
 exec --no-startup-id /usr/lib/gnome-settings-daemon/gsd-xsettings
 exec_always --no-startup-id gnome-power-manager
+
+# scratchpads
+exec --no-startup-id keepassxc
+for_window [instance="keepassxc"] floating enable;
+for_window [instance="keepassxc"] move scratchpad; [instance="keepassxc"] scratchpad show; move position 80px 50px; move scratchpad
+bindsym $mod+p [instance="keepassxc"] scratchpad show, resize set 1200 650
+
+exec --no-startup-id clementine
+for_window [instance="clementine"] floating enable;
+for_window [instance="clementine"] move scratchpad; [instance="clementine"] scratchpad show; move position 80px 50px; move scratchpad
+bindsym $mod+m [instance="clementine"] scratchpad show, resize set 1400 900
+
+exec --no-startup-id thunderbird-earlybird
+for_window [instance="Mail"] floating enable;
+for_window [instance="Mail"] move scratchpad; [instance="Mail"] scratchpad show; move position 80px 50px; move scratchpad
+bindsym $mod+t [instance="Mail"] scratchpad show, resize set 1400 900
 
 # Variables
 set $mod Mod4
