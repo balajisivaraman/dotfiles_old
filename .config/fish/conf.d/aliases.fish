@@ -10,3 +10,6 @@ alias rs 'rails server'
 
 #Pam
 alias lb './build_scripts/local_build.sh'
+
+#Vim
+alias v nvim
