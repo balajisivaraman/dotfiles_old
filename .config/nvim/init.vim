@@ -33,6 +33,10 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
 
+  "Editing
+  Plug 'scrooloose/nerdcommenter'
+  Plug 'ntpeters/vim-better-whitespace'
+
   if isdirectory('/usr/local/opt/fzf')
     Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
   else
@@ -71,6 +75,18 @@ let g:airline_theme='dracula'
 let g:airline#extensions#tabline#enabled = 1
 set relativenumber " Show relative line numbers
 set number " Show absolute number on current line
+" }}}
+
+" {{{ Editing Settings
+
+" Comments with NerdCommenter: Add spaces after delimiters, allow to comment
+" empty lines and automatically trim trailing whitespaces when uncommenting
+let g:NERDSpaceDelims = 1
+let g:NERDCommentEmptyLines = 1
+let g:NERDCompactSexyComs = 1
+let g:NERDDefaultAlign = 'left'
+let g:NERDTrimTrailingWhitespace = 1
+
 " }}}
 
 " {{{ FZF
