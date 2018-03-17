@@ -36,6 +36,7 @@ call plug#begin('~/.config/nvim/plugged')
   "Editing
   Plug 'scrooloose/nerdcommenter'
   Plug 'ntpeters/vim-better-whitespace'
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
   " Git/VCS
   Plug 'airblade/vim-gitgutter'
@@ -96,6 +97,7 @@ set softtabstop=0
 set shiftwidth=4
 set expandtab
 
+let g:deoplete#enable_at_startup = 1
 " }}}
 
 " {{{ FZF
