@@ -13,6 +13,27 @@
 " You should have received a copy of the GNU General Public License along with
 " this program.  If not, see <http://www.gnu.org/licenses/>.
 
+if has('vim_starting')
+  set nocompatible               " Be iMproved
+endif
+
+let g:vim_bootstrap_editor = "nvim"
+
+" {{{ Plug
+if empty(glob('~/.config/nvim/site/autoload/plug.vim'))
+  silent !curl -fLo ~/.config/nvim/site/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+call plug#begin('~/.config/nvim/plugged')
+  " User Interface
+  Plug 'dracula/vim'
+  Plug 'vim-airline/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
+call plug#end()
+"}}}
+
 " {{{ Sensible Defaults
 set autoread
 set autoindent
@@ -33,6 +54,10 @@ endif
 " }}}
 
 " {{{ UI Settings
+set termguicolors
+colorscheme dracula
+let g:airline_theme='dracula'
+let g:airline#extensions#tabline#enabled = 1
 set relativenumber " Show relative line numbers
 set number " Show absolute number on current line
 " }}}
