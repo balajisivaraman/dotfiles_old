@@ -13,11 +13,13 @@
 " You should have received a copy of the GNU General Public License along with
 " this program.  If not, see <http://www.gnu.org/licenses/>.
 
+" {{{ Bootstrap
 if has('vim_starting')
   set nocompatible               " Be iMproved
 endif
 
 let g:vim_bootstrap_editor = "nvim"
+" }}}
 
 " {{{ Plug
 if empty(glob('~/.config/nvim/site/autoload/plug.vim'))
@@ -56,10 +58,9 @@ call plug#begin('~/.config/nvim/plugged')
 call plug#end()
 "}}}
 
+" {{{ Sensible Defaults
 " Required:
 filetype plugin indent on
-
-" {{{ Sensible Defaults
 set autoread
 set autoindent
 set backspace=indent,eol,start
@@ -76,6 +77,7 @@ elseif executable("/usr/local/bin/python3")
   let g:python_host_prog="/usr/local/bin/python"
   let g:python3_host_prog="/usr/local/bin/python3"
 endif
+:autocmd FileType vim setlocal foldmethod=marker
 " }}}
 
 " {{{ UI Settings
@@ -124,7 +126,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 " }}}
 
-" {{[ Global Bindings
+" {{{ Global Bindings
 imap fd <Esc>
 nmap <Enter> :nohlsearch<cr>
 nnoremap <silent> ; :
