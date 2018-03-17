@@ -82,18 +82,30 @@ set grepprg=rg\ --vimgrep
 " {{[ Global Bindings
 imap fd <Esc>
 nmap <Enter> :nohlsearch<cr>
-nnoremap ; :
+nnoremap <silent> ; :
 " }}}
 
 " {{{ Leader Bindings
 let mapleader = ' '
 let maplocalleader = ','
-nnoremap <leader>fd :e ~/.config/nvim/init.vim<cr>
-nnoremap <leader>ff :Files<cr>
-nnoremap <leader>fs :w<cr>
-nnoremap <leader>fR :source ~/.config/nvim/init.vim<cr>
-nnoremap <leader>bd :bd<cr>
-nnoremap <leader>qq :confirm quit<cr> <Paste>
+
+nnoremap <silent> <leader>qq :confirm quit<cr> <Paste>
+
+" Easier Bindings for VIMRC file
+nnoremap <silent> <leader>fd :e ~/.config/nvim/init.vim<cr>
+nnoremap <silent> <leader>fR :source ~/.config/nvim/init.vim<cr>
+
+" File Bindings
+nnoremap <silent> <leader>ff :Files<cr>
+nnoremap <silent> <leader>fs :w<cr>
+
+" Buffers
+nnoremap <silent> <leader>bd :bd<cr>
+nnoremap <silent> <leader>bb :Buffers<cr>
+
+" Plug
+nnoremap <silent> <leader>pi :PlugInstall<cr>
+nnoremap <silent> <leader>pu :PlugUpdate<cr>
 
 " Simpler navigation for splits
 nnoremap <C-J> <C-W><C-J>
