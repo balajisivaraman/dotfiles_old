@@ -26,13 +26,24 @@ if empty(glob('~/.config/nvim/site/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
+" Required:
 call plug#begin('~/.config/nvim/plugged')
   " User Interface
   Plug 'dracula/vim'
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
+
+  if isdirectory('/usr/local/opt/fzf')
+    Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
+  else
+    Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
+    Plug 'junegunn/fzf.vim'
+  endif
 call plug#end()
 "}}}
+
+" Required:
+filetype plugin indent on
 
 " {{{ Sensible Defaults
 set autoread
@@ -62,6 +73,12 @@ set relativenumber " Show relative line numbers
 set number " Show absolute number on current line
 " }}}
 
+" {{{ FZF
+set wildmode=list:longest,list:full
+let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --follow --glob "!.git/*"'
+set grepprg=rg\ --vimgrep
+"}}}
+
 " {{[ Global Bindings
 imap fd <Esc>
 nmap <Enter> :nohlsearch<cr>
@@ -72,6 +89,7 @@ nnoremap ; :
 let mapleader = ' '
 let maplocalleader = ','
 nnoremap <leader>fd :e ~/.config/nvim/init.vim<cr>
+nnoremap <leader>ff :Files<cr>
 nnoremap <leader>fs :w<cr>
 nnoremap <leader>fR :source ~/.config/nvim/init.vim<cr>
 nnoremap <leader>bd :bd<cr>
@@ -86,3 +104,4 @@ nnoremap <C-Down> <C-W><C-J>
 nnoremap <C-Up> <C-W><C-K>
 nnoremap <C-Right> <C-W><C-L>
 " }}}
+
