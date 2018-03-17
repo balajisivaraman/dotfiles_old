@@ -62,6 +62,7 @@ azScript
 .dbeaver4
 .proselint
 .pylint.d
+.fzf
 
 #XMonad#
 ########
