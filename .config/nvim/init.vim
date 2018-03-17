@@ -37,6 +37,9 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'scrooloose/nerdcommenter'
   Plug 'ntpeters/vim-better-whitespace'
 
+  " Git/VCS
+  Plug 'airblade/vim-gitgutter'
+
   if isdirectory('/usr/local/opt/fzf')
     Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
   else
@@ -114,6 +117,13 @@ nnoremap <silent> <leader>fR :source ~/.config/nvim/init.vim<cr>
 " File Bindings
 nnoremap <silent> <leader>ff :Files<cr>
 nnoremap <silent> <leader>fs :w<cr>
+
+" Git
+nmap gp <Plug>GitGutterPrevHunk
+nmap gn <Plug>GitGutterNextHunk
+nmap ga <Plug>GitGutterStageHunk
+nmap gr <Plug>GitGutterUndoHunk
+nmap gv <Plug>GitGutterPreviewHunk
 
 " Buffers
 nnoremap <silent> <leader>bd :bd<cr>
