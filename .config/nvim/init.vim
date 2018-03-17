@@ -97,6 +97,7 @@ set softtabstop=0
 set shiftwidth=4
 set expandtab
 
+autocmd BufEnter * EnableStripWhitespaceOnSave
 let g:deoplete#enable_at_startup = 1
 " }}}
 
