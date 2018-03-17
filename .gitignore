@@ -60,6 +60,9 @@ azScript
 /_GOBBLIN_TRASH
 .fehbg
 .dbeaver4
+.proselint
+.pylint.d
+
 #XMonad#
 ########
 .xmonad/*
@@ -281,6 +284,7 @@ ansible_hosts
 !.config/fontconfig
 
 !.config/nvim
+!.config/alacritty
 .config/nvim/*
 !.config/nvim/init.vim
 
