@@ -85,6 +85,8 @@ elseif executable("/usr/local/bin/python3")
   let g:python3_host_prog="/usr/local/bin/python3"
 endif
 :autocmd FileType vim setlocal foldmethod=marker
+" Leave paste mode when leaving insert mode
+autocmd InsertLeave * set nopaste
 " }}}
 
 " {{{ UI Settings
