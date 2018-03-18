@@ -38,7 +38,6 @@ call plug#begin('~/.config/nvim/plugged')
   "Editing
   Plug 'scrooloose/nerdcommenter'
   Plug 'ntpeters/vim-better-whitespace'
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
   Plug 'ervandew/supertab'
   Plug 'tpope/vim-surround'
   Plug 'jiangmiao/auto-pairs'
@@ -51,9 +50,16 @@ call plug#begin('~/.config/nvim/plugged')
 
   " Languages
   Plug 'majutsushi/tagbar'
-  Plug 'scrooloose/syntastic'
+  Plug 'vim-syntastic/syntastic'
   Plug 'rust-lang/rust.vim'
   Plug 'racer-rust/vim-racer'
+  Plug 'autozimu/LanguageClient-neovim', { 'do': ':UpdateRemotePlugins'  }
+  Plug 'roxma/nvim-completion-manager'
+  Plug 'roxma/nvim-cm-racer'
+  Plug 'Shougo/neco-vim'
+  Plug 'Shougo/echodoc.vim'
+  Plug 'cespare/vim-toml'
+  Plug 'dag/vim-fish'
 
   " FZF
   if isdirectory('/usr/local/opt/fzf')
@@ -117,7 +123,6 @@ set shiftwidth=4
 set expandtab
 
 autocmd BufEnter * EnableStripWhitespaceOnSave
-let g:deoplete#enable_at_startup = 1
 " }}}
 
 " {{{ FZF
@@ -269,4 +274,10 @@ au FileType rust nmap gd <Plug>(rust-def)
 au FileType rust nmap gs <Plug>(rust-def-split)
 au FileType rust nmap gx <Plug>(rust-def-vertical)
 au FileType rust nmap <leader>gd <Plug>(rust-doc)
+let g:LanguageClient_serverCommands = {
+    \ 'rust': ['rustup', 'run', 'nightly', 'rls'],
+    \ }
+nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
+nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
+nnoremap <silent> <F2> :call LanguageClient_textDocument_rename()<CR>
 " }}}
