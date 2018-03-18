@@ -45,6 +45,8 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'justinmk/vim-sneak'
   Plug 'easymotion/vim-easymotion'
   Plug 'thinca/vim-visualstar'
+  Plug 'Shougo/neosnippet'
+  Plug 'Shougo/neosnippet-snippets'
 
   " Git/VCS
   Plug 'airblade/vim-gitgutter'
@@ -253,6 +255,7 @@ nnoremap <C-Right> <C-W><C-L>
 " }}}
 
 " {{{ Misc Plugins
+" Tagbar
 let g:tagbar_type_rust = {
    \ 'ctagstype' : 'rust',
    \ 'kinds' : [
@@ -266,6 +269,11 @@ let g:tagbar_type_rust = {
        \'i:impls,trait implementations',
    \]
    \}
+
+" Neosnippet
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-k>     <Plug>(neosnippet_expand_target)
 " }}}
 
 " {{{ Rust
