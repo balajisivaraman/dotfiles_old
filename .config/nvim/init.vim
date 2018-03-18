@@ -63,6 +63,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'Shougo/echodoc.vim'
   Plug 'cespare/vim-toml'
   Plug 'dag/vim-fish'
+  Plug 'ledger/vim-ledger'
 
   " FZF
   if isdirectory('/usr/local/opt/fzf')
