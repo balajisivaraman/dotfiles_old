@@ -40,6 +40,11 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'ntpeters/vim-better-whitespace'
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
   Plug 'ervandew/supertab'
+  Plug 'tpope/vim-surround'
+  Plug 'jiangmiao/auto-pairs'
+  Plug 'justinmk/vim-sneak'
+  Plug 'easymotion/vim-easymotion'
+  Plug 'thinca/vim-visualstar'
 
   " Git/VCS
   Plug 'airblade/vim-gitgutter'
@@ -49,6 +54,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'rust-lang/rust.vim'
   Plug 'racer-rust/vim-racer'
 
+  " FZF
   if isdirectory('/usr/local/opt/fzf')
     Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
   else
@@ -130,7 +136,6 @@ let g:syntastic_check_on_wq = 0
 " {{{ Global Bindings
 imap fd <Esc>
 nmap <Enter> :nohlsearch<cr>
-nnoremap <silent> ; :
 " }}}
 
 " {{{ Leader Bindings
@@ -161,6 +166,21 @@ nnoremap <silent> <leader>bb :Buffers<cr>
 " Plug
 nnoremap <silent> <leader>pi :PlugInstall<cr>
 nnoremap <silent> <leader>pu :PlugUpdate<cr>
+
+" <Leader>f{char} to move to {char}
+map  <Leader>f <Plug>(easymotion-bd-f)
+nmap <Leader>f <Plug>(easymotion-overwin-f)
+
+" s{char}{char} to move to {char}{char}
+nmap s <Plug>(easymotion-overwin-f2)
+
+" Move to line
+map <Leader>L <Plug>(easymotion-bd-jk)
+nmap <Leader>L <Plug>(easymotion-overwin-line)
+
+" Move to word
+map  <Leader>w <Plug>(easymotion-bd-w)
+nmap <Leader>w <Plug>(easymotion-overwin-w)
 
 " Simpler navigation for splits
 nnoremap <C-J> <C-W><C-J>
