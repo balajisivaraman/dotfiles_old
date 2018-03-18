@@ -129,17 +129,6 @@ autocmd BufEnter * EnableStripWhitespaceOnSave
 set wildmode=list:longest,list:full
 let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --follow --glob "!.git/*"'
 set grepprg=rg\ --vimgrep
-"}}}
-
-" {{{ Synctastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
 
 function! s:align_lists(lists)
   let maxes = {}
@@ -185,6 +174,17 @@ function! s:btags()
 endfunction
 
 command! BTags call s:btags()
+"}}}
+
+" {{{ Synctastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 " }}}
 
 " {{{ Global Bindings
