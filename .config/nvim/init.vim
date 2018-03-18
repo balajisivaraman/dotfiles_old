@@ -32,6 +32,7 @@ endif
 call plug#begin('~/.config/nvim/plugged')
   " User Interface
   Plug 'dracula/vim'
+  Plug 'morhetz/gruvbox'
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
 
@@ -97,8 +98,9 @@ autocmd InsertLeave * set nopaste
 
 " {{{ UI Settings
 set termguicolors
-colorscheme dracula
-let g:airline_theme='dracula'
+colorscheme gruvbox
+set background=dark
+let g:airline_theme='gruvbox'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 set relativenumber " Show relative line numbers
@@ -281,3 +283,15 @@ nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
 nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
 nnoremap <silent> <F2> :call LanguageClient_textDocument_rename()<CR>
 " }}}
+
+"{{{ Custom Functions
+function! CycleThemes()
+  let current_background = &background
+  if current_background == "dark"
+    set background=light
+  else
+    set background=dark
+  endif
+endfunction
+nnoremap <leader>Tn :call CycleThemes()<cr>
+"}}}
