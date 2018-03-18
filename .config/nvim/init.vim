@@ -50,6 +50,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'airblade/vim-gitgutter'
 
   " Languages
+  Plug 'majutsushi/tagbar'
   Plug 'scrooloose/syntastic'
   Plug 'rust-lang/rust.vim'
   Plug 'racer-rust/vim-racer'
@@ -167,6 +168,9 @@ nnoremap <silent> <leader>bb :Buffers<cr>
 nnoremap <silent> <leader>pi :PlugInstall<cr>
 nnoremap <silent> <leader>pu :PlugUpdate<cr>
 
+" Jumping Around
+nmap <Leader>jI :TagbarToggle<CR>
+
 " <Leader>f{char} to move to {char}
 map  <Leader>f <Plug>(easymotion-bd-f)
 nmap <Leader>f <Plug>(easymotion-overwin-f)
@@ -190,6 +194,22 @@ nnoremap <C-H> <C-W><C-H>
 nnoremap <C-Down> <C-W><C-J>
 nnoremap <C-Up> <C-W><C-K>
 nnoremap <C-Right> <C-W><C-L>
+" }}}
+
+" {{{ Misc Plugins
+let g:tagbar_type_rust = {
+   \ 'ctagstype' : 'rust',
+   \ 'kinds' : [
+       \'T:types,type definitions',
+       \'f:functions,function definitions',
+       \'g:enum,enumeration names',
+       \'s:structure names',
+       \'m:modules,module names',
+       \'c:consts,static constants',
+       \'t:traits',
+       \'i:impls,trait implementations',
+   \]
+   \}
 " }}}
 
 " {{{ Rust
