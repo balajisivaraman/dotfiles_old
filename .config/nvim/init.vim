@@ -109,6 +109,7 @@ let g:airline_powerline_fonts = 1
 set relativenumber " Show relative line numbers
 set number " Show absolute number on current line
 au FileType vim setlocal textwidth=80
+au FileType markdown setlocal textwidth=80
 " }}}
 
 " {{{ Editing Settings
