@@ -32,7 +32,7 @@ endif
 call plug#begin('~/.config/nvim/plugged')
   " User Interface
   Plug 'dracula/vim'
-  Plug 'morhetz/gruvbox'
+  Plug 'iCyMind/NeoSolarized'
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
 
@@ -101,9 +101,9 @@ autocmd InsertLeave * set nopaste
 
 " {{{ UI Settings
 set termguicolors
-colorscheme gruvbox
+colorscheme NeoSolarized
 set background=dark
-let g:airline_theme='gruvbox'
+let g:airline_theme='solarized'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 set relativenumber " Show relative line numbers
