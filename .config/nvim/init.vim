@@ -31,8 +31,7 @@ endif
 " Required:
 call plug#begin('~/.config/nvim/plugged')
   " User Interface
-  Plug 'dracula/vim'
-  Plug 'iCyMind/NeoSolarized'
+  Plug 'rakr/vim-one'
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
 
@@ -101,9 +100,10 @@ autocmd InsertLeave * set nopaste
 
 " {{{ UI Settings
 set termguicolors
-colorscheme NeoSolarized
+let g:one_allow_italics = 1
+colorscheme one
 set background=dark
-let g:airline_theme='solarized'
+let g:airline_theme='one'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 set relativenumber " Show relative line numbers
