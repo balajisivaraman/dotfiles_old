@@ -225,6 +225,7 @@ nnoremap <silent> <leader>bb :Buffers<cr>
 
 " Plug
 nnoremap <silent> <leader>pi :PlugInstall<cr>
+nnoremap <silent> <leader>pc :PlugClean<cr>
 nnoremap <silent> <leader>pu :PlugUpdate<cr>
 
 " Jumping Around
