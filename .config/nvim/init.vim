@@ -43,7 +43,10 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'vim-syntastic/syntastic'
   Plug 'rust-lang/rust.vim'
   Plug 'racer-rust/vim-racer'
-  Plug 'autozimu/LanguageClient-neovim', { 'do': ':UpdateRemotePlugins'  }
+  Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
   Plug 'roxma/nvim-completion-manager'
   Plug 'roxma/nvim-cm-racer'
   Plug 'Shougo/neco-vim'
