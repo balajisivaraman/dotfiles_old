@@ -39,6 +39,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'thinca/vim-visualstar'
   Plug 'Shougo/neosnippet'
   Plug 'Shougo/neosnippet-snippets'
+  Plug 'honza/vim-snippets'
 
   " Git/VCS
   Plug 'airblade/vim-gitgutter'
