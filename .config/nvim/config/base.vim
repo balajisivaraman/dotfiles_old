@@ -26,10 +26,10 @@ set expandtab " expand tabs into spaces
 
 " Ensure Python executable is set properly
 if executable("/usr/bin/python3")
-  let g:python_host_prog = "/usr/bin/python"
+  let g:python_host_prog = "/usr/bin/python2"
   let g:python3_host_prog = "/usr/bin/python3"
 elseif executable("/usr/local/bin/python3")
-  let g:python_host_prog="/usr/local/bin/python"
+  let g:python_host_prog="/usr/local/bin/python2"
   let g:python3_host_prog="/usr/local/bin/python3"
 endif
 
