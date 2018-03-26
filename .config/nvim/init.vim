@@ -28,6 +28,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'ntpeters/vim-better-whitespace'
   Plug 'ervandew/supertab'
   Plug 'tpope/vim-surround'
+  Plug 'tpope/vim-unimpaired'
   Plug 'jiangmiao/auto-pairs'
   Plug 'justinmk/vim-sneak'
   Plug 'easymotion/vim-easymotion'
