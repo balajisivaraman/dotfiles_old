@@ -288,6 +288,7 @@ ansible_hosts
 !.config/alacritty
 .config/nvim/*
 !.config/nvim/init.vim
+!.config/nvim/config
 
 !.config/systemd
 .config/systemd/*
