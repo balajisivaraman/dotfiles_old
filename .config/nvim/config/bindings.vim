@@ -50,7 +50,6 @@ nnoremap <silent> <leader>pu :PlugUpdate<cr>
 
 " Jumping Around
 nmap <Leader>ji :BTags<CR>
-nmap <Leader>jI :TagbarToggle<CR>
 
 " <Leader>f{char} to move to {char}
 map  <Leader>f <Plug>(easymotion-bd-f)
