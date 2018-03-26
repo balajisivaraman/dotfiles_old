@@ -55,6 +55,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'cespare/vim-toml'
   Plug 'dag/vim-fish'
   Plug 'ledger/vim-ledger'
+  Plug 'janko-m/vim-test'
 
   " FZF
   if isdirectory('/usr/local/opt/fzf')
@@ -75,4 +76,5 @@ source ~/.config/nvim/config/bindings.vim
 source ~/.config/nvim/config/snippets.vim
 source ~/.config/nvim/config/functions.vim
 source ~/.config/nvim/config/rust.vim
+source ~/.config/nvim/config/test.vim
 
