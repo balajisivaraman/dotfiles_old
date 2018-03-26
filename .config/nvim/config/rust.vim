@@ -14,16 +14,20 @@
 " this program.  If not, see <http://www.gnu.org/licenses/>.
 
 set hidden
-let g:racer_cmd = "~/.cargo/bin/racer"
-let g:racer_experimental_completer = 1
-au FileType rust nmap gd <Plug>(rust-def)
-au FileType rust nmap gs <Plug>(rust-def-split)
-au FileType rust nmap gx <Plug>(rust-def-vertical)
-au FileType rust nmap <leader>gd <Plug>(rust-doc)
+let g:racer_cmd="~/.cargo/bin/racer"
+let g:racer_experimental_completer=1
 let g:LanguageClient_serverCommands = {
     \ 'rust': ['rustup', 'run', 'nightly', 'rls'],
     \ }
-nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
-nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
-nnoremap <silent> <F2> :call LanguageClient_textDocument_rename()<CR>
-let g:LanguageClient_autoStart=1
+
+augroup myRustLang
+    au!
+    au FileType rust
+    \  nmap <silent> gd :call LanguageClient_textDocument_definition()<CR>
+    \| nnoremap <silent> <localleader>ht :call LanguageClient_textDocument_hover()<CR>
+    \| nnoremap <silent> <localleader>r :call LanguageClient_textDocument_rename()<CR>
+    \| nmap <silent> <localleader>js :call LanguageClient_textDocument_documentSymbol()<CR>
+    \| nmap <silent> gs <Plug>(rust-def-split)
+    \| nmap <silent> gx <Plug>(rust-def-vertical)
+    \| nmap <silent> <localleader>hd <Plug>(rust-doc)
+augroup END
