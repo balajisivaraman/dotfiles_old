@@ -35,3 +35,6 @@ endif
 
 " Leave paste mode when leaving insert mode
 au InsertLeave * set nopaste
+
+" Use system clipboard for yanks.
+set clipboard+=unnamedplus
