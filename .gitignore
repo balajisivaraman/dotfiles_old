@@ -67,6 +67,7 @@ azScript
 .zoom/
 .sudo_as_admin_successful
 .citrix
+.pEp*
 
 #XMonad#
 ########
