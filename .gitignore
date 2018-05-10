@@ -68,6 +68,8 @@ azScript
 .sudo_as_admin_successful
 .citrix
 .pEp*
+.pam_environment
+.xinputrc
 
 #XMonad#
 ########
