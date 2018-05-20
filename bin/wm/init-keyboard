@@ -10,7 +10,6 @@ xkb_keymap {
 	xkb_types     { include "complete" };
 	xkb_compat    { include "complete" };
 	xkb_symbols   { include "pc+us+inet(evdev)+custom(hypers)" };
-	xkb_geometry  { include "kinesis" };
 };
 EOF
 
