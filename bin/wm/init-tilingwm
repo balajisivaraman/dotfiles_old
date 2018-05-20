@@ -1,6 +1,5 @@
 #!/bin/sh
 
-unclutter -idle 2 &
 xsettingsd &
 nvidia-settings --load-config-only &
 compton -bCG
