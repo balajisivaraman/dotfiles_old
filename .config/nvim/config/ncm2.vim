@@ -13,19 +13,11 @@
 " You should have received a copy of the GNU General Public License along with
 " this program.  If not, see <http://www.gnu.org/licenses/>.
 
-set hidden
-let g:LanguageClient_serverCommands = {
-    \ 'rust': ['rustup', 'run', 'nightly', 'rls'],
-    \ }
+" enable ncm2 for all buffers
+autocmd BufEnter * call ncm2#enable_for_buffer()
+set completeopt=noinsert,menuone,noselect
+set shortmess+=c
 
-augroup myRustLang
-    au!
-    au FileType rust
-    \  nmap <silent> gd :call LanguageClient_textDocument_definition()<CR>
-    \| nnoremap <silent> <localleader>ht :call LanguageClient_textDocument_hover()<CR>
-    \| nnoremap <silent> <localleader>r :call LanguageClient_textDocument_rename()<CR>
-    \| nmap <silent> <localleader>js :call LanguageClient_textDocument_documentSymbol()<CR>
-    \| nmap <silent> gs <Plug>(rust-def-split)
-    \| nmap <silent> gx <Plug>(rust-def-vertical)
-    \| nmap <silent> <localleader>hd <Plug>(rust-doc)
-augroup END
+au TextChangedI * call ncm2#auto_trigger()
+
+inoremap <c-c> <ESC>

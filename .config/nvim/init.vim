@@ -43,19 +43,26 @@ call plug#begin('~/.config/nvim/plugged')
   " Languages
   Plug 'vim-syntastic/syntastic'
   Plug 'rust-lang/rust.vim'
-  Plug 'racer-rust/vim-racer'
   Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
     \ 'do': 'bash install.sh',
     \ }
-  Plug 'roxma/nvim-completion-manager'
-  Plug 'roxma/nvim-cm-racer'
-  Plug 'Shougo/neco-vim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'ncm2/ncm2'
   Plug 'Shougo/echodoc.vim'
   Plug 'cespare/vim-toml'
   Plug 'dag/vim-fish'
   Plug 'ledger/vim-ledger'
   Plug 'janko-m/vim-test'
+
+  " NCM2 Sources
+  Plug 'ncm2/ncm2-bufword'
+  Plug 'ncm2/ncm2-tmux'
+  Plug 'ncm2/ncm2-path'
+
+  " NeoVim Sources for NCM2
+  Plug 'Shougo/neco-vim'
+  Plug 'ncm2/ncm2-vim'
 
   " FZF
   if isdirectory('/usr/local/opt/fzf')
@@ -77,4 +84,5 @@ source ~/.config/nvim/config/snippets.vim
 source ~/.config/nvim/config/functions.vim
 source ~/.config/nvim/config/rust.vim
 source ~/.config/nvim/config/test.vim
+source ~/.config/nvim/config/ncm2.vim
 
