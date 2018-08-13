@@ -19,7 +19,7 @@ let g:vim_bootstrap_editor = "nvim"
 " Required:
 call plug#begin('~/.config/nvim/plugged')
   " User Interface
-  Plug 'rakr/vim-one'
+  Plug 'dracula/vim'
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
 

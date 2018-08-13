@@ -18,9 +18,9 @@ set termguicolors
 
 " Use One Dark/Light Theme
 let g:one_allow_italics = 1
-colorscheme one
+colorscheme dracula
 set background=dark
-let g:airline_theme='one'
+let g:airline_theme='dracula'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 
