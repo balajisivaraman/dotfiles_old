@@ -305,3 +305,8 @@ ansible_hosts
 !.config/systemd/user
 .config/systemd/user/*
 !.config/systemd/user/*.service
+
+# TMUX
+######
+.tmux/plugins/*
+!.tmux/plugins/tpm
