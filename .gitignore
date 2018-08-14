@@ -287,6 +287,7 @@ ansible_hosts
 .config/fish/conf.d/fzf.fish
 !/.config/fish/config.fish
 !/.config/fish/conf.d
+!/.config/fish/fishfile
 
 !.config/.Xresources.d
 !.config/.Xresources.d/*
