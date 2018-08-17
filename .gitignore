@@ -239,6 +239,7 @@ ansible_hosts
 # Dotfiles Gitignore #
 ######################
 .emacs.d
+.atom
 .oh-my-fish
 .vim
 .sh_history
