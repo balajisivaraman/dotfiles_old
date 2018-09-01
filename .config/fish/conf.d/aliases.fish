@@ -1,5 +1,5 @@
 #General
-alias l 'ls -alhFrt'
+alias l 'exa -lart modified --git-ignore'
 
 #Git
 alias g git
