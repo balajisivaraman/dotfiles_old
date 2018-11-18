@@ -309,6 +309,7 @@ ansible_hosts
 !.config/systemd/user/*.service
 app/
 keys/
+.gconf
 
 # TMUX
 ######
