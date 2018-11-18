@@ -13,3 +13,7 @@ alias lb './build_scripts/local_build.sh'
 
 #Vim
 alias v nvim
+
+# Kubernetes
+source ~/.config/fish/conf.d/kubectl_aliases.fish
+
