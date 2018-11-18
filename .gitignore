@@ -307,6 +307,8 @@ ansible_hosts
 !.config/systemd/user
 .config/systemd/user/*
 !.config/systemd/user/*.service
+app/
+keys/
 
 # TMUX
 ######
@@ -319,3 +321,5 @@ ansible_hosts
 .nuget/
 .vsts/
 
+# K8S
+.kube
