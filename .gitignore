@@ -312,3 +312,10 @@ ansible_hosts
 ######
 .tmux/plugins/*
 !.tmux/plugins/tpm
+
+# DotNet
+.Rider2018.2/
+.dotnet/
+.nuget/
+.vsts/
+
