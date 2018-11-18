@@ -6,3 +6,4 @@ set -x PATH ~/bin/ $PATH
 set -x PATH $HOME/.local/bin/ $PATH
 set -x PATH $HOME/.fzf/bin $PATH
 set -x PATH $HOME/.cargo/bin $PATH
+set -x PATH /usr/share/bcc/tools $PATH
