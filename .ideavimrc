@@ -18,8 +18,12 @@ set incsearch " Search incrementally
 set visualbell " Don't beep please
 
 set surround " Surround text with quotes, parens, etc.
+set multiple-cursors " Emulate Vim Multiple Cursor mode
 
 nmap <Enter> :nohlsearch<cr>
+
+" IDE Actions
+nnoremap <Space>fs :action SaveDocument<CR>
 
 " Quickly go to normal mode
 imap fd <esc>
