@@ -796,4 +796,3 @@ alias kgdepwowidesln 'kubectl get deployment --watch -o=wide --show-labels --nam
 alias kgwslowiden 'kubectl get --watch --show-labels -o=wide --namespace'
 alias kgpowslowiden 'kubectl get pods --watch --show-labels -o=wide --namespace'
 alias kgdepwslowiden 'kubectl get deployment --watch --show-labels -o=wide --namespace'
-
