@@ -70,6 +70,9 @@ azScript
 .pEp*
 .pam_environment
 .xinputrc
+.elementary
+.e
+.xscreensaver
 
 #XMonad#
 ########
@@ -326,3 +329,8 @@ keys/
 
 # K8S
 .kube
+
+# Linux Gaming
+.PlayOnLinux/
+.steam*
+PlayOnLinux's virtual drives
