@@ -1,7 +1,0 @@
-rofi.font: xos4 Terminus 12
-rofi.hide-scrollbar: true
-rofi.color-enabled: true
-rofi.color-window: S_base03, S_base01, S_base02
-rofi.color-normal: S_base03, S_base0, S_base03, S_base02, S_base0
-rofi.color-active: S_base03, S_cyan, S_base03, S_base02, S_cyan
-rofi.color-urgent: S_base03, S_red, S_base03, S_base02, S_red

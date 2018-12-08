@@ -1,9 +1,0 @@
-#!/bin/sh
-
-xsettingsd &
-nvidia-settings --load-config-only &
-compton -bCG
-light-locker &
-
-~/bin/wm/init-keyboard
-~/bin/wm/init-wallpaper
