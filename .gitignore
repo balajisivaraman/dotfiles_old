@@ -321,16 +321,24 @@ keys/
 
 # DotNet
 #######
-.Rider2018.2/
+.Rider2018*/
 .dotnet/
 .nuget/
 .vsts/
+.aspnet/
 .templateengine/
+.vscode/
 
 # K8S
+#####
 .kube
 
 # Linux Gaming
+##############
 .PlayOnLinux/
 .steam*
 PlayOnLinux's virtual drives
+
+# Development #
+###############
+Development.*/
