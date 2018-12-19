@@ -342,3 +342,8 @@ PlayOnLinux's virtual drives
 # Development #
 ###############
 Development.*/
+
+# Eta #
+#######
+.eta/
+.etlas/
