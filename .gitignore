@@ -348,3 +348,9 @@ Development.*/
 #######
 .eta/
 .etlas/
+
+# Fish #
+########
+.config/fish/conf.d/fish-ssh-agent_init.fish
+.config/fish/conf.d/fisher.fish
+.config/fish/conf.d/fzf_key_bindings.fish
