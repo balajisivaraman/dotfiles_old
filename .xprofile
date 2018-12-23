@@ -1,3 +1,4 @@
+[[ -f ~/.Xresources ]] && xrdb -I$HOME ~/.Xresources
 owncloud &
 stalonetray &
 ~/bin/wm/init-tilingwm

@@ -1,0 +1,10 @@
+! ------------------------------------------------------------------------------
+! ROFI Color theme
+! ------------------------------------------------------------------------------
+rofi.font: xos4 Terminus 12
+rofi.hide-scrollbar: true
+rofi.color-enabled: true
+rofi.color-window: #44475a, #6272a4, #f1fa8c
+rofi.color-normal: #44475a, #8BE9FD, #44475a, #44475a, #FF7AC6
+rofi.color-active: #f1fa8c, #44475a, #8BE9FD, #44475a, #FF7AC6
+rofi.color-urgent: #f1fa8c, #44475a, #8BE9FD, #44475a, #FF7AC6

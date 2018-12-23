@@ -1,0 +1,2 @@
+#include ".config/.Xresources.d/fonts"
+#include ".config/.Xresources.d/rofi"

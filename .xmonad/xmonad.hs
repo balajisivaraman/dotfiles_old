@@ -16,6 +16,7 @@ import Data.Map (Map)
 
 myTerminal = "alacritty"
 myBrowser = "/opt/firefox-nightly/firefox"
+myLauncher = "rofi -matching fuzzy -modi combi -show combi -combi-modi drun,window"
 
 mySpacing = spacingRaw True (Border 0 10 10 10) True (Border 10 10 10 10) True
 myLayoutHook = noBorders -- Don't want borders
@@ -39,26 +40,42 @@ myWorkspaces = ["web","dev","misc"]
 myKeys :: XConfig l -> Map (KeyMask, KeySym) (X ())
 myKeys c = mkKeymap c $
     [
-    -- Essentials
+    -----------------------------------------------------------
+    -- Launchers
+    -----------------------------------------------------------
       ("M-b", spawn myBrowser)
+    , ("M-<Space>", spawn myLauncher)
     , ("M-<Return>", spawn myTerminal)
-    , ("M-<Backspace>", kill)
-    , ("M-S-r", spawn "xmonad --recompile && xmonad --restart")
 
+    -----------------------------------------------------------
+    -- Layouts
+    -----------------------------------------------------------
+    , ("M-<Tab>", sendMessage NextLayout)
+
+    -----------------------------------------------------------
     -- Navigation
+    -----------------------------------------------------------
     , ("M-j", windows W.focusDown)
     , ("M-k", windows W.focusUp)
 
-    -- Resizing Windows
+    -----------------------------------------------------------
+    -- Scratchpads
+    -----------------------------------------------------------
+    , ("M-p", namedScratchpadAction myScratchpads "keepassxc")
+
+    -----------------------------------------------------------
+    -- System/Utilities
+    -----------------------------------------------------------
+    , ("M-<Backspace>", kill)
+    , ("M-S-r", spawn "xmonad --recompile && xmonad --restart")
+
+    -----------------------------------------------------------
+    -- Window Operations
+    -----------------------------------------------------------
     , ("M-h", sendMessage Shrink)
     , ("M-l", sendMessage Expand)
-
-    -- Moving Windows
     , ("M-S-j", windows W.swapDown)
     , ("M-S-k", windows W.swapUp)
-
-    -- Scratchpads
-    , ("M-p", namedScratchpadAction myScratchpads "keepassxc")
     ]
 
 main = do
