@@ -7,7 +7,10 @@ import XMonad.Layout.Fullscreen (fullscreenSupport)
 import XMonad.Layout.NoBorders (noBorders)
 import XMonad.Layout.Spacing
 import XMonad.Util.EZConfig (additionalKeys)
+import XMonad.Util.NamedScratchpad
 import XMonad.Util.Run (spawnPipe, hPutStrLn)
+
+import Data.List (isInfixOf)
 
 myTerminal = "alacritty"
 myBrowser = "/opt/firefox-nightly/firefox"
@@ -25,6 +28,10 @@ myLogHook h = do
         { ppOutput = hPutStrLn h
         }
 
+myScratchpads = [
+    NS "keepassxc" "keepassxc" (fmap (isInfixOf "KeePassXC") title) defaultFloating
+    ]
+
 myWorkspaces = ["web","dev","misc"]
 
 main = do
@@ -36,12 +43,15 @@ main = do
        $ myConfig xmproc
 
 myConfig p = desktopConfig -- Sets up basic desktop related configuration
-    { modMask = mod4Mask
+    {
+      manageHook = namedScratchpadManageHook myScratchpads
+    , modMask = mod4Mask
     , layoutHook = myLayoutHook
     , logHook = myLogHook p
     , workspaces = myWorkspaces
     } `additionalKeys`
     [ ((mod4Mask, xK_b), spawn myBrowser),
       ((mod4Mask, xK_Return), spawn myTerminal),
-      ((mod4Mask, xK_BackSpace), kill)
+      ((mod4Mask, xK_BackSpace), kill),
+      ((mod4Mask, xK_p), namedScratchpadAction myScratchpads "keepassxc")
     ]
