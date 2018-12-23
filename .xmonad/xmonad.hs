@@ -53,6 +53,10 @@ myKeys c = mkKeymap c $
     , ("M-h", sendMessage Shrink)
     , ("M-l", sendMessage Expand)
 
+    -- Moving Windows
+    , ("M-S-j", windows W.swapDown)
+    , ("M-S-k", windows W.swapUp)
+
     -- Scratchpads
     , ("M-p", namedScratchpadAction myScratchpads "keepassxc")
     ]
