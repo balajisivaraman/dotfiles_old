@@ -6,11 +6,13 @@ import XMonad.Hooks.ManageDocks (avoidStruts, docks)
 import XMonad.Layout.Fullscreen (fullscreenSupport)
 import XMonad.Layout.NoBorders (noBorders)
 import XMonad.Layout.Spacing
-import XMonad.Util.EZConfig (additionalKeys)
+import qualified XMonad.StackSet as W
+import XMonad.Util.EZConfig (mkKeymap)
 import XMonad.Util.NamedScratchpad
 import XMonad.Util.Run (spawnPipe, hPutStrLn)
 
 import Data.List (isInfixOf)
+import Data.Map (Map)
 
 myTerminal = "alacritty"
 myBrowser = "/opt/firefox-nightly/firefox"
@@ -34,6 +36,27 @@ myScratchpads = [
 
 myWorkspaces = ["web","dev","misc"]
 
+myKeys :: XConfig l -> Map (KeyMask, KeySym) (X ())
+myKeys c = mkKeymap c $
+    [
+    -- Essentials
+      ("M-b", spawn myBrowser)
+    , ("M-<Return>", spawn myTerminal)
+    , ("M-<Backspace>", kill)
+    , ("M-S-r", spawn "xmonad --recompile && xmonad --restart")
+
+    -- Navigation
+    , ("M-j", windows W.focusDown)
+    , ("M-k", windows W.focusUp)
+
+    -- Resizing Windows
+    , ("M-h", sendMessage Shrink)
+    , ("M-l", sendMessage Expand)
+
+    -- Scratchpads
+    , ("M-p", namedScratchpadAction myScratchpads "keepassxc")
+    ]
+
 main = do
     xmproc <- spawnPipe myStatusBar
     xmonad
@@ -44,14 +67,10 @@ main = do
 
 myConfig p = desktopConfig -- Sets up basic desktop related configuration
     {
-      manageHook = namedScratchpadManageHook myScratchpads
-    , modMask = mod4Mask
+      keys = myKeys
     , layoutHook = myLayoutHook
     , logHook = myLogHook p
+    , manageHook = namedScratchpadManageHook myScratchpads
+    , modMask = mod4Mask
     , workspaces = myWorkspaces
-    } `additionalKeys`
-    [ ((mod4Mask, xK_b), spawn myBrowser),
-      ((mod4Mask, xK_Return), spawn myTerminal),
-      ((mod4Mask, xK_BackSpace), kill),
-      ((mod4Mask, xK_p), namedScratchpadAction myScratchpads "keepassxc")
-    ]
+    }
