@@ -1,8 +1,5 @@
-{-# LANGUAGE RebindableSyntax #-}
-import XMonad.Config.Prime
-
-import Data.Map (Map)
-import XMonad.Util.EZConfig (additionalKeysP, removeKeysP)
+import XMonad
+import XMonad.Util.EZConfig (additionalKeys)
 
 myTerminal :: String
 myTerminal = "alacritty"
@@ -10,20 +7,10 @@ myTerminal = "alacritty"
 myBrowser :: String
 myBrowser = "/opt/firefox-nightly/firefox"
 
-addKeyBindings :: XConfig l -> XConfig l
-addKeyBindings c = additionalKeysP c
-    [
-      ("M-b", spawn myBrowser)
-    , ("M-<Return>", spawn myTerminal)
-    , ("M-<Backspace>", kill)
-    ]
-
-removeKeyBindings :: XConfig l -> XConfig l
-removeKeyBindings c = removeKeysP c [ "M-S-c" ]
-
-myKeys :: XConfig l -> XConfig l
-myKeys = addKeyBindings . removeKeyBindings
-
-main = xmonad $ do
-    apply $ myKeys
-    modMask =: mod4Mask
+main = xmonad $ def
+     { modMask = mod4Mask
+     } `additionalKeys`
+     [ ((mod4Mask, xK_b), spawn myBrowser),
+       ((mod4Mask, xK_Return), spawn myTerminal),
+       ((mod4Mask, xK_BackSpace), kill)
+     ]
