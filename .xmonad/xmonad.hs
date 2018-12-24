@@ -112,7 +112,8 @@ main = do
 
 myConfig p = desktopConfig -- Sets up basic desktop related configuration
     {
-      handleEventHook = myEventHook
+      borderWidth = 0
+    , handleEventHook = myEventHook
     , keys = myKeys
     , layoutHook = myLayoutHook
     , logHook = myLogHook p
