@@ -1,0 +1,20 @@
+#!/bin/sh
+
+mute_status="$(pamixer --get-mute)"
+volume="$(pamixer --get-volume)"
+
+if [ "${mute_status}" == "true" ]
+then
+    volume=0
+    color="#FF5555"
+    icon=""
+else
+    color="#8BE9FD"
+    case $((volume/50)) in
+        0) icon="" ;; # fa-volume-down f027
+        1) icon="" ;; # fa-volume-up f028
+        *) icon=""; color="#FFB86C" ;; # fa-volume-up f028
+    esac
+fi
+
+echo "<fc=$color><fn=1>$icon</fn> $volume</fc>"

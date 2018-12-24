@@ -9,9 +9,10 @@ Config
     , commands          = [
         Run Date "<fc=#bd93f9><fn=1>\xf073</fn> %a %_d %b %Y | d.%j w.%W</fc>   <fc=#8be9fd><fn=1></fn> %H:%M:%S</fc>" "date" 10
       , Run Com "/bin/bash" ["-c", "~/bin/wm/status-cmus"] "nowplaying" 10
+      , Run Com "/bin/bash" ["-c", "~/bin/wm/status-vol"] "volume" 10
       , Run StdinReader
                           ]
     , sepChar           = "%"
     , alignSep          = "}{"
-    , template          = " %StdinReader% } %nowplaying% { %date% "
+    , template          = " %StdinReader% } %nowplaying% { %volume%  %date% "
     }
