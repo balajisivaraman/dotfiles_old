@@ -5,6 +5,7 @@ import XMonad.Hooks.EwmhDesktops (ewmh, fullscreenEventHook)
 import XMonad.Hooks.ManageDocks (avoidStruts, docks)
 import XMonad.Layout.Fullscreen (fullscreenSupport)
 import XMonad.Layout.NoBorders (noBorders)
+import XMonad.Layout.NoFrillsDecoration
 import XMonad.Layout.Spacing
 import qualified XMonad.StackSet as W
 import XMonad.Util.EZConfig (mkKeymap)
@@ -18,11 +19,27 @@ myTerminal = "alacritty"
 myBrowser = "/opt/firefox-nightly/firefox"
 myLauncher = "rofi -matching fuzzy -modi combi -show combi -combi-modi drun,window"
 
+myFont = "xft:xos4 Terminus:pixelsize=10"
+topBarDracula = def
+    { fontName = myFont
+    , activeColor = "#BD93F9"
+    , activeBorderColor = "#BD93F9"
+    , activeTextColor = "#BD93F9"
+    , inactiveColor = "#6272A4"
+    , inactiveBorderColor = "#6272A4"
+    , inactiveTextColor = "#6272A4"
+    , urgentBorderColor = "#FF5555"
+    , urgentTextColor = "#F8F8F2"
+    , decoHeight = 10
+    }
+addTopBar = noFrillsDeco shrinkText topBarDracula
+
 mySpacing = spacingRaw True (Border 0 10 10 10) True (Border 10 10 10 10) True
-myLayoutHook = noBorders -- Don't want borders
-    $ mySpacing -- Setup 10 spacing as above
+myLayoutHook = addTopBar
     $ avoidStruts -- Needed to ensure XMobar stays on top
-    $ layoutHook def
+    $ mySpacing -- Setup 10 spacing as above
+    $ noBorders -- Don't want borders
+    $ layoutHook desktopConfig
 
 myStatusBar = "xmobar -x1"
 -- Below is needed to ensure content is output to XMobar StdIn
