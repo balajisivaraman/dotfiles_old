@@ -10,7 +10,7 @@ then
     icon=""
 else
     color="#8BE9FD"
-    case $((volume/50)) in
+    case $((volume/40)) in
         0) icon="" ;; # fa-volume-down f027
         1) icon="" ;; # fa-volume-up f028
         *) icon=""; color="#FFB86C" ;; # fa-volume-up f028
