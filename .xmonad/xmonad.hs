@@ -1,7 +1,7 @@
 import XMonad
 import XMonad.Config.Desktop
 import XMonad.Hooks.DynamicLog
-import XMonad.Hooks.EwmhDesktops (ewmh)
+import XMonad.Hooks.EwmhDesktops (ewmh, fullscreenEventHook)
 import XMonad.Hooks.ManageDocks (avoidStruts, docks)
 import XMonad.Layout.Fullscreen (fullscreenSupport)
 import XMonad.Layout.NoBorders (noBorders)
@@ -34,6 +34,13 @@ myLogHook h = do
 myScratchpads = [
     NS "keepassxc" "keepassxc" (fmap (isInfixOf "KeePassXC") title) defaultFloating
     ]
+
+myManageHook =
+        namedScratchpadManageHook myScratchpads
+    <+> manageHook desktopConfig
+
+-- fullscreenEventHook from EWMH module is needed for proper fullscreen behaviour
+myEventHook = handleEventHook def <+> fullscreenEventHook
 
 myWorkspaces = ["web","dev","misc"]
 
@@ -88,10 +95,11 @@ main = do
 
 myConfig p = desktopConfig -- Sets up basic desktop related configuration
     {
-      keys = myKeys
+      handleEventHook = myEventHook
+    , keys = myKeys
     , layoutHook = myLayoutHook
     , logHook = myLogHook p
-    , manageHook = namedScratchpadManageHook myScratchpads
+    , manageHook = myManageHook
     , modMask = mod4Mask
     , workspaces = myWorkspaces
     }
