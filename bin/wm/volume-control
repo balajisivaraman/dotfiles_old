@@ -1,0 +1,28 @@
+#!/usr/bin/env sh
+
+arg="$1"
+amount="$2"
+
+mute_unmute() {
+    mute_status="$(pamixer --get-mute)"
+    if [ "$mute_status" == "true" ]
+    then
+        pamixer -u
+    else
+        pamixer -m
+    fi
+}
+
+inc_volume() {
+    pamixer -i $1
+}
+
+dec_volume() {
+    pamixer -d $1
+}
+
+case $arg in
+    "mute") mute_unmute ;;
+    "inc") inc_volume $amount ;;
+    *) dec_volume $amount ;;
+esac

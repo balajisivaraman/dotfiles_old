@@ -101,6 +101,13 @@ myKeys c = mkKeymap c $
     , ("M-S-r", spawn "xmonad --recompile && xmonad --restart")
 
     -----------------------------------------------------------
+    -- Volume Control
+    -----------------------------------------------------------
+    , ("M-S-.", spawn "~/bin/wm/volume-control inc 5")
+    , ("M-S-,", spawn "~/bin/wm/volume-control dec 5")
+    , ("M-S-m", spawn "~/bin/wm/volume-control mute")
+
+    -----------------------------------------------------------
     -- Window Operations
     -----------------------------------------------------------
     , ("M-h", sendMessage Shrink)
