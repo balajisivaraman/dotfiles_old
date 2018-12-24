@@ -1,4 +1,5 @@
 import XMonad
+import qualified XMonad.Core as XMonad
 import XMonad.Config.Desktop
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.EwmhDesktops (ewmh, fullscreenEventHook)
@@ -13,7 +14,7 @@ import XMonad.Util.NamedScratchpad
 import XMonad.Util.Run (spawnPipe, hPutStrLn)
 
 import Data.List (isInfixOf)
-import Data.Map (Map)
+import Data.Map (Map, union)
 
 myTerminal = "alacritty"
 myBrowser = "/opt/firefox-nightly/firefox"
@@ -114,7 +115,7 @@ myConfig p = desktopConfig -- Sets up basic desktop related configuration
     {
       borderWidth = 0
     , handleEventHook = myEventHook
-    , keys = myKeys
+    , keys = \c -> myKeys c `union` keys XMonad.def c
     , layoutHook = myLayoutHook
     , logHook = myLogHook p
     , manageHook = myManageHook
