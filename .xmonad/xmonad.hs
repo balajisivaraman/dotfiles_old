@@ -49,8 +49,11 @@ myLogHook h = do
         { ppOutput = hPutStrLn h
         }
 
-myScratchpads = [
-    NS "keepassxc" "keepassxc" (fmap (isInfixOf "KeePassXC") title) defaultFloating
+myScratchpads =
+    [
+      NS "keepassxc" "keepassxc" (fmap (isInfixOf "KeePassXC") title) defaultFloating
+    , NS "cmus" "alacritty --title cmus -e cmus" (title =? "cmus")
+        (customFloating $ W.RationalRect (1/6) (1/6) 1 1)
     ]
 
 myManageHook =
@@ -87,6 +90,7 @@ myKeys c = mkKeymap c $
     -- Scratchpads
     -----------------------------------------------------------
     , ("M-p", namedScratchpadAction myScratchpads "keepassxc")
+    , ("M-m", namedScratchpadAction myScratchpads "cmus")
 
     -----------------------------------------------------------
     -- System/Utilities
