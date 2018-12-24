@@ -19,6 +19,7 @@ import Data.Map (Map, union)
 myTerminal = "alacritty"
 myBrowser = "/opt/firefox-nightly/firefox"
 myLauncher = "rofi -matching fuzzy -modi combi -show combi -combi-modi drun,window"
+myDocumentLauncher = "~/bin/wm/document-launcher"
 
 myFont = "xft:xos4 Terminus:pixelsize=10"
 topBarDracula = def
@@ -72,6 +73,7 @@ myKeys c = mkKeymap c $
     -- Launchers
     -----------------------------------------------------------
       ("M-b", spawn myBrowser)
+    , ("M-d", spawn myDocumentLauncher)
     , ("M-<Space>", spawn myLauncher)
     , ("M-<Return>", spawn myTerminal)
 
