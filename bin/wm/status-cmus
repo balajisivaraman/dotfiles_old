@@ -1,0 +1,13 @@
+#!/bin/sh
+
+status="$(cmus-remote -Q 2> /dev/null | grep status | cut -d' ' -f 2)"
+artist="$(cmus-remote -Q 2> /dev/null | grep ' artist ' | awk -F' ' '{for (i=3; i<=NF; i++) print $i}' | xargs)"
+title="$(cmus-remote -Q 2> /dev/null | grep ' title ' | awk -F' ' '{for (i=3; i<=NF; i++) print $i}' | xargs)"
+
+if [ "$status" = "playing" ]; then
+    echo "<fn=1></fn>  $artist - $title"
+elif [ "$status" = "paused" ]; then
+    echo "<fn=1></fn>  $artist - $title"
+else
+    echo "<fn=1></fn>"
+fi
