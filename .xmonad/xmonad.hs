@@ -99,6 +99,7 @@ myKeys c = mkKeymap c $
     -----------------------------------------------------------
     , ("M-<Backspace>", kill)
     , ("M-S-r", spawn "xmonad --recompile && xmonad --restart")
+    , ("M-S-l", spawn "dm-tool lock")
 
     -----------------------------------------------------------
     -- Volume Control
