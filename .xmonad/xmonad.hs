@@ -54,7 +54,9 @@ myScratchpads =
     [
       NS "keepassxc" "keepassxc" (fmap (isInfixOf "KeePassXC") title) defaultFloating
     , NS "cmus" "alacritty --title cmus -e cmus" (title =? "cmus")
-        (customFloating $ W.RationalRect (1/6) (1/6) 1 1)
+        (customFloating $ W.RationalRect (1/6) (1/6) (1/3) (1/3))
+    , NS "thunderbird" "thunderbird" (className =? "Thunderbird")
+        (customFloating $ W.RationalRect (1/8) (1/8) (3/4) (3/4))
     ]
 
 myManageHook =
@@ -93,6 +95,7 @@ myKeys c = mkKeymap c $
     -----------------------------------------------------------
     , ("M-p", namedScratchpadAction myScratchpads "keepassxc")
     , ("M-m", namedScratchpadAction myScratchpads "cmus")
+    , ("M-t", namedScratchpadAction myScratchpads "thunderbird")
 
     -----------------------------------------------------------
     -- System/Utilities
