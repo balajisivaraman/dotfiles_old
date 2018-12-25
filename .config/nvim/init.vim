@@ -54,6 +54,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'dag/vim-fish'
   Plug 'ledger/vim-ledger'
   Plug 'janko-m/vim-test'
+  Plug 'rhysd/vim-wasm'
 
   " NCM2 Sources
   Plug 'ncm2/ncm2-bufword'
