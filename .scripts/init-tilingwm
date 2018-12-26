@@ -1,0 +1,8 @@
+#!/bin/bash
+
+start-pulseaudio-x11 &
+compton -bCG
+
+# Run all my custom scripts
+init-keyboard
+init-wallpaper

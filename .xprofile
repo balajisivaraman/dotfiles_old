@@ -1,4 +1,6 @@
 [[ -f ~/.Xresources ]] && xrdb -I$HOME ~/.Xresources
+[[ -d ~/.scripts ]] && export PATH=~/.scripts:${PATH}
+
 owncloud &
 stalonetray &
-~/bin/wm/init-tilingwm
+init-tilingwm

@@ -1,6 +1,0 @@
-#!/bin/bash
-
-start-pulseaudio-x11 &
-~/bin/wm/init-keyboard
-compton -bCG
-~/bin/wm/init-wallpaper

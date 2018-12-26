@@ -19,7 +19,7 @@ import Data.Map (Map, union)
 myTerminal = "alacritty"
 myBrowser = "/opt/firefox-nightly/firefox"
 myLauncher = "rofi -matching fuzzy -modi combi -show combi -combi-modi drun,window"
-myDocumentLauncher = "~/bin/wm/document-launcher"
+myDocumentLauncher = "document-launcher"
 
 myFont = "xft:xos4 Terminus:pixelsize=10"
 topBarDracula = def
@@ -107,9 +107,9 @@ myKeys c = mkKeymap c $
     -----------------------------------------------------------
     -- Volume Control
     -----------------------------------------------------------
-    , ("M-S-.", spawn "~/bin/wm/volume-control inc 5")
-    , ("M-S-,", spawn "~/bin/wm/volume-control dec 5")
-    , ("M-S-m", spawn "~/bin/wm/volume-control mute")
+    , ("M-S-.", spawn "volume-control inc 5")
+    , ("M-S-,", spawn "volume-control dec 5")
+    , ("M-S-m", spawn "volume-control mute")
 
     -----------------------------------------------------------
     -- Window Operations
