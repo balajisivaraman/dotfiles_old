@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+
+mount_path="/run/media/$USER/"
+path_to_unmount=$(exa -1d $mount_path/* | rofi -dmenu -i -p "Unmount Path > ")
+udiskie-umount "$path_to_unmount"

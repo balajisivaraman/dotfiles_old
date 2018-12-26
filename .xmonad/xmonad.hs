@@ -103,6 +103,7 @@ myKeys c = mkKeymap c $
     , ("M-<Backspace>", kill)
     , ("M-S-r", spawn "xmonad --recompile && xmonad --restart")
     , ("M-S-l", spawn "dm-tool lock")
+    , ("M-S-u", spawn "rofi-unmount")
 
     -----------------------------------------------------------
     -- Volume Control

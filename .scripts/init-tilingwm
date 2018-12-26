@@ -1,5 +1,6 @@
 #!/bin/bash
 
+udiskie &
 start-pulseaudio-x11 &
 compton -bCG
 
