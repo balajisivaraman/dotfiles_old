@@ -1,3 +1,4 @@
 #include ".config/.Xresources.d/dracula"
 #include ".config/.Xresources.d/fonts"
 #include ".config/.Xresources.d/rofi"
+#include ".config/.Xresources.d/urxvt"

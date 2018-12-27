@@ -53,8 +53,8 @@ myLogHook h = do
 myScratchpads =
     [
       NS "keepassxc" "keepassxc" (fmap (isInfixOf "KeePassXC") title) defaultFloating
-    , NS "cmus" "alacritty --title cmus -e cmus" (title =? "cmus")
-        (customFloating $ W.RationalRect (1/6) (1/6) (1/3) (1/3))
+    , NS "cmus" "urxvt -name cmus -e cmus" (appName =? "cmus")
+        (customFloating $ W.RationalRect (1/8) (1/8) (3/4) (3/4))
     , NS "thunderbird" "thunderbird" (className =? "Thunderbird")
         (customFloating $ W.RationalRect (1/8) (1/8) (3/4) (3/4))
     ]
