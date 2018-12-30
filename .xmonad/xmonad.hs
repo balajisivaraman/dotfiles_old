@@ -57,6 +57,8 @@ myScratchpads =
         (customFloating $ W.RationalRect (1/8) (1/8) (3/4) (3/4))
     , NS "thunderbird" "thunderbird" (className =? "Thunderbird")
         (customFloating $ W.RationalRect (1/8) (1/8) (3/4) (3/4))
+    , NS "emacs-tasks" "emacs-tasks" (appName =? "emacs-tasks")
+        (customFloating $ W.RationalRect (1/8) (1/8) (3/4) (3/4))
     ]
 
 myManageHook =
@@ -96,6 +98,7 @@ myKeys c = mkKeymap c $
     , ("M-p", namedScratchpadAction myScratchpads "keepassxc")
     , ("M-m", namedScratchpadAction myScratchpads "cmus")
     , ("M-t", namedScratchpadAction myScratchpads "thunderbird")
+    , ("M-s", namedScratchpadAction myScratchpads "emacs-tasks")
 
     -----------------------------------------------------------
     -- System/Utilities

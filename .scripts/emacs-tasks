@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+
+set -e
+
+emacs -Q -l "~/.emacs.d/init-tasks.el" --name emacs-tasks --title emacs-tasks
