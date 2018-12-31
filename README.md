@@ -72,7 +72,7 @@ have used it to automate a few workflows.
   displays additional Rofi menus or performs some action.
 
 I can see many more uses for Rofi and think it'll become a mainstay of
-my workflow in years to come.
+my workflow for years to come.
 
 # Utility Scripts
 
