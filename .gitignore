@@ -305,6 +305,7 @@ ansible_hosts
 !.config/nvim/init.vim
 !.config/nvim/config
 !.config/polybar
+!.config/zathura
 
 !.config/systemd
 .config/systemd/*

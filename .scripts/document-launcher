@@ -4,4 +4,4 @@ set -e
 
 file_name=$(fd -FaLp 'pdf' ~/Documents/ | rofi -dmenu -i -p "Open File > ")
 rofi_exit=$?
-xdg-open "$file_name"
+zathura "$file_name"
