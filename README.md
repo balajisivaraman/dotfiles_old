@@ -59,7 +59,7 @@ displayed on the far right using
 I absolutely love [Rofi](https://github.com/DaveDavenport/rofi/) and
 have used it to automate a few workflows.
 
-- [App Launcher/Desktop Switcher](.xmonad/xmonad.hs#L22) - This is
+- [App Launcher/Desktop Switcher](.xmonad/xmonad.hs#L21) - This is
   directly configured in XMonad and bound to `Mod+Space`, similar to
   how Alfred would be on OSX.
 - [Document Launcher](.scripts/document-launcher) - This uses the
