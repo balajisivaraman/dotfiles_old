@@ -41,7 +41,7 @@ In particular, you will be able to see the following idiosyncrasies:
 # XMobar
 
 My XMobar configuration was also inspired by the Ethan Schoonover
-linked to above. There's nothing particularly fancy about it.
+video linked to above. There's nothing particularly fancy about it.
 
 - Left Side: XMonad status piped in from stdin
 - Middle: Status of my music retrieved using the [status-cmus](.scripts/status-cmus) script
