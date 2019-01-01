@@ -7,7 +7,7 @@ Config
     , allDesktops       = True
     , alpha             = 255
     , commands          = [
-        Run Date "<fc=#bd93f9><fn=1>\xf073</fn> %a %_d %b %Y | d.%j w.%V</fc>   <fc=#8be9fd><fn=1></fn> %H:%M:%S</fc>" "date" 10
+        Run Date "<fc=#bd93f9><fn=1>\xf073</fn> %a%_d %b %Y | d.%j w.%V</fc>   <fc=#8be9fd><fn=1></fn> %H:%M:%S</fc>" "date" 10
       , Run Com "status-cmus" [] "nowplaying" 10
       , Run Com "status-vol" [] "volume" 10
       , Run StdinReader
