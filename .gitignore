@@ -148,6 +148,7 @@ Google Drive
 /tmp
 /.ssh
 /.bin
+/bin
 /.ICEauthority
 /*audacity*
 /.qt
@@ -161,6 +162,9 @@ gPodder/
 snap
 Templates
 .vscode*/
+Nextcloud/
+opt/
+.docker/
 
 #X-Related#
 ###########
