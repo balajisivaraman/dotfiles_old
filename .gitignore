@@ -115,6 +115,7 @@ azScript
 .cvecheck
 .oracle_jre_usage
 .neo4j_shell_history
+.IdeaIC2018.2/
 
 #MacOSX#
 ########
@@ -165,6 +166,7 @@ Templates
 Nextcloud/
 opt/
 .docker/
+syncthing/
 
 #X-Related#
 ###########
