@@ -2,6 +2,6 @@
 
 set -e
 
-file_name=$(fd -FaLp 'pdf' ~/Documents/ | rofi -dmenu -i -p "Open File > ")
+file_name=$(fd -FaLp '' ~/Documents/ | rofi -dmenu -i -p "Open File > ")
 rofi_exit=$?
-zathura "$file_name"
+mimeo "$file_name"
