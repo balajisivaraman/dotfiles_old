@@ -16,10 +16,10 @@ EOF
 cat > $XKBDIR/symbols/custom << EOF
 default partial
 xkb_symbols "hypers" {
+    key <TAB> { [ Hyper_L, Hyper_L ] };
     key <BKSL> { [ Hyper_R, Hyper_R ] };
-    key <AB10> { [ Hyper_L, Hyper_L ] };
+    key <I252> { [ Tab,	ISO_Left_Tab ] };
     key <I253> { [ backslash, bar ] };
-    key <I252> { [ slash, question ] };
     modifier_map Mod4 { Super_L, Super_R, Hyper_L, Hyper_R };
 };
 EOF
