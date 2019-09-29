@@ -167,6 +167,7 @@ Nextcloud/
 opt/
 .docker/
 syncthing/
+.texlive/
 
 #X-Related#
 ###########
