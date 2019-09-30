@@ -1,0 +1,3 @@
+#!/usr/bin/env fish
+
+run_all git pull --rebase --autostash

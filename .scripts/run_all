@@ -1,0 +1,12 @@
+#!/usr/bin/env fish
+
+set cmd $argv
+
+for dir in */
+    pushd $dir
+        if test -d .git
+            echo "Pulling latest code in $dir"
+            eval $cmd
+        end
+    popd
+end
