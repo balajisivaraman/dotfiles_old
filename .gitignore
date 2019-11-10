@@ -325,8 +325,7 @@ keys/
 
 # TMUX
 ######
-.tmux/plugins/*
-!.tmux/plugins/tpm
+.tmux/
 
 # DotNet
 #######
