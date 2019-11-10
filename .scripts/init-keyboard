@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 DISPLAY=:0
 XKBDIR=/tmp/xkb
@@ -21,10 +21,6 @@ xkb_symbols "local" {
     key <I252> { [ Tab,	ISO_Left_Tab ] };
     key <I253> { [ backslash, bar ] };
     modifier_map Mod4 { Super_L, Super_R, Hyper_L, Hyper_R };
-
-    key <RTRN> { [ Control_R ] };
-    key <I254> { [ Return ] };
-    modifier_map Control { Control_R };
 };
 EOF
 
