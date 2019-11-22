@@ -20,8 +20,7 @@ let g:vim_bootstrap_editor = "nvim"
 call plug#begin('~/.config/nvim/plugged')
   " User Interface
   Plug 'srcery-colors/srcery-vim'
-  Plug 'vim-airline/vim-airline'
-  Plug 'vim-airline/vim-airline-themes'
+  Plug 'itchyny/lightline.vim'
 
   "Editing
   Plug 'scrooloose/nerdcommenter'
@@ -33,57 +32,26 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'justinmk/vim-sneak'
   Plug 'easymotion/vim-easymotion'
   Plug 'thinca/vim-visualstar'
-  Plug 'Shougo/neosnippet'
-  Plug 'Shougo/neosnippet-snippets'
   Plug 'honza/vim-snippets'
 
   " Git/VCS
   Plug 'airblade/vim-gitgutter'
 
   " Languages
-  Plug 'vim-syntastic/syntastic'
   Plug 'rust-lang/rust.vim'
-  Plug 'autozimu/LanguageClient-neovim', {
-    \ 'branch': 'next',
-    \ 'do': 'bash install.sh',
-    \ }
-  Plug 'roxma/nvim-yarp'
-  Plug 'ncm2/ncm2'
   Plug 'Shougo/echodoc.vim'
   Plug 'cespare/vim-toml'
   Plug 'dag/vim-fish'
-  Plug 'ledger/vim-ledger'
-  Plug 'janko-m/vim-test'
-  Plug 'rhysd/vim-wasm'
 
-  " NCM2 Sources
-  Plug 'ncm2/ncm2-bufword'
-  Plug 'ncm2/ncm2-tmux'
-  Plug 'ncm2/ncm2-path'
-
-  " NeoVim Sources for NCM2
-  Plug 'Shougo/neco-vim'
-  Plug 'ncm2/ncm2-vim'
-
-  " FZF
-  if isdirectory('/usr/local/opt/fzf')
-    Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
-  else
-    Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
-    Plug 'junegunn/fzf.vim'
-  endif
+  " Skim
+  Plug 'lotabout/skim', { 'dir': '~/.skim', 'do': './install' }
+  Plug 'lotabout/skim.vim'
 call plug#end()
 
 " Source custom configuration files
 source ~/.config/nvim/config/base.vim
 source ~/.config/nvim/config/user-interface.vim
 source ~/.config/nvim/config/editing.vim
-source ~/.config/nvim/config/fzf.vim
-source ~/.config/nvim/config/syntax-checkers.vim
+source ~/.config/nvim/config/skim.vim
 source ~/.config/nvim/config/bindings.vim
-source ~/.config/nvim/config/snippets.vim
-source ~/.config/nvim/config/functions.vim
-source ~/.config/nvim/config/rust.vim
-source ~/.config/nvim/config/test.vim
-source ~/.config/nvim/config/ncm2.vim
 

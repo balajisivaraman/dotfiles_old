@@ -64,6 +64,7 @@ azScript
 .proselint
 .pylint.d
 .fzf
+.skim
 .zoom/
 .sudo_as_admin_successful
 .citrix

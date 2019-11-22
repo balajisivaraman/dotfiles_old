@@ -16,13 +16,13 @@
 " Enable Truecolor support
 set termguicolors
 
-" Use One Dark/Light Theme
+" Use Srcery Theme
 let g:one_allow_italics = 1
 colorscheme srcery
 set background=dark
-let g:airline_theme='srcery'
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_powerline_fonts = 1
+let g:lightline = {
+      \ 'colorscheme': 'srcery',
+      \ }
 
 " Basic UI Settings
 set relativenumber  " Show relative line numbers
