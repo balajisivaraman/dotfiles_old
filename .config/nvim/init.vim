@@ -19,7 +19,7 @@ let g:vim_bootstrap_editor = "nvim"
 " Required:
 call plug#begin('~/.config/nvim/plugged')
   " User Interface
-  Plug 'srcery-colors/srcery-vim'
+  Plug 'dracula/vim'
   Plug 'itchyny/lightline.vim'
 
   "Editing
