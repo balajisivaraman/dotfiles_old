@@ -32,10 +32,16 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'justinmk/vim-sneak'
   Plug 'easymotion/vim-easymotion'
   Plug 'thinca/vim-visualstar'
+  Plug 'MarcWeber/vim-addon-mw-utils'
+  Plug 'tomtom/tlib_vim'
+  Plug 'garbas/vim-snipmate'
   Plug 'honza/vim-snippets'
 
   " Git/VCS
   Plug 'airblade/vim-gitgutter'
+
+  " COC
+  Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
 
   " Languages
   Plug 'rust-lang/rust.vim'
@@ -54,4 +60,6 @@ source ~/.config/nvim/config/user-interface.vim
 source ~/.config/nvim/config/editing.vim
 source ~/.config/nvim/config/skim.vim
 source ~/.config/nvim/config/bindings.vim
+source ~/.config/nvim/config/coc.vim
+source ~/.config/nvim/config/rust.vim
 
