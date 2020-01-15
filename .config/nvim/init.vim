@@ -19,7 +19,7 @@ let g:vim_bootstrap_editor = "nvim"
 " Required:
 call plug#begin('~/.config/nvim/plugged')
   " User Interface
-  Plug 'dracula/vim'
+  Plug 'haishanh/night-owl.vim'
   Plug 'itchyny/lightline.vim'
 
   "Editing
