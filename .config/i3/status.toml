@@ -19,19 +19,19 @@ block = "focused_window"
 max_width = 100
 
 [[block]]
-block = "memory"
-display_type = "memory"
-format_mem = "{Mup}%"
-format_swap = "{SUp}%"
+block = "music"
+buttons = ["play", "next"]
+max_width = 50
 
 [[block]]
-block = "cpu"
-interval = 1
+block = "bluetooth"
+mac = "78:DB:2F:DF:48:78"
+label = "AnnePro2"
 
 [[block]]
-block = "load"
-interval = 1
-format = "{1m}"
+block = "bluetooth"
+mac = "4C:87:5D:C9:56:56"
+label = "QC-35"
 
 [[block]]
 block = "sound"
