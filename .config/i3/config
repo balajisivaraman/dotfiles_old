@@ -18,7 +18,6 @@ exec --no-startup-id /usr/lib/gnome-settings-daemon/gsd-xsettings
 exec_always --no-startup-id gnome-power-manager
 
 # scratchpads
-# scratchpads
 exec --no-startup-id keepassxc
 for_window [instance="keepassxc"] floating enable;
 for_window [instance="keepassxc"] move scratchpad; [instance="keepassxc"] scratchpad show; move position 80px 50px; move scratchpad
@@ -30,6 +29,7 @@ set $mod Mod4
 # Basic Variables
 set $terminal alacritty
 set $browser /opt/firefox/firefox
+set $launcher "rofi -matching fuzzy -modi combi -show combi -combi-modi drun,window"
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -58,7 +58,7 @@ bindsym $mod+b exec $browser
 bindsym $mod+BackSpace kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run
+bindsym $mod+space exec $launcher
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -106,7 +106,7 @@ bindsym $mod+e layout toggle split
 bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+# bindsym $mod+space focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
