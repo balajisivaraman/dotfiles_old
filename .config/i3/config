@@ -30,6 +30,7 @@ set $mod Mod4
 set $terminal alacritty
 set $browser /opt/firefox/firefox
 set $launcher "rofi -matching fuzzy -modi combi -show combi -combi-modi drun,window"
+set $documentLauncher "document-launcher"
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -59,6 +60,10 @@ bindsym $mod+BackSpace kill
 
 # start dmenu (a program launcher)
 bindsym $mod+space exec $launcher
+
+# start document launcher
+bindsym $mod+d exec $documentLauncher
+
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
