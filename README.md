@@ -13,46 +13,20 @@ I find that using a single colorscheme across all my tools including
 my Window manager gives a uniform look and feel to my entire desktop
 experience.
 
-# XMonad
+# i3
 
-After a brief tryst with i3 (and Gnome), I moved back to XMonad as my
-primary window manager in late 2018. My
-[configuration](.xmonad/xmonad.hs) does not represent close to the
-full powers of XMonad, but I hope it still highlights how configurable
-it truly is.
+After various attempts to setup XMonad, I moved to i3 (with Gnome) as
+my primary window manager in early 2020. My
+[configuration](.config/i3/config) does not represent close to the
+full powers of i3, but I hope it still highlights how configurable it
+truly is.
 
-In particular, you will be able to see the following idiosyncrasies:
+# i3status-rust
 
-- Use a
-  [NoFrillsDecoration](https://hackage.haskell.org/package/xmonad-contrib-0.15/docs/XMonad-Layout-NoFrillsDecoration.html)
-  titlebar without the text instead of a border to highlight currently
-  active window. (This idea was taken from Ethan Schoonover's
-  wonderful XMonad
-  [demo](https://www.youtube.com/watch?v=70IxjLEmomg), which is highly
-  recommended to get an understanding of the customisability of XMonad.)
-- Setup a few
-  [NamedScratchpad](https://hackage.haskell.org/package/xmonad-contrib-0.15/docs/XMonad-Util-NamedScratchpad.html#t:NamedScratchpads)'s
-  that I use on a day-to-day basis (mail reader, password manager,
-  music player etc.)
-- Pipe XMonad status to XMobar's stdin. This gives us useful
-  information such as workspaces opened and currently in use, window
-  title of the current window etc.
-
-# XMobar
-
-My XMobar configuration was also inspired by the Ethan Schoonover
-video linked to above. There's nothing particularly fancy about it.
-
-- Left Side: XMonad status piped in from stdin
-- Middle: Status of my music retrieved using the [status-cmus](.scripts/status-cmus) script
-- Right:
-  - Volume information retrieved using the [status-vol](.scripts/status-vol) script
-  - Date and Time information output using XMobar itself
-
-In addition to the above, tray icons (currently only Owncloud) are
-displayed on the far right using
-[Stalonetray](http://stalonetray.sourceforge.net/), configured
-[here](.stalonetrayrc).
+There's nothing particularly fancy about my
+[i3status-rust](https://github.com/greshake/i3status-rust)
+[configuration](.config/i3/status.toml), but I do think it's better
+and easier to configure than the standard i3bar.
 
 # Rofi
 
