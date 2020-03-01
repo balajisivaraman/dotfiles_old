@@ -7,3 +7,9 @@ alias rs 'rails server'
 
 #Vim
 alias v nvim
+
+#TMux
+alias tmux 'tmux -u'
+
+#Generali
+alias lb './scripts/local_build.sh'
