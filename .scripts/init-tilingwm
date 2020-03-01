@@ -1,7 +1,5 @@
 #!/bin/bash
 
-udiskie &
-start-pulseaudio-x11 &
 compton -bCG
 
 # Run all my custom scripts
