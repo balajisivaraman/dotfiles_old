@@ -34,6 +34,21 @@ mac = "4C:87:5D:C9:56:56"
 label = "QC-35"
 
 [[block]]
+block = "net"
+device = "wlp1s0"
+ssid = true
+signal_strength = false
+ip = false
+speed_up = false
+speed_down = false
+graph_up = false
+graph_down = false
+interval = 5
+use_bits = false
+hide_missing = true
+hide_inactive = true
+
+[[block]]
 block = "sound"
 
 [[block]]
