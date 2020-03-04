@@ -36,6 +36,7 @@ label = "QC-35"
 [[block]]
 block = "net"
 device = "wlp1s0"
+device = "enp3s0"
 ssid = true
 signal_strength = false
 ip = false
@@ -46,7 +47,7 @@ graph_down = false
 interval = 5
 use_bits = false
 hide_missing = true
-hide_inactive = true
+hide_inactive = false
 
 [[block]]
 block = "sound"
