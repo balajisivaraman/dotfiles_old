@@ -164,18 +164,17 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 
-mode "exit: [l]ock, l[o]gout, [r]eboot, s[u]spend, [s]hutdown" {
-  bindsym l exec i3lockr --brighten 30 --blur 25 -- --nofork --ignore-empty-password
-  bindsym o exec i3-msg exit
-  bindsym r exec systemctl reboot
-  bindsym u exec systemctl suspend
-  bindsym s exec systemctl shutdown
+set $exit_launcher "Exit: [l]ock, l[o]gout, [r]eboot, s[u]spend, [s]hutdown"
+mode $exit_launcher {
+  bindsym l exec i3lockr --brighten 30 --blur 25 -- --nofork --ignore-empty-password ; mode "default"
+  bindsym o exec i3-msg exit ; mode "default"
+  bindsym r exec systemctl reboot ; mode "default"
+  bindsym u exec systemctl suspend ; mode "default"
+  bindsym s exec systemctl shutdown ; mode "default"
   bindsym Escape mode "default"
   bindsym Return mode "default"
 }
-
-# exit i3 (logs you out of your X session)
-bindsym $mod+x mode "exit: [l]ock, l[o]gout, [r]eboot, s[u]spend, [s]hutdown"
+bindsym $mod+x mode $exit_launcher
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
