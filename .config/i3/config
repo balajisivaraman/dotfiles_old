@@ -25,6 +25,9 @@ for_window [instance="keepassxc"] floating enable;
 for_window [instance="keepassxc"] move scratchpad; [instance="keepassxc"] scratchpad show; move position 80px 50px; move scratchpad
 bindsym $mod+p [instance="keepassxc"] scratchpad show, resize set 1200 650
 
+# enable floating for certain windows
+for_window [class="Nightly" title="Library"] floating enable
+
 # Set Modifier Key
 set $mod Mod4
 
