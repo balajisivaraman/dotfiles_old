@@ -50,6 +50,11 @@ hide_missing = true
 hide_inactive = false
 
 [[block]]
+block = "weather"
+format = "{weather} ({location}) {temp}°, {wind} m/s {direction}"
+service = { name = "openweathermap", api_key = "XXX", city_id = "1264527", units = "metric" }
+
+[[block]]
 block = "sound"
 
 [[block]]
