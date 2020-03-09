@@ -9,6 +9,10 @@ set $launcher "rofi -matching fuzzy -modi combi -show combi -combi-modi drun,win
 set $documentLauncher "document-launcher"
 
 smart_borders on
+smart_gaps on
+gaps inner 10
+hide_edge_borders smart_no_gaps
+for_window [class="^.*"] border pixel 2
 
 # Integration with Gnome I3
 exec --no-startup-id /usr/lib/gnome-settings-daemon/gsd-xsettings
