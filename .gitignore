@@ -170,6 +170,7 @@ opt/
 syncthing/
 .texlive/
 .electron-gyp/
+.joplin/
 
 #X-Related#
 ###########
