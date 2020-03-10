@@ -238,7 +238,7 @@ client.background       #F8F8F2
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-    font pango:SF Pro Display, FontAwesome 10
+    font pango:TamzenForPowerline, FontAwesome 12
     position top
     status_command /usr/bin/i3status-rs ~/.config/i3/status.toml
     colors {
