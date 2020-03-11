@@ -7,6 +7,7 @@ alias rs 'rails server'
 
 #Vim
 alias v nvim
+alias vim nvim
 
 #TMux
 alias tmux 'tmux -u'
