@@ -36,7 +36,6 @@ exec --no-startup-id joplin-desktop
 for_window [class="Joplin"] floating enable;
 for_window [class="Joplin"] move scratchpad; [class="Joplin"] scratchpad show; move position 80px 50px; move scratchpad
 bindsym $mod+n [class="Joplin"] scratchpad show, resize set 1800 1000
-exec --no-startup-id slack
 for_window [class="Slack"] floating enable;
 for_window [class="Slack"] move scratchpad; [class="Slack"] scratchpad show; move position 50px 40px; move scratchpad
 bindsym $mod+m [class="Slack"] scratchpad show, resize set 1800 1000
