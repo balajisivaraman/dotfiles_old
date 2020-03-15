@@ -136,6 +136,7 @@ Software/
 *.DS_Store
 Google Drive
 .cisco/
+.bash_sessions
 
 #Linux#
 #######
