@@ -55,7 +55,7 @@ set $right semicolon
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec $terminal
+bindsym $mod+KP_Enter exec $terminal
 
 # start browser
 bindsym $mod+b exec $browser
