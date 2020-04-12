@@ -14,12 +14,6 @@ gaps inner 10
 hide_edge_borders smart_no_gaps
 for_window [class="^.*"] border pixel 2
 
-# Integration with Gnome I3
-exec --no-startup-id /usr/lib/gnome-settings-daemon/gsd-xsettings
-exec_always --no-startup-id gnome-power-manager
-exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec --no-startup-id gnome-flashback
-
 # Startup
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lockr --brighten 30 --blur 25 -- --nofork --ignore-empty-password
 
