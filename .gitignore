@@ -142,6 +142,9 @@ Google Drive
 #######
 /.Skype*
 /.local*
+!/.local*/
+!/.local/share
+!/.local/bin
 /.Xauthority
 /*spell*
 /*gstreamer*
