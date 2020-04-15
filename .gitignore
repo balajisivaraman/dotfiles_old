@@ -143,7 +143,9 @@ Google Drive
 /.Skype*
 /.local*
 !/.local*/
-!/.local/share
+/.local/share/*
+!/.local/share/applications/reboot.desktop
+!/.local/share/applications/shutdown.desktop
 !/.local/bin
 /.Xauthority
 /*spell*
