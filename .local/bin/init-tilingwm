@@ -1,6 +1,7 @@
 #!/bin/bash
 
 compton -bCG
+nextcloud &
 
 # Run all my custom scripts
 init-keyboard
