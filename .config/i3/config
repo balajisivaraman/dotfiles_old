@@ -69,6 +69,9 @@ bindsym $mod+space exec $launcher
 # start document launcher
 bindsym $mod+d exec $documentLauncher
 
+# bluetooth selector
+bindsym $mod+Shift+b exec --no-startup-id rofi-bluetooth
+
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
