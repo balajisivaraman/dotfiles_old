@@ -329,6 +329,9 @@ ansible_hosts
 !.config/systemd/user
 .config/systemd/user/*
 !.config/systemd/user/*.service
+
+!.config/i3/
+
 app/
 keys/
 .gconf
