@@ -2,6 +2,7 @@
 
 compton -bCG
 nextcloud &
+dunst &
 
 # Run all my custom scripts
 init-keyboard

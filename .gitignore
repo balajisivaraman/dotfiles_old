@@ -331,6 +331,7 @@ ansible_hosts
 !.config/systemd/user/*.service
 
 !.config/i3/
+!.config/dunst/
 
 app/
 keys/
