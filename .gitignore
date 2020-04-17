@@ -317,10 +317,9 @@ ansible_hosts
 !.config/fontconfig
 
 !.config/nvim
+.config/nvim/plugged
+.config/nvim/.netrwhist
 !.config/alacritty
-.config/nvim/*
-!.config/nvim/init.vim
-!.config/nvim/config
 !.config/polybar
 !.config/zathura
 
@@ -379,3 +378,7 @@ Development.*/
 # Kotlin #
 ##########
 /.kotlinc_history
+
+# Golang #
+##########
+/go
