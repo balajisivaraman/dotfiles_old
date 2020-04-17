@@ -1,6 +1,5 @@
 
 set wildmode=list:longest,list:full
-let $SKIM_DEFAULT_COMMAND = 'rg --files --hidden --follow --glob "!.git/*"'
 let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --follow --glob "!.git/*"'
 set grepprg=rg\ --vimgrep
 
@@ -35,7 +34,7 @@ endfunction
 
 function! s:btags()
   try
-    call skim#run({
+    call fzf#run({
     \ 'source':  s:btags_source(),
     \ 'options': '+m -d "\t" --with-nth 1,4.. -n 1 --tiebreak=index',
     \ 'down':    '40%',

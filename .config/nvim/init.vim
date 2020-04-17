@@ -50,15 +50,15 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'dag/vim-fish'
 
   " Skim
-  Plug 'lotabout/skim', { 'dir': '~/.skim', 'do': './install' }
-  Plug 'lotabout/skim.vim'
+  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+  Plug 'junegunn/fzf.vim'
 call plug#end()
 
 " Source custom configuration files
 source ~/.config/nvim/config/base.vim
 source ~/.config/nvim/config/user-interface.vim
 source ~/.config/nvim/config/editing.vim
-source ~/.config/nvim/config/skim.vim
+source ~/.config/nvim/config/fzf.vim
 source ~/.config/nvim/config/bindings.vim
 source ~/.config/nvim/config/coc.vim
 source ~/.config/nvim/config/rust.vim
