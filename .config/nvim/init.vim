@@ -48,6 +48,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'Shougo/echodoc.vim'
   Plug 'cespare/vim-toml'
   Plug 'dag/vim-fish'
+  Plug 'fatih/vim-go'
 
   " Skim
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -62,4 +63,5 @@ source ~/.config/nvim/config/fzf.vim
 source ~/.config/nvim/config/bindings.vim
 source ~/.config/nvim/config/coc.vim
 source ~/.config/nvim/config/rust.vim
+source ~/.config/nvim/config/go.vim
 
