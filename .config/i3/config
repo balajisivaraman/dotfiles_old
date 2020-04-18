@@ -183,7 +183,7 @@ mode $exit_launcher {
   bindsym o exec i3-msg exit ; mode "default"
   bindsym r exec systemctl reboot ; mode "default"
   bindsym u exec systemctl suspend ; mode "default"
-  bindsym s exec systemctl shutdown ; mode "default"
+  bindsym s exec shutdown -h now ; mode "default"
   bindsym Escape mode "default"
   bindsym Return mode "default"
 }
