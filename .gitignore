@@ -228,6 +228,7 @@ syncthing/
 .cabal/
 .cabal.bak/
 .stack/
+!.stack/global-project/stack.yaml
 .ghc-mod
 .elm
 .psci_modules

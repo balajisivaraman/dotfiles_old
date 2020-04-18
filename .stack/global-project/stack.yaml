@@ -1,6 +1,5 @@
 flags: {}
 extra-package-dbs: []
 packages: []
-extra-deps:
-- githud-2.0.2
-resolver: lts-11.9
+extra-deps: []
+resolver: lts-15.8
