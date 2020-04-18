@@ -1,2 +1,3 @@
 auto-reload "yes"
 cache-file "/media/backup/Nextcloud/Newsboat/cache.db"
+browser "/opt/firefox/firefox %u"
