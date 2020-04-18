@@ -320,6 +320,7 @@ ansible_hosts
 !.config/alacritty
 !.config/polybar
 !.config/zathura
+!.config/newsboat
 
 !.config/systemd
 .config/systemd/*
