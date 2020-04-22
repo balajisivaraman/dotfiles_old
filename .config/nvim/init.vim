@@ -36,6 +36,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'tomtom/tlib_vim'
   Plug 'garbas/vim-snipmate'
   Plug 'honza/vim-snippets'
+  Plug 'editorconfig/editorconfig-vim'
 
   " Git/VCS
   Plug 'airblade/vim-gitgutter'
