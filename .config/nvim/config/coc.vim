@@ -155,6 +155,8 @@ let g:coc_global_extensions = [
     \'coc-neosnippet',
     \'coc-tsserver',
     \'coc-vimlsp',
+    \'coc-yank',
 \]
 
 autocmd CursorHold * silent call CocActionAsync('highlight')
+nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<cr>
