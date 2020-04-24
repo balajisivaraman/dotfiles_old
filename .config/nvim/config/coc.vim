@@ -147,9 +147,11 @@ nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 let g:coc_global_extensions = [
     \'coc-angular',
     \'coc-css',
+    \'coc-cssmodules',
     \'coc-html',
     \'coc-json',
     \'coc-prettier',
     \'coc-neosnippet',
     \'coc-tsserver',
+    \'coc-vimlsp',
 \]
