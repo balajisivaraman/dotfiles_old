@@ -6,5 +6,6 @@
       "filetypes": ["go"]
     }
   },
-  "coc.preferences.formatOnSaveFiletypes": ["css",  "markdown",  "scss", "html", "typescript"]
+  "coc.preferences.formatOnSaveFiletypes": ["css",  "markdown",  "scss", "html", "typescript"],
+  "coc.preferences.colorSupport": true
 }

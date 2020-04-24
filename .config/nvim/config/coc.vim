@@ -148,6 +148,7 @@ let g:coc_global_extensions = [
     \'coc-angular',
     \'coc-css',
     \'coc-cssmodules',
+    \'coc-highlight',
     \'coc-html',
     \'coc-json',
     \'coc-prettier',
@@ -155,3 +156,5 @@ let g:coc_global_extensions = [
     \'coc-tsserver',
     \'coc-vimlsp',
 \]
+
+autocmd CursorHold * silent call CocActionAsync('highlight')
