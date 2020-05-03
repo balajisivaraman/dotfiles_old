@@ -1,0 +1,9 @@
+[username]
+show_always=true
+
+[hostname]
+ssh_only = false
+prefix = "⟪"
+suffix = "⟫"
+trim_at = ".companyname.com"
+disabled = false
