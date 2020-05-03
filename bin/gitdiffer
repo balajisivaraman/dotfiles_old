@@ -1,0 +1,7 @@
+#!/bin/sh
+
+if cmd-exists delta; then
+  exec delta --theme Dracula
+else
+  exec less
+fi
