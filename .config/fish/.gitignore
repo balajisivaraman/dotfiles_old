@@ -1,0 +1,5 @@
+/completions
+/conf.d/*ssh*.fish
+/conf.d/fzf*.fish
+/fish_variables
+/functions
