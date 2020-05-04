@@ -2,6 +2,7 @@
 /cmus
 /coc
 /configstore
+/containers
 /dconf
 /fisher
 /google-chrome
@@ -15,3 +16,6 @@
 /pulse
 /QtProject.conf
 /VSCodium
+
+# osx - to be removed once we get rid of it
+karabiner
