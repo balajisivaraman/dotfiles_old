@@ -17,8 +17,14 @@ set hlsearch " Highlight last search results
 set incsearch " Search incrementally
 set visualbell " Don't beep please
 
+let mapleader=" "
+
 set surround " Surround text with quotes, parens, etc.
 set multiple-cursors " Emulate Vim Multiple Cursor mode
+set easymotion
+set commentary
+
+set clipboard+=unnamed
 
 nmap <Enter> :nohlsearch<cr>
 
