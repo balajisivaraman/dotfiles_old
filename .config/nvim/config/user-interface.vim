@@ -17,11 +17,10 @@
 set termguicolors
 
 " Use Srcery Theme
-let g:one_allow_italics = 1
-colorscheme dracula
+colorscheme srcery
 set background=dark
 let g:lightline = {
-      \ 'colorscheme': 'dracula',
+      \ 'colorscheme': 'srcery',
       \ }
 
 " Basic UI Settings
