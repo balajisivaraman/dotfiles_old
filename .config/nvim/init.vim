@@ -49,6 +49,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'cespare/vim-toml'
   Plug 'dag/vim-fish'
   Plug 'fatih/vim-go'
+  Plug 'mboughaba/i3config.vim'
 
   " Skim
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
