@@ -3,16 +3,6 @@
 Welcome to my dot files. Feel free to browse around or peruse this
 README file, where I have explained my configuration and workflows.
 
-# Color Scheme
-
-One thing you will observe as you go through my configurations is that
-I use is that I use [Dracula](https://draculatheme.com/) as my
-colorscheme everywhere.
-
-I find that using a single colorscheme across all my tools including
-my Window manager gives a uniform look and feel to my entire desktop
-experience.
-
 # i3
 
 After various attempts to setup XMonad, I moved to i3 (with Gnome) as
