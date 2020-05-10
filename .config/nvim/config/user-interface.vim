@@ -28,6 +28,7 @@ set relativenumber  " Show relative line numbers
 set number          " Show absolute number on current line
 set colorcolumn=80  " ruler at 80 chars width
 set cursorline      " Highlight current line
+highlight Normal guibg=none " Transparent background
 
 " Navigation
 set scrolloff=3 " some lines around scroll for context
