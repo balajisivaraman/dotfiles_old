@@ -74,3 +74,6 @@ nnoremap <C-H> <C-W><C-H>
 nnoremap <C-Down> <C-W><C-J>
 nnoremap <C-Up> <C-W><C-K>
 nnoremap <C-Right> <C-W><C-L>
+
+" Gundo
+nnoremap <Leader>u :GundoToggle<CR>

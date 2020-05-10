@@ -36,6 +36,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'Shougo/neosnippet.vim'
   Plug 'Shougo/neosnippet-snippets'
   Plug 'editorconfig/editorconfig-vim'
+  Plug 'sjl/gundo.vim'
 
   " Git/VCS
   Plug 'airblade/vim-gitgutter'
