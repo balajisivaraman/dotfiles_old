@@ -51,6 +51,9 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'dag/vim-fish'
   Plug 'fatih/vim-go'
   Plug 'mboughaba/i3config.vim'
+  Plug 'martinda/Jenkinsfile-vim-syntax'
+  Plug 'stephpy/vim-yaml'
+  Plug 'ekalinin/Dockerfile.vim'
 
   " Skim
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
