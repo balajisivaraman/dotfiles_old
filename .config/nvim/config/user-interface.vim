@@ -37,3 +37,5 @@ set scrolloff=3 " some lines around scroll for context
 au FileType vim setlocal textwidth=80
 au FileType markdown setlocal textwidth=80
 
+map <C-n> :NERDTreeToggle %<CR>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif

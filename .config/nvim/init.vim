@@ -22,6 +22,11 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'srcery-colors/srcery-vim'
   Plug 'itchyny/lightline.vim'
 
+  " File Management
+  Plug 'preservim/nerdtree'
+  Plug 'Xuyuanp/nerdtree-git-plugin'
+  Plug 'ryanoasis/vim-devicons'
+
   "Editing
   Plug 'scrooloose/nerdcommenter'
   Plug 'ntpeters/vim-better-whitespace'
