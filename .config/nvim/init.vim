@@ -26,6 +26,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'preservim/nerdtree'
   Plug 'Xuyuanp/nerdtree-git-plugin'
   Plug 'ryanoasis/vim-devicons'
+  Plug 'qpkorr/vim-renamer'
 
   "Editing
   Plug 'scrooloose/nerdcommenter'
