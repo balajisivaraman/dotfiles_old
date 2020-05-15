@@ -27,4 +27,4 @@ set shiftwidth=4
 set expandtab
 
 " Cleanup whitespace on save
-au BufEnter * EnableStripWhitespaceOnSave
+let g:strip_whitespace_on_save = 1
