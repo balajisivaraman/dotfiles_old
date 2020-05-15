@@ -55,7 +55,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'stephpy/vim-yaml'
   Plug 'ekalinin/Dockerfile.vim'
 
-  " Skim
+  " FZF
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
 
