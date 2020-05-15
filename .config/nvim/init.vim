@@ -22,12 +22,6 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'srcery-colors/srcery-vim'
   Plug 'itchyny/lightline.vim'
 
-  " File Management
-  Plug 'preservim/nerdtree'
-  Plug 'Xuyuanp/nerdtree-git-plugin'
-  Plug 'ryanoasis/vim-devicons'
-  Plug 'qpkorr/vim-renamer'
-
   "Editing
   Plug 'scrooloose/nerdcommenter'
   Plug 'ntpeters/vim-better-whitespace'
@@ -64,6 +58,12 @@ call plug#begin('~/.config/nvim/plugged')
   " Skim
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
+
+  " File Management
+  Plug 'preservim/nerdtree'
+  Plug 'Xuyuanp/nerdtree-git-plugin'
+  Plug 'ryanoasis/vim-devicons'
+  Plug 'qpkorr/vim-renamer'
 call plug#end()
 
 " Source custom configuration files
