@@ -32,13 +32,6 @@ nnoremap <silent> <leader>fR :source ~/.config/nvim/init.vim<cr>
 nnoremap <silent> <leader>ff :Files<cr>
 nnoremap <silent> <leader>fs :w<cr>
 
-" Git
-nmap gp <Plug>GitGutterPrevHunk
-nmap gn <Plug>GitGutterNextHunk
-nmap ga <Plug>GitGutterStageHunk
-nmap gr <Plug>GitGutterUndoHunk
-nmap gv <Plug>GitGutterPreviewHunk
-
 " Buffers
 nnoremap <silent> <leader>bd :bd<cr>
 nnoremap <silent> <leader>bb :Buffers<cr>
@@ -77,3 +70,9 @@ nnoremap <C-Right> <C-W><C-L>
 
 " Gundo
 nnoremap <Leader>u :GundoToggle<CR>
+
+" Easy Align
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)

@@ -34,11 +34,12 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'Shougo/neosnippet-snippets'
   Plug 'editorconfig/editorconfig-vim'
   Plug 'sjl/gundo.vim'
+  Plug 'junegunn/vim-easy-align'
 
   " Git/VCS
   Plug 'airblade/vim-gitgutter'
 
-  " COC
+  " General Purpose
   Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
 
   " Languages
