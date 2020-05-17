@@ -16,11 +16,11 @@
 " Enable Truecolor support
 set termguicolors
 
-" Use Srcery Theme
-colorscheme srcery
+" Use One Dark Theme
+colorscheme onedark
 set background=dark
 let g:lightline = {
-      \ 'colorscheme': 'srcery',
+      \ 'colorscheme': 'onedark',
       \ }
 
 " Basic UI Settings
