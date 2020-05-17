@@ -7,5 +7,11 @@
     }
   },
   "coc.preferences.formatOnSaveFiletypes": ["css",  "markdown",  "scss", "html", "typescript"],
-  "coc.preferences.colorSupport": true
+  "coc.preferences.colorSupport": true,
+  "explorer.width": 40,
+  "explorer.icon.enableNerdfont": true,
+  "explorer.icon.enableVimDevicons": true,
+  "explorer.file.autoReveal": true,
+  "explorer.file.showHiddenFiles": true,
+  "explorer.previewAction.onHover": false
 }

@@ -148,6 +148,7 @@ let g:coc_global_extensions = [
     \'coc-angular',
     \'coc-css',
     \'coc-cssmodules',
+    \'coc-explorer',
     \'coc-highlight',
     \'coc-html',
     \'coc-json',
@@ -161,3 +162,8 @@ let g:coc_global_extensions = [
 
 autocmd CursorHold * silent call CocActionAsync('highlight')
 nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<cr>
+
+" Coc Explorer
+:nmap <space>fe :CocCommand explorer<CR>
+autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
+
