@@ -31,6 +31,7 @@
 /.local
 /.ssh
 /.stack
+/.thunderbird
 /.tmux
 /.vim
 /.viminfo
