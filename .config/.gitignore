@@ -16,6 +16,7 @@
 /Nextcloud
 /pulse
 /QtProject.conf
+/systemd/user/default.target.wants/
 /VSCodium
 
 # osx - to be removed once we get rid of it
