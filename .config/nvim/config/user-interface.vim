@@ -15,6 +15,8 @@
 
 " Enable Truecolor support
 set termguicolors
+" Do not show mode since we're using Lightline
+set noshowmode
 
 " Use One Dark Theme
 colorscheme onedark
