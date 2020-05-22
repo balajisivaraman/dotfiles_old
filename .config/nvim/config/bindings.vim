@@ -78,3 +78,5 @@ nnoremap <Leader>u :GundoToggle<CR>
 xmap ga <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
+
+let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']

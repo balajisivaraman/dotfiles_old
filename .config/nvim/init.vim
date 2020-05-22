@@ -35,6 +35,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'editorconfig/editorconfig-vim'
   Plug 'sjl/gundo.vim'
   Plug 'junegunn/vim-easy-align'
+  Plug 'unblevable/quick-scope'
 
   " Git/VCS
   Plug 'airblade/vim-gitgutter'
