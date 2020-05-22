@@ -13,5 +13,6 @@
   "explorer.icon.enableVimDevicons": true,
   "explorer.file.autoReveal": true,
   "explorer.file.showHiddenFiles": true,
-  "explorer.previewAction.onHover": false
+  "explorer.previewAction.onHover": false,
+  "rust-analyzer.serverPath": "~/bin/rust-analyzer-wrapper"
 }
