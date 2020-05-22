@@ -23,10 +23,10 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'itchyny/lightline.vim'
 
   "Editing
-  Plug 'scrooloose/nerdcommenter'
-  Plug 'ntpeters/vim-better-whitespace'
+  Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-surround'
   Plug 'tpope/vim-unimpaired'
+  Plug 'ntpeters/vim-better-whitespace'
   Plug 'jiangmiao/auto-pairs'
   Plug 'easymotion/vim-easymotion'
   Plug 'thinca/vim-visualstar'
