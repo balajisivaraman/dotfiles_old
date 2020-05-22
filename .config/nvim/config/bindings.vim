@@ -17,6 +17,8 @@
 imap fd <Esc>
 " Enter clears searches. Nifty trick borrowed from Gary Bernhardt.
 nmap <Enter> :nohlsearch<cr>
+" Alias semicolon in normal to colon
+nmap ; :
 
 let mapleader = ' '
 let maplocalleader = ','
