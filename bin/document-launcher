@@ -4,4 +4,4 @@ set -e
 
 file_name=$(fd -FaLp '' ~/Documents/ | rofi -dmenu -i -p "Open File > ")
 rofi_exit=$?
-mimeopen "$file_name"
+mimeopen -n "$file_name"
