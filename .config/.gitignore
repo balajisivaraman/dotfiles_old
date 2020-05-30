@@ -21,6 +21,7 @@
 /pulse
 /QtProject.conf
 /systemd/user/default.target.wants/
+/user-dirs*
 /VSCodium
 
 # osx - to be removed once we get rid of it
