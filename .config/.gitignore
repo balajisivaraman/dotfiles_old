@@ -4,11 +4,14 @@
 /configstore
 /containers
 /dconf
+/evolution
 /fisher
+/gnome-control-center
 /google-chrome
 /GIMP
 /gtk-2.0
 /gtk-3.0
+/gtk-4.0
 /Joplin
 /joplin-desktop
 /keepassxc
