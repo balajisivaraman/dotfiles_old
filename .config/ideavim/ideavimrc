@@ -29,7 +29,11 @@ set clipboard+=unnamed
 nmap <Enter> :nohlsearch<cr>
 
 " IDE Actions
-nnoremap <Space>fs :action SaveDocument<CR>
+nnoremap <Leader>ff :action GotoFile<CR>
+nnoremap <Leader>bf :action RecentFiles<CR>
+nnoremap <Leader>fs :action SaveDocument<CR>
+nnoremap <Leader>fR :source ~/.config/ideavim/ideavimrc<CR>
+nnoremap <Leader>bd :action CloseContent<CR>
 
 " Quickly go to normal mode
 imap fd <esc>
