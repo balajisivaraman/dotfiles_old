@@ -1,4 +1,5 @@
 # top-level hidden files/directories
+/.aws
 /.bash_history
 /.bash_logout
 /.bash_sessions
@@ -15,6 +16,7 @@
 /.gradle
 !/.gnupg/gpg-agent.conf
 /.gtk-bookmarks
+/.k9s
 /.kube
 /.lesshst
 /.m2
@@ -23,8 +25,10 @@
 /.node_path
 /.node_repl_history
 /.npm
+/.npmrc
 /.nv
 /.nvm
+/.org-roam.db
 /.pki
 /.profile
 /.rustup
