@@ -42,6 +42,8 @@
 /.vscode-oss
 /.xsession-errors*
 /.Xauthority
+/.zotero
+/Zotero
 
 # top-level directories
 /code

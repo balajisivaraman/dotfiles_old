@@ -20,6 +20,7 @@
 /Nextcloud
 /pulse
 /QtProject.conf
+/Slack
 /systemd/user/default.target.wants/
 /user-dirs*
 /VSCodium
