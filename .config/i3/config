@@ -34,14 +34,10 @@ exec --no-startup-id thunderbird
 for_window [class="Thunderbird"] floating enable;
 for_window [class="Thunderbird"] move scratchpad; [class="Thunderbird"] scratchpad show; move position 80px 50px; move scratchpad
 bindsym $mod+t [class="Thunderbird"] scratchpad show, resize set 1600 950
-exec --no-startup-id joplin-desktop
-for_window [class="Joplin"] floating enable;
-for_window [class="Joplin"] move scratchpad; [class="Joplin"] scratchpad show; move position 80px 50px; move scratchpad
-bindsym $mod+Shift+n [class="Joplin"] scratchpad show, resize set 1800 1000
-exec --no-startup-id "alacritty -t 'newsboat' --class 'newsboat' -e newsboat"
-for_window [instance="newsboat"] floating enable;
-for_window [instance="newsboat"] move scratchpad; [instance="newsboat"] scratchpad show; move position 80px 50px; move scratchpad
-bindsym $mod+n [instance="newsboat"] scratchpad show, resize set 1800 1000
+exec --no-startup-id slack
+for_window [class="Slack"] floating enable;
+for_window [class="Slack"] move scratchpad; [class="Slack"] scratchpad show; move position 80px 50px; move scratchpad
+bindsym $mod+m [class="Slack"] scratchpad show, resize set 1800 1000
 
 # enable floating for certain windows
 for_window [class="Nightly" title="Library"] floating enable
