@@ -14,3 +14,6 @@ alias tmux 'tmux -u'
 
 #Generali
 alias lb './scripts/local_build.sh'
+
+#Emacs
+alias e 'emacsclient -n -q -u'
