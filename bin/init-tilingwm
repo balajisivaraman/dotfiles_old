@@ -1,6 +1,6 @@
 #!/bin/bash
 
-compton -bCG
+picom -bCG --config /home/balaji/.config/picom/config
 nextcloud &
 dunst &
 
