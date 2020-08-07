@@ -61,3 +61,5 @@
     prune = true
 [remote "upstream"]
     prune = true
+[pull]
+	ff = only
