@@ -13,7 +13,7 @@ smart_borders on
 smart_gaps on
 gaps inner 10
 hide_edge_borders smart_no_gaps
-for_window [class="^.*"] border pixel 1
+for_window [class="^.*"] border pixel 2
 
 # Startup
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lockr --brighten 30 --blur 25 -- --nofork --ignore-empty-password
