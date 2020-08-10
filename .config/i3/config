@@ -42,6 +42,9 @@ bindsym $mod+m [class="Slack"] scratchpad show, resize set 1800 1000
 # enable floating for certain windows
 for_window [class="Nightly" title="Library"] floating enable
 
+# settings
+focus_follows_mouse no
+
 # Set Modifier Key
 set $mod Mod4
 
@@ -238,4 +241,3 @@ client.unfocused        #282C34 #222222 #888888 #292d2e   #222222
 client.urgent           #2f343a #E06C76 #ABB2BF #E06C76   #E06C76
 client.placeholder      #000000 #0c0c0c #ABB2BF #000000   #0c0c0c
 client.background       #ABB2BF
-
