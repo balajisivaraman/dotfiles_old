@@ -20,7 +20,9 @@
 /menus
 /mimeapps.list
 /Nextcloud
-/pulse
+!/pulse
+/pulse/*
+!/pulse/default.pa
 /QtProject.conf
 /Slack
 /systemd/user/default.target.wants/
