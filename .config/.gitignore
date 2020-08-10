@@ -24,6 +24,7 @@
 /QtProject.conf
 /Slack
 /systemd/user/default.target.wants/
+/systemd/user/timers.target.wants/
 /user-dirs*
 /VSCodium
 
