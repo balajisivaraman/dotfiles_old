@@ -3,6 +3,7 @@
 picom -bCG --config /home/balaji/.config/picom/config
 nextcloud &
 dunst &
+udiskie --tray &
 
 # Run all my custom scripts
 init-keyboard
