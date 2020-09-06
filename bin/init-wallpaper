@@ -1,3 +1,3 @@
 #!/bin/sh
 
-feh --bg-fill --randomize /media/Media/Wallpapers
+feh --bg-fill --randomize /media/backup/Nextcloud/Wallpapers
