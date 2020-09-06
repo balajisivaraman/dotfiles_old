@@ -34,8 +34,8 @@ bindsym $mod+p [instance="keepassxc"] scratchpad show, resize set 1000 650
 exec --no-startup-id thunderbird
 for_window [class="Thunderbird"] floating enable;
 for_window [class="Thunderbird"] move position 80px 50px;
-for_window [class="Thunderbird" title="^Inbox"] move scratchpad;
-bindsym $mod+t [class="Thunderbird" title="^Inbox"] scratchpad show, resize set 1600 950
+for_window [class="Thunderbird" instance="Mail"] move scratchpad;
+bindsym $mod+t [class="Thunderbird" instance="Mail"] scratchpad show, resize set 1600 950
 exec --no-startup-id slack
 for_window [class="Slack"] floating enable;
 for_window [class="Slack"] move scratchpad; [class="Slack"] scratchpad show; move position 80px 50px; move scratchpad
