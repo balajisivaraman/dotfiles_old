@@ -5,6 +5,7 @@
 /.bash_sessions
 /.cache
 /.cargo
+/.dbus
 /.dmrc
 /.docker
 /.electron-gyp
@@ -18,8 +19,10 @@
 /.gtk-bookmarks
 /.k9s
 /.kube
+/.landscape
 /.lesshst
 /.m2
+/.motd_shown
 /.mozilla
 /.NERDTreeBookmarks
 /.node_path
@@ -35,11 +38,14 @@
 /.local
 /.ssh
 /.stack
+/.sudo_as_admin_successful
 /.thunderbird
 /.tmux
+/.vscode-server
 /.vim
 /.viminfo
 /.vscode-oss
+/.wget-hsts
 /.xsession-errors*
 /.Xauthority
 /.zotero
