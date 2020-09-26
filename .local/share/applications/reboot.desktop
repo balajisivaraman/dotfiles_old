@@ -1,9 +1,0 @@
-[Desktop Entry]
-Version=1.0
-Name=Reboot
-Comment=Restarts the system
-Exec=bash -c 'reboot'
-Icon=utilities-terminal
-Terminal=true 
-Type=Application
-Categories=Application;

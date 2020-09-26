@@ -1,9 +1,0 @@
-[Desktop Entry]
-Version=1.0
-Name=Shutdown
-Comment=Shuts down the system immediately
-Exec=bash -c 'shutdown -h now'
-Icon=utilities-terminal
-Terminal=true 
-Type=Application
-Categories=Application;
