@@ -42,7 +42,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'airblade/vim-gitgutter'
 
   " General Purpose
-  Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
   " Languages
   Plug 'rust-lang/rust.vim'
