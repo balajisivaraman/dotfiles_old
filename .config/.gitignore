@@ -19,7 +19,9 @@
 /keepassxc
 /menus
 /mimeapps.list
+/nautilus
 /Nextcloud
+/pipewire-media-session
 !/pulse
 /pulse/*
 !/pulse/default.pa
@@ -28,6 +30,7 @@
 /systemd/user/default.target.wants/
 /systemd/user/timers.target.wants/
 /user-dirs*
+/VIA
 /VSCodium
 
 # osx - to be removed once we get rid of it
