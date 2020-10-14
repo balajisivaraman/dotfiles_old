@@ -3,7 +3,6 @@ show_always=true
 
 [hostname]
 ssh_only = false
-prefix = "⟪"
-suffix = "⟫"
+format = "⟪[$hostname]($style)⟫ "
 trim_at = ".companyname.com"
 disabled = false
