@@ -1,28 +1,28 @@
 #!/bin/bash
 
-DISPLAY=:0
-XKBDIR=/tmp/xkb
-[ -d ${XKBDIR}/symbols ] || mkdir -p ${XKBDIR}/{keymap,symbols}
+reset_kbd () {
+  local xcape_cnt=$(pgrep xcape | wc -l)
 
-cat > $XKBDIR/keymap/custom.xkb << EOF
-xkb_keymap {
-	xkb_keycodes  { include "evdev+aliases(qwerty)"	};
-	xkb_types     { include "complete" };
-	xkb_compat    { include "complete" };
-	xkb_symbols   { include "pc+us+inet(evdev)+custom(local)" };
-};
-EOF
+  echo "  - reset_kbd"
+  echo "  - killing $xcape_cnt instances of xcape"
+  setxkbmap -layout us
+  killall xcape
+}
 
-cat > $XKBDIR/symbols/custom << EOF
-default partial
-xkb_symbols "local" {
-    key <TAB> { [ Hyper_L, Hyper_L ] };
-    key <BKSL> { [ Hyper_R, Hyper_R ] };
-    key <I252> { [ Tab,	ISO_Left_Tab ] };
-    key <I253> { [ backslash, bar ] };
-    modifier_map Mod4 { Super_L, Super_R, Hyper_L, Hyper_R };
-};
-EOF
+backslash_to_super() {
+    xmodmap -e "keycode 51 = Hyper_L"
+    xmodmap -e "keycode any = backslash bar"
+    xcape -e "Hyper_L=backslash|bar"
+}
 
-xkbcomp -synch -w3 -I$XKBDIR $XKBDIR/keymap/custom.xkb $DISPLAY &>/dev/null
-(exec pkill -x xcape)
+slash_to_super() {
+    xmodmap -e "keycode 61 = Super_R"
+    xmodmap -e "keycode any = slash question"
+    xcape -e "Super_R=slash|question"
+}
+
+reset_kbd
+slash_to_super
+backslash_to_super
+
+notify-send "Keyboard Configured/Reset"
