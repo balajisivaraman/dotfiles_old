@@ -6,6 +6,7 @@
 /dconf
 /evolution
 /fisher
+/gnome-boxes
 /gnome-control-center
 /google-chrome
 /GIMP
@@ -17,6 +18,7 @@
 /Joplin
 /joplin-desktop
 /keepassxc
+/libvirt
 /menus
 /mimeapps.list
 /nautilus
