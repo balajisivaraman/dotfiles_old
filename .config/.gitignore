@@ -9,12 +9,14 @@
 /gnome-boxes
 /gnome-control-center
 /google-chrome
+/google-chrome-unstable
 /GIMP
 /gtk-2.0
 !/gtk-3.0
 /gtk-3.0/*
 !/gtk-3.0/settings.ini
 /gtk-4.0
+/htop
 /Joplin
 /joplin-desktop
 /keepassxc
