@@ -20,10 +20,10 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lockr --brighten 30 --b
 exec_always --no-startup-id launch_polybar.sh
 
 # i3-gnome
-exec --no-startup-id /usr/lib/gsd-xsettings
-exec_always --no-startup-id gnome-power-manager
-exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec --no-startup-id gnome-flashback
+# exec --no-startup-id /usr/lib/gsd-xsettings
+# exec_always --no-startup-id gnome-power-manager
+# exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+# exec --no-startup-id gnome-flashback
 
 # scratchpads
 exec --no-startup-id keepassxc
