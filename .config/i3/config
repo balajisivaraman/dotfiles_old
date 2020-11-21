@@ -215,6 +215,8 @@ bindsym $mod+shift+period exec "volume-control inc 5"
 bindsym $mod+shift+comma exec "volume-control dec 5"
 bindsym $mod+shift+m exec "volume-control mute"
 
+bindsym Print exec "flameshot gui"
+
 ################
 #ONE DARK THEME#
 ################
