@@ -54,6 +54,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'martinda/Jenkinsfile-vim-syntax'
   Plug 'stephpy/vim-yaml'
   Plug 'ekalinin/Dockerfile.vim'
+  Plug 'lervag/vimtex'
 
   " FZF
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
