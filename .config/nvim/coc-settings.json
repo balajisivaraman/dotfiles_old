@@ -10,9 +10,17 @@
       "args": ["start"],
       "filetypes": ["sh"],
       "ignoredRootPaths": ["~"]
+    },
+    "golang": {
+      "command": "gopls",
+      "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
+      "filetypes": ["go"],
+      "initializationOptions": {
+        "usePlaceholders": true
+      }
     }
   },
-  "coc.preferences.formatOnSaveFiletypes": ["css",  "markdown",  "scss", "html", "typescript"],
+  "coc.preferences.formatOnSaveFiletypes": ["css",  "markdown",  "scss", "html", "typescript", "go"],
   "coc.preferences.colorSupport": true,
   "explorer.width": 40,
   "explorer.icon.enableNerdfont": true,
