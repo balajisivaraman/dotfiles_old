@@ -18,6 +18,7 @@
 /.gradle
 !/.gnupg/gpg-agent.conf
 /.gtk-bookmarks
+/.java
 /.k9s
 /.kube
 /.landscape
