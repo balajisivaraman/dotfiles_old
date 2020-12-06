@@ -21,6 +21,7 @@ call plug#begin('~/.config/nvim/plugged')
   " User Interface
   Plug 'joshdick/onedark.vim'
   Plug 'itchyny/lightline.vim'
+  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
   "Editing
   Plug 'tpope/vim-commentary'
