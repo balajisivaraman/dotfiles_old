@@ -5,6 +5,7 @@ nextcloud &
 dunst &
 udiskie --tray &
 flameshot &
+lxsession &
 
 # Run all my custom scripts
 init-keyboard
