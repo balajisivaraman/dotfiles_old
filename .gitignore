@@ -41,6 +41,7 @@
 /.ssh
 /.stack
 /.sudo_as_admin_successful
+/.thumbnails
 /.thunderbird
 /.tmux
 /.vscode-server
