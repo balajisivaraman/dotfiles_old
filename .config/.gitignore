@@ -24,6 +24,7 @@
 /joplin-desktop
 /keepassxc
 /libfm
+/libreoffice
 /libvirt
 /menus
 /mimeapps.list
@@ -36,6 +37,7 @@
 /pulse/*
 !/pulse/default.pa
 /QtProject.conf
+/Signal
 /Slack
 /systemd/user/default.target.wants/
 /systemd/user/timers.target.wants/
