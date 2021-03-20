@@ -47,6 +47,7 @@
 /.vscode-server
 /.vim
 /.viminfo
+/VirtualBox VMs
 /.vscode-oss
 /.wget-hsts
 /.xsession-errors*

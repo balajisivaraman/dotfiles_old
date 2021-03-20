@@ -43,6 +43,7 @@
 /systemd/user/timers.target.wants/
 /user-dirs*
 /VIA
+/VirtualBox
 /vlc
 /VSCodium
 
