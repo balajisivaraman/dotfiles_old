@@ -217,13 +217,23 @@ bindsym $mod+shift+m exec "volume-control mute"
 
 bindsym Print exec "flameshot gui"
 
+set $bg #282828
+set $red #cc241d
+set $green #98971a
+set $yellow #d79921
+set $blue #458588
+set $purple #b16286
+set $aqua #689d68
+set $gray #a89984
+set $darkgray #1d2021
+
 ################
 #ONE DARK THEME#
 ################
-# Window borders        #border #BG     #Text   #Indic.   #Child Border
-client.focused          #56B6C2 #61AFEF #ABB2BF #56B6C2   #61AFEF
-client.focused_inactive #282C34 #5f676a #ABB2BF #484e50   #ABB2BF
-client.unfocused        #282C34 #222222 #888888 #292d2e   #222222
-client.urgent           #2f343a #E06C76 #ABB2BF #E06C76   #E06C76
-client.placeholder      #000000 #0c0c0c #ABB2BF #000000   #0c0c0c
-client.background       #ABB2BF
+# Window borders        #border    #BG        #Text      #Indic.   #Child Border
+client.focused          $blue      $blue      $darkgray  $purple   $blue
+client.focused_inactive $darkgray  $darkgray  $yellow    $purple   $darkgray
+client.unfocused        $darkgray  $darkgray  $yellow    $purple   $darkgray
+client.urgent           $darkgray  $red       $darkgray  $red      $red
+client.placeholder      #000000    #0c0c0c    $darkgray  #000000   #0c0c0c
+client.background       $darkgray

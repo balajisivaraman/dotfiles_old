@@ -10,17 +10,17 @@
 
 * {
   black:      #000000;
-  red:        #eb6e67;
-  green:      #95ee8f;
-  yellow:     #f8c456;
-  blue:       #6eaafb;
-  mangenta:   #d886f3;
-  cyan:       #6cdcf7;
-  emphasis:   #50536b;
-  text:       #dfdfdf;
-  text-alt:   #b2b2b2;
-  fg:         #abb2bf;
-  bg:         #282c34;
+  red:        #CC241D;
+  green:      #98971A;
+  yellow:     #D79921;
+  blue:       #458588;
+  mangenta:   #B16286;
+  cyan:       #689D6A;
+  emphasis:   #928374;
+  text:       #EBDBB2;
+  text-alt:   #BDAE93;
+  fg:         #A89984;
+  bg:         #282828;
 
   spacing: 0;
   background-color: transparent;
@@ -32,7 +32,7 @@
 window {
   transparency: "real";
   fullscreen: true;
-  background-color: #282c34dd;
+  background-color: #282828dd;
 }
 
 mainbox {
