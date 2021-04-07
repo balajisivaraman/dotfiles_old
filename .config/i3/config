@@ -40,6 +40,10 @@ exec --no-startup-id slack
 for_window [class="Slack"] floating enable;
 for_window [class="Slack"] move scratchpad; [class="Slack"] scratchpad show; move position 80px 50px; move scratchpad
 bindsym $mod+m [class="Slack"] scratchpad show, resize set 1800 1000
+exec --no-startup-id emacs-tasks
+for_window [instance="emacs-tasks"] floating enable;
+for_window [instance="emacs-tasks"] move scratchpad; [instance="emacs-tasks"] scratchpad show; move position 800px 200px; move scratchpad
+bindsym $mod+o [instance="emacs-tasks"] scratchpad show, resize set 1800 1000
 
 # enable floating for certain windows
 for_window [class="Nightly" title="Library"] floating enable
