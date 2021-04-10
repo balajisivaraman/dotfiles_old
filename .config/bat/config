@@ -1,6 +1,5 @@
-# Set the theme to Dracula
---theme="gruvbox-dark"
+# Set the theme to Modus Operandi
+--theme="Modus Operandi"
 
 # Show line numbers, Git modifications and file header (but no grid)
 --style="numbers,changes,header"
-
