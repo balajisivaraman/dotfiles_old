@@ -11,12 +11,13 @@ my primary window manager in early 2020. My
 full powers of i3, but I hope it still highlights how configurable it
 truly is.
 
-# i3status-rust
+# Polybar
 
 There's nothing particularly fancy about my
-[i3status-rust](https://github.com/greshake/i3status-rust)
-[configuration](.config/i3/status.toml), but I do think it's better
-and easier to configure than the standard i3bar.
+[Polybar](https://github.com/polybar/polybar)
+[configuration](.config/polybar/config.ini), but I do think it's
+better and easier to configure over standard i3 bars mainly due to its
+out of the box tray integration.
 
 # Rofi
 
