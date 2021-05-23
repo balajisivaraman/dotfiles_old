@@ -151,6 +151,7 @@ nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
 let g:coc_global_extensions = [
     \'coc-angular',
+    \'coc-clangd',
     \'coc-css',
     \'coc-cssmodules',
     \'coc-explorer',
