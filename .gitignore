@@ -3,6 +3,7 @@
 /.bash_history
 /.bash_logout
 /.bash_sessions
+/.cabal
 /.cache
 /.cargo
 /.dbus
@@ -13,6 +14,7 @@
 /.fehbg
 /.fnm
 /.ghc
+/.ghcup
 /.gnome
 /.gnupg
 /.gradle
@@ -34,6 +36,7 @@
 /.nv
 /.nvm
 /.org-roam.db
+/.orhc-bibtex-cache
 /.pki
 /.profile
 /.rustup
