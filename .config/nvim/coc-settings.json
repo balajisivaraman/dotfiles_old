@@ -13,6 +13,12 @@
       "initializationOptions": {
         "usePlaceholders": true
       }
+    },
+    "haskell": {
+      "command": "haskell-language-server-wrapper",
+      "args": ["--lsp"],
+      "rootPatterns": ["*.cabal", "stack.yaml", "cabal.project", "package.yaml", "hie.yaml"],
+      "filetypes": ["haskell", "lhaskell"]
     }
   },
   "coc.preferences.formatOnSaveFiletypes": ["css",  "markdown",  "scss", "html", "typescript", "go"],
