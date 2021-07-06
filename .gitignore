@@ -1,5 +1,7 @@
 # top-level hidden files/directories
+/.angular-config.json
 /.aws
+/.azure
 /.bash_history
 /.bash_logout
 /.bash_sessions
@@ -13,6 +15,7 @@
 /.emacs.d
 /.fehbg
 /.fnm
+/.fzf*
 /.ghc
 /.ghcup
 /.gnome
@@ -20,6 +23,7 @@
 /.gradle
 !/.gnupg/gpg-agent.conf
 /.gtk-bookmarks
+/.httpie
 /.java
 /.k9s
 /.kube
