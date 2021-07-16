@@ -1,3 +1,3 @@
-#include ".config/.Xresources.d/tempus_totus"
+#include ".config/.Xresources.d/gruvbox"
 #include ".config/.Xresources.d/fonts"
 #include ".config/.Xresources.d/urxvt"

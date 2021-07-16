@@ -1,5 +1,5 @@
-# Set the theme to Modus Operandi
---theme="GitHub"
+# Set the theme to Gruvbox Dark
+--theme="gruvbox-dark"
 
 # Show line numbers, Git modifications and file header (but no grid)
 --style="numbers,changes,header"
