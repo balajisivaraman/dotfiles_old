@@ -17,3 +17,6 @@ alias lb './scripts/local_build.sh'
 
 #Emacs
 alias e 'emacsclient -n -q -u'
+
+#Podman
+alias docker 'podman'
