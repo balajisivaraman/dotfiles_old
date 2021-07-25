@@ -1,6 +1,7 @@
 [user]
     name = Balaji Sivaraman
     email = balaji@balajisivaraman.com
+    signingkey = 48AEBD08561BC452
 [alias]
     st = status
     ci = commit --verbose
@@ -52,7 +53,7 @@
     editor = nvim
     pager = gitdiffer
 [commit]
-    gpgsign = false
+    gpgsign = true
 [credential]
     helper = cache --timeout=3600
 [interactive]
@@ -62,4 +63,4 @@
 [remote "upstream"]
     prune = true
 [pull]
-	ff = only
+    ff = only
