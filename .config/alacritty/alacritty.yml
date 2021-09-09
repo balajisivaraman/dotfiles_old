@@ -153,38 +153,29 @@ font:
 # If `true`, bold text is drawn using the bright color variants.
 draw_bold_text_with_bright_colors: true
 
-# Colors (Tempus Totus)
+# Colors (Modus Operandi)
 colors:
-  name: 'Tempus Totus'
-  author: 'Protesilaos Stavrou (https://protesilaos.com)'
-  description: 'Light theme for prose or for coding in an open space (WCAG AAA compliant)'
   primary:
-    foreground: '#4a484d'
     background: '#ffffff'
-  cursor:
-    text: '#ffffff'
-    cursor: '#4a484d'
-  selection:
-    text: '#ffffff'
-    background: '#4a484d'
+    foreground: '#000000'
   normal:
-    black: '#4a484d'
-    red: '#a50000'
-    green: '#005d26'
-    yellow: '#714700'
-    blue: '#1d3ccf'
-    magenta: '#88267a'
-    cyan: '#185570'
-    white: '#efefef'
+    black:   '#000000'
+    red:     '#a60000'
+    green:   '#005e00'
+    yellow:  '#813e00'
+    blue:    '#0031a9'
+    magenta: '#721045'
+    cyan:    '#00538b'
+    white:   '#bfbfbf'
   bright:
-    black: '#5e4b4f'
-    red: '#992030'
-    green: '#4a5500'
-    yellow: '#8a3600'
-    blue: '#2d45b0'
-    magenta: '#700dc9'
-    cyan: '#005289'
-    white: '#ffffff'
+    black:   '#595959'
+    red:     '#972500'
+    green:   '#315b00'
+    yellow:  '#70480f'
+    blue:    '#2544bb'
+    magenta: '#5317ac'
+    cyan:    '#005a5f'
+    white:   '#ffffff'
 
   # Indexed Colors
   #
