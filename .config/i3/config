@@ -27,9 +27,9 @@ exec_always --no-startup-id launch_polybar.sh
 
 # scratchpads
 exec --no-startup-id keepassxc
-for_window [instance="keepassxc" title="^(?!Generate|Move|Unsaved)"] floating enable;
-for_window [instance="keepassxc" title="^(?!Generate|Move|Unsaved)"] move position 600px 200px;
-for_window [instance="keepassxc" title="^(?!Generate|Move|Unsaved)"] move scratchpad;
+for_window [instance="keepassxc" title="^(?!Generate|Move|Unsaved|Open)"] floating enable;
+for_window [instance="keepassxc" title="^(?!Generate|Move|Unsaved|Open)"] move position 600px 200px;
+for_window [instance="keepassxc" title="^(?!Generate|Move|Unsaved|Open)"] move scratchpad;
 bindsym $mod+p [instance="keepassxc"] scratchpad show, resize set 1000 650
 exec --no-startup-id thunderbird
 for_window [class="Thunderbird"] floating enable;
