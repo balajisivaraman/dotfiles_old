@@ -3,6 +3,22 @@
 Welcome to my dot files. Feel free to browse around or peruse this
 README file, where I have explained my configuration and workflows.
 
+# GNU Stow
+
+Inspired by barrucadu's
+[dotfiles](https://github.com/barrucadu/dotfiles "dotfiles") and
+[this](http://brandon.invergo.net/news/2012-05-26-using-gnu-stow-to-manage-your-dotfiles.html)
+post, I decided to use [GNU Stow](https://www.gnu.org/software/stow/
+"GNU Stow") to manage my dotfiles.
+
+The primary motivation behind this was that I found it tiresome to
+keep adding stuff to be ignored by Git when I version controlled my
+entire Home directory. For example, my different PCs have different
+folder setups within the Home directory. As a result, I ended up with
+multiple `.gitignore` files that were cumulatively more than 100 lines
+long and growing. With this setup, there's no need for that, which
+feels freeing.
+
 # i3
 
 After various attempts to setup XMonad, I moved to i3 (with Gnome) as
