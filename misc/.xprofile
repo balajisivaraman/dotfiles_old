@@ -1,4 +1,7 @@
 [[ -f ~/.Xresources ]] && xrdb -I$HOME ~/.Xresources
-[[ -d ~/.scripts ]] && export PATH=~/.scripts:${PATH}
 
-init-tilingwm
+if [ -z $_XPROFILE_SOURCED ]; then
+  export _XPROFILE_SOURCED=1
+  [[ -d ~/.scripts ]] && export PATH=~/bin:${PATH}
+  init-tilingwm
+fi
