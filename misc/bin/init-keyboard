@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 reset_kbd () {
   local xcape_cnt=$(pgrep xcape | wc -l)
