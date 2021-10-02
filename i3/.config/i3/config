@@ -5,7 +5,7 @@ font pango:SF Pro Display 10
 
 # Basic Variables
 set $terminal alacritty
-set $browser /opt/firefox/firefox
+set $browser firefox
 set $launcher "rofi -matching fuzzy -modi combi -show combi -combi-modi drun,window"
 set $documentLauncher "document-launcher"
 
