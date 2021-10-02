@@ -33,7 +33,7 @@
     alternate-active-foreground: @active-foreground;
     active-background:           rgba ( 245, 245, 245, 100 % );
     selected-active-background:  rgba ( 0, 95, 135, 100 % );
-    font: "Terminus 12";
+    font: "TerminessTTF Nerd Font Mono 12";
 }
 
 #window {
