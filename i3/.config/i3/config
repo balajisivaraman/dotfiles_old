@@ -35,6 +35,7 @@ bindsym $mod+z [class="Zotero" instance="Navigator"] scratchpad show, resize set
 
 # enable floating for certain windows
 for_window [class="Nightly" title="Library"] floating enable
+for_window [class="Emacs" title="Ediff"] floating enable
 
 # settings
 focus_follows_mouse no
