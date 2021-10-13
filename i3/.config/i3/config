@@ -17,6 +17,7 @@ for_window [class="^.*"] border pixel 2
 
 # Startup
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lockr --brighten 30 --blur 25 -- --nofork --ignore-empty-password
+exec --no-startup-id launch_polybar.sh
 
 # scratchpads
 exec --no-startup-id keepassxc
@@ -230,20 +231,3 @@ client.unfocused        $darkgray  $darkgray  $yellow    $purple   $darkgray
 client.urgent           $darkgray  $red       $darkgray  $red      $red
 client.placeholder      #000000    #0c0c0c    $darkgray  #000000   #0c0c0c
 client.background       $darkgray
-
-bar {
-    font pango:TerminessTTF Nerd Font Mono 12
-    position top
-    status_command i3status-rs ~/.config/i3/status.toml
-    colors {
-        background #282A36
-        statusline #F8F8F2
-        separator  #44475A
-
-        focused_workspace  #44475A #44475A #F8F8F2
-        active_workspace   #282A36 #44475A #F8F8F2
-        inactive_workspace #282A36 #282A36 #BFBFBF
-        urgent_workspace   #FF5555 #FF5555 #F8F8F2
-        binding_mode       #FF5555 #FF5555 #F8F8F2
-    }
-}
