@@ -25,6 +25,11 @@ for_window [instance="keepassxc" title="^(?!Generate|Move|Unsaved|Open)"] floati
 for_window [instance="keepassxc" title="^(?!Generate|Move|Unsaved|Open)"] move position 600px 200px;
 for_window [instance="keepassxc" title="^(?!Generate|Move|Unsaved|Open)"] move scratchpad;
 bindsym $mod+p [instance="keepassxc"] scratchpad show, resize set 1000 650
+exec --no-startup-id yubioath-desktop
+for_window [class="Yubico Authenticator"] floating enable;
+for_window [class="Yubico Authenticator"] move position 1300px 400px;
+for_window [class="Yubico Authenticator"] move scratchpad;
+bindsym $mod+y [class="Yubico Authenticator"] scratchpad show, resize set 800 600
 for_window [class="Zotero"] floating enable;
 for_window [class="Zotero"] move position 600px 150px;
 for_window [class="Zotero" instance="Navigator"] move scratchpad;
