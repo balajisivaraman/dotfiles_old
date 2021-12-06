@@ -5,6 +5,7 @@ picom -bCG --config /home/balaji/.config/picom/config
 dunst &
 udiskie --tray &
 flameshot &
+clipcatd
 
 # Run all my custom scripts
 init-keyboard

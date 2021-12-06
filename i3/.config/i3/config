@@ -8,6 +8,7 @@ set $terminal alacritty
 set $browser firefox
 set $launcher "rofi -matching fuzzy -modi combi -show combi -combi-modi drun,window"
 set $documentLauncher "document-launcher"
+set $clipboardManager "clipcat-menu"
 
 smart_borders on
 smart_gaps on
@@ -29,7 +30,7 @@ exec --no-startup-id yubioath-desktop
 for_window [class="Yubico Authenticator"] floating enable;
 for_window [class="Yubico Authenticator"] move position 1300px 400px;
 for_window [class="Yubico Authenticator"] move scratchpad;
-bindsym $mod+y [class="Yubico Authenticator"] scratchpad show, resize set 800 600
+bindsym $mod+o [class="Yubico Authenticator"] scratchpad show, resize set 800 600
 for_window [class="Zotero"] floating enable;
 for_window [class="Zotero"] move position 600px 150px;
 for_window [class="Zotero" instance="Navigator"] move scratchpad;
@@ -77,6 +78,9 @@ bindsym $mod+space exec $launcher
 
 # start document launcher
 bindsym $mod+d exec $documentLauncher
+
+# start clipboard manager
+bindsym $mod+y exec $clipboardManager
 
 # bluetooth selector
 bindsym $mod+Shift+b exec --no-startup-id rofi-bluetooth
