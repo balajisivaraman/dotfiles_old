@@ -28,7 +28,7 @@
   "explorer.file.reveal.auto": true,
   "explorer.file.showHiddenFiles": true,
   "explorer.previewAction.onHover": false,
-  "rust-analyzer.server.path": "~/bin/rust-analyzer-wrapper",
+  "rust-analyzer.server.path": "rust-analyzer",
   "rust-analyzer.inlayHints.typeHints": false,
   "rust-analyzer.inlayHints.chainingHints": false
 }
