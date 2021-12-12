@@ -43,6 +43,7 @@ call plug#begin('~/.config/nvim/plugged')
 
   " General Purpose
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  Plug 'direnv/direnv.vim'
 
   " Languages
   Plug 'rust-lang/rust.vim'
