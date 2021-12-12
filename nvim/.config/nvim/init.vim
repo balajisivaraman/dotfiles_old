@@ -57,6 +57,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'ekalinin/Dockerfile.vim'
   Plug 'lervag/vimtex'
   Plug 'neovimhaskell/haskell-vim'
+  Plug 'sbdchd/neoformat'
 
   " FZF
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
