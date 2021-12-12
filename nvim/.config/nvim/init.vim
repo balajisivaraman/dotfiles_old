@@ -58,6 +58,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'lervag/vimtex'
   Plug 'neovimhaskell/haskell-vim'
   Plug 'sbdchd/neoformat'
+  Plug 'LnL7/vim-nix'
 
   " FZF
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
