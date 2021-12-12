@@ -21,6 +21,12 @@ slash_to_super() {
     xcape -e "Super_R=slash|question"
 }
 
+tab_to_super() {
+    xmodmap -e "keycode 23 = Super_R"
+    xmodmap -e "keycode any = Tab"
+    xcape -e "Super_R=Tab"
+}
+
 reset_kbd
 slash_to_super
 backslash_to_super
