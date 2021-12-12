@@ -55,6 +55,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'stephpy/vim-yaml'
   Plug 'ekalinin/Dockerfile.vim'
   Plug 'lervag/vimtex'
+  Plug 'neovimhaskell/haskell-vim'
 
   " FZF
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -73,5 +74,6 @@ source ~/.config/nvim/config/fzf.vim
 source ~/.config/nvim/config/bindings.vim
 source ~/.config/nvim/config/coc.vim
 source ~/.config/nvim/config/rust.vim
+source ~/.config/nvim/config/haskell.vim
 source ~/.config/nvim/config/go.vim
 
