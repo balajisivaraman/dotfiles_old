@@ -1,0 +1,20 @@
+Config
+    { font              = "xft:TerminessTTF NerdFont:pixelsize=12:antialias=true:hinting=true"
+    , additionalFonts   = ["xft:TerminessTTF NerdFont:pixelsize=12:antialias=true:hinting=true"]
+    , position          = TopP 0 48
+    , bgColor           = "#282828"
+    , fgColor           = "#ebdbb2"
+    , allDesktops       = True
+    , alpha             = 255
+    , commands          = [
+        Run Date "<fc=#b16286>  %a %_d %b %Y | d.%j w.%W</fc>  <fc=#458588> %H:%M:%S</fc>" "date" 10
+      , Run Com "status-cmus" [] "nowplaying" 10
+      , Run Com "status-vol" [] "volume" 10
+      , Run StdinReader
+                          ]
+    , sepChar           = "%"
+    , alignSep          = "}{"
+    , template          = " %StdinReader% } %nowplaying% { %volume%  %date% "
+    , lowerOnStart      = True
+    , overrideRedirect  = True
+    }
