@@ -6,14 +6,14 @@ volume="$(pamixer --get-volume)"
 if [ "${mute_status}" == "true" ]
 then
     volume=0
-    color="#cc241d"
+    color="#fe6060"
     icon="  "
 else
-    color="#689d6a"
+    color="#44bc44"
     case $((volume/40)) in
         0) icon="  " ;; # fa-volume-down f027
         1) icon=" 墳 " ;; # fa-volume-up f028
-        *) icon="  "; color="#d65d0e" ;; # fa-volume-up f028
+        *) icon="  "; color="#fba849" ;; # fa-volume-up f028
     esac
 fi
 

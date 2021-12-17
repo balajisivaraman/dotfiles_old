@@ -1,5 +1,5 @@
-# Set the theme to Modus Operandi
---theme="gruvbox-dark"
+# Set the theme to Modus Vivendi
+--theme="Modus Vivendi"
 
 # Show line numbers, Git modifications and file header (but no grid)
 --style="numbers,changes,header"

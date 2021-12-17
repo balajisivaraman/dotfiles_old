@@ -19,7 +19,7 @@ let g:vim_bootstrap_editor = "nvim"
 " Required:
 call plug#begin('~/.config/nvim/plugged')
   " User Interface
-  Plug 'gruvbox-community/gruvbox'
+  Plug 'ishan9299/modus-theme-vim'
   Plug 'itchyny/lightline.vim'
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
