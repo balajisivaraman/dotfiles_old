@@ -6,7 +6,7 @@ reset_kbd () {
   echo "  - reset_kbd"
   echo "  - killing $xcape_cnt instances of xcape"
   setxkbmap -layout us
-  killall xcape
+  killall xcape 2>&1
 }
 
 backslash_to_super() {
