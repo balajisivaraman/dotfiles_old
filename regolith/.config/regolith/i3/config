@@ -49,41 +49,22 @@ set_from_resource $i3-wm.binding. i3-wm.binding.
 # These are the labels which define each i3 workspace.
 ###############################################################################
 
-set_from_resource $ws1  i3-wm.workspace.01.name "1"
-set_from_resource $ws2  i3-wm.workspace.02.name "2"
-set_from_resource $ws3  i3-wm.workspace.03.name "3"
-set_from_resource $ws4  i3-wm.workspace.04.name "4"
-set_from_resource $ws5  i3-wm.workspace.05.name "5"
-set_from_resource $ws6  i3-wm.workspace.06.name "6"
-set_from_resource $ws7  i3-wm.workspace.07.name "7"
-set_from_resource $ws8  i3-wm.workspace.08.name "8"
-set_from_resource $ws9  i3-wm.workspace.09.name "9"
-set_from_resource $ws10 i3-wm.workspace.10.name "10"
-set_from_resource $ws11 i3-wm.workspace.11.name "11"
-set_from_resource $ws12 i3-wm.workspace.12.name "12"
-set_from_resource $ws13 i3-wm.workspace.13.name "13"
-set_from_resource $ws14 i3-wm.workspace.14.name "14"
-set_from_resource $ws15 i3-wm.workspace.15.name "15"
-set_from_resource $ws16 i3-wm.workspace.16.name "16"
-set_from_resource $ws17 i3-wm.workspace.17.name "17"
-set_from_resource $ws18 i3-wm.workspace.18.name "18"
-set_from_resource $ws19 i3-wm.workspace.19.name "19"
+set $ws1 "1:WRK"
+set $ws2 "2:GEN"
+set $ws3 "3:COM"
+set $ws4 "4:MON"
 
-###############################################################################
-# Workspace Keys
-# These are the keys which will be used while binding workspace switching
-###############################################################################
+# switch to workspace
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
 
-set_from_resource $ws1_key  i3-wm.workspace.01.key 1
-set_from_resource $ws2_key  i3-wm.workspace.02.key 2
-set_from_resource $ws3_key  i3-wm.workspace.03.key 3
-set_from_resource $ws4_key  i3-wm.workspace.04.key 4
-set_from_resource $ws5_key  i3-wm.workspace.05.key 5
-set_from_resource $ws6_key  i3-wm.workspace.06.key 6
-set_from_resource $ws7_key  i3-wm.workspace.07.key 7
-set_from_resource $ws8_key  i3-wm.workspace.08.key 8
-set_from_resource $ws9_key  i3-wm.workspace.09.key 9
-set_from_resource $ws10_key i3-wm.workspace.10.key 0
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
 
 ###############################################################################
 # Launcher dialogs
@@ -156,28 +137,6 @@ bindsym $mod+$i3-wm.binding.left focus left
 bindsym $mod+$i3-wm.binding.down focus down
 bindsym $mod+$i3-wm.binding.up focus up
 bindsym $mod+$i3-wm.binding.right focus right
-
-## Navigate // Workspaces 1-10 // <> 0..9 ##
-bindsym $mod+$ws1_key workspace number $ws1
-bindsym $mod+$ws2_key workspace number $ws2
-bindsym $mod+$ws3_key workspace number $ws3
-bindsym $mod+$ws4_key workspace number $ws4
-bindsym $mod+$ws5_key workspace number $ws5
-bindsym $mod+$ws6_key workspace number $ws6
-bindsym $mod+$ws7_key workspace number $ws7
-bindsym $mod+$ws8_key workspace number $ws8
-bindsym $mod+$ws9_key workspace number $ws9
-bindsym $mod+$ws10_key workspace number $ws10
-## Navigate // Workspace 11 - 19 // <><Ctrl> 1..9 ##
-bindsym $mod+Ctrl+$ws1_key workspace number $ws11
-bindsym $mod+Ctrl+$ws2_key workspace number $ws12
-bindsym $mod+Ctrl+$ws3_key workspace number $ws13
-bindsym $mod+Ctrl+$ws4_key workspace number $ws14
-bindsym $mod+Ctrl+$ws5_key workspace number $ws15
-bindsym $mod+Ctrl+$ws6_key workspace number $ws16
-bindsym $mod+Ctrl+$ws7_key workspace number $ws17
-bindsym $mod+Ctrl+$ws8_key workspace number $ws18
-bindsym $mod+Ctrl+$ws9_key workspace number $ws19
 
 ## Navigate // Next Workspace // <> Tab ##
 set_from_resource $i3-wm.binding.ws_next i3-wm.binding.ws_next Tab
@@ -264,7 +223,7 @@ set_from_resource $i3-wm.binding.split_h i3-wm.binding.split_h g
 bindsym $mod+$i3-wm.binding.split_h split horizontal
 
 ## Modify // Toggle Window Orientation // <> Backspace ##
-set_from_resource $i3-wm.binding.orientation_toggle i3-wm.binding.orientation_toggle BackSpace
+set_from_resource $i3-wm.binding.orientation_toggle i3-wm.binding.orientation_toggle Shift+BackSpace
 bindsym $mod+$i3-wm.binding.orientation_toggle split toggle
 
 ## Modify // Window Fullscreen Toggle // <> f ##
@@ -287,54 +246,9 @@ bindsym $mod+$i3-wm.binding.focus_toggle focus mode_toggle
 set_from_resource $i3-wm.binding.layout_mode i3-wm.binding.layout_mode t
 bindsym $mod+$i3-wm.binding.layout_mode layout toggle tabbed splith splitv
 
-## Modify // Move Window to Workspace 1 - 10 // <><Shift> 0..9 ##
-bindsym $mod+Shift+$ws1_key move container to workspace number $ws1
-bindsym $mod+Shift+$ws2_key move container to workspace number $ws2
-bindsym $mod+Shift+$ws3_key move container to workspace number $ws3
-bindsym $mod+Shift+$ws4_key move container to workspace number $ws4
-bindsym $mod+Shift+$ws5_key move container to workspace number $ws5
-bindsym $mod+Shift+$ws6_key move container to workspace number $ws6
-bindsym $mod+Shift+$ws7_key move container to workspace number $ws7
-bindsym $mod+Shift+$ws8_key move container to workspace number $ws8
-bindsym $mod+Shift+$ws9_key move container to workspace number $ws9
-bindsym $mod+Shift+$ws10_key move container to workspace number $ws10
-## Modify // Move Window to Workspace 11 - 19// <><Ctrl><Shift> 1..9 ##
-bindsym $mod+Shift+Ctrl+$ws1_key move container to workspace number $ws11
-bindsym $mod+Shift+Ctrl+$ws2_key move container to workspace number $ws12
-bindsym $mod+Shift+Ctrl+$ws3_key move container to workspace number $ws13
-bindsym $mod+Shift+Ctrl+$ws4_key move container to workspace number $ws14
-bindsym $mod+Shift+Ctrl+$ws5_key move container to workspace number $ws15
-bindsym $mod+Shift+Ctrl+$ws6_key move container to workspace number $ws16
-bindsym $mod+Shift+Ctrl+$ws7_key move container to workspace number $ws17
-bindsym $mod+Shift+Ctrl+$ws8_key move container to workspace number $ws18
-bindsym $mod+Shift+Ctrl+$ws9_key move container to workspace number $ws19
-
 ## Modify // Move Window to Next Free Workspace // <><Shift> ` ##
 set_from_resource $i3-wm.binding.move_next_free i3-wm.binding.move_next_free Shift+grave
 bindsym $mod+$i3-wm.binding.move_next_free exec --no-startup-id /usr/bin/i3-next-workspace --move-window
-
-# move focused container to workspace, move to workspace
-## Modify // Carry Window to Workspace 1 - 10// <><Alt> 0..9 ##
-bindsym $mod+$alt+$ws1_key move container to workspace number $ws1; workspace number $ws1
-bindsym $mod+$alt+$ws2_key move container to workspace number $ws2; workspace number $ws2
-bindsym $mod+$alt+$ws3_key move container to workspace number $ws3; workspace number $ws3
-bindsym $mod+$alt+$ws4_key move container to workspace number $ws4; workspace number $ws4
-bindsym $mod+$alt+$ws5_key move container to workspace number $ws5; workspace number $ws5
-bindsym $mod+$alt+$ws6_key move container to workspace number $ws6; workspace number $ws6
-bindsym $mod+$alt+$ws7_key move container to workspace number $ws7; workspace number $ws7
-bindsym $mod+$alt+$ws8_key move container to workspace number $ws8; workspace number $ws8
-bindsym $mod+$alt+$ws9_key move container to workspace number $ws9; workspace number $ws9
-bindsym $mod+$alt+$ws10_key move container to workspace number $ws10; workspace number $ws10
-## Modify // Carry Window to Workspace 11 - 19 // <><Alt><Ctrl> 1..9 ##
-bindsym $mod+$alt+Ctrl+$ws1_key move container to workspace number $ws11; workspace number $ws11
-bindsym $mod+$alt+Ctrl+$ws2_key move container to workspace number $ws12; workspace number $ws12
-bindsym $mod+$alt+Ctrl+$ws3_key move container to workspace number $ws13; workspace number $ws13
-bindsym $mod+$alt+Ctrl+$ws4_key move container to workspace number $ws14; workspace number $ws14
-bindsym $mod+$alt+Ctrl+$ws5_key move container to workspace number $ws15; workspace number $ws15
-bindsym $mod+$alt+Ctrl+$ws6_key move container to workspace number $ws16; workspace number $ws16
-bindsym $mod+$alt+Ctrl+$ws7_key move container to workspace number $ws17; workspace number $ws17
-bindsym $mod+$alt+Ctrl+$ws8_key move container to workspace number $ws18; workspace number $ws18
-bindsym $mod+$alt+Ctrl+$ws9_key move container to workspace number $ws19; workspace number $ws19
 
 ## Modify // Carry Window to Next Free Workspace // <><Alt> ` ##
 set_from_resource $i3-wm.binding.take_next_free i3-wm.binding.take_next_free Mod1+grave
@@ -412,7 +326,7 @@ set_from_resource $i3-wm.program.settings i3-wm.program.settings gnome-control-c
 bindsym $mod+$i3-wm.binding.settings exec $i3-wm.program.settings
 
 ## Modify // Display Settings // <> d ##
-set_from_resource $i3-wm.binding.display i3-wm.binding.display d
+set_from_resource $i3-wm.binding.display i3-wm.binding.display Shift+D
 set_from_resource $i3-wm.program.display i3-wm.program.display gnome-control-center --class=floating_window display
 bindsym $mod+$i3-wm.binding.display exec $i3-wm.program.display
 
@@ -605,43 +519,6 @@ set_from_resource $i3-wm.font i3-wm.font pango:Source Code Pro Medium 13
 font $i3-wm.font
 
 ###############################################################################
-# i3 Bar
-###############################################################################
-
-set_from_resource $i3-wm.bar.position i3-wm.bar.position bottom
-set_from_resource $i3-wm.bar.font i3-wm.bar.font pango:Source Code Pro Medium 13, Material Design Icons 13
-set_from_resource $i3-wm.bar.separator i3-wm.bar.separator " "
-set_from_resource $i3-wm.bar.trayoutput i3-wm.bar.trayoutput primary
-set_from_resource $i3-wm.bar.stripworkspacenumbers i3-wm.bar.stripworkspacenumbers yes
-set_from_resource $i3-wm.bar.mode i3-wm.bar.mode dock
-
-# i3xrocks config file. Override this for a custom status bar generator.
-set_from_resource $i3-wm.bar.status_command i3-wm.bar.status_command i3xrocks -u ~/.config/regolith/i3xrocks/conf.d -d /etc/regolith/i3xrocks/conf.d
-
-# The bar configuration
-bar {
-  position $i3-wm.bar.position
-  mode $i3-wm.bar.mode
-  font $i3-wm.bar.font
-  separator_symbol $i3-wm.bar.separator
-  status_command $i3-wm.bar.status_command
-  tray_output $i3-wm.bar.trayoutput
-  strip_workspace_numbers $i3-wm.bar.stripworkspacenumbers
-
-  colors {
-      background $i3-wm.bar.background.color
-      statusline $i3-wm.bar.statusline.color
-      separator  $i3-wm.bar.separator.color
-
-#                        BORDER  BACKGROUND TEXT
-      focused_workspace  $i3-wm.bar.workspace.focused.border.color      $i3-wm.bar.workspace.focused.background.color   $i3-wm.bar.workspace.focused.text.color
-      active_workspace   $i3-wm.bar.workspace.active.border.color       $i3-wm.bar.workspace.active.background.color    $i3-wm.bar.workspace.active.text.color
-      inactive_workspace $i3-wm.bar.workspace.inactive.border.color     $i3-wm.bar.workspace.inactive.background.color  $i3-wm.bar.workspace.inactive.text.color
-      urgent_workspace   $i3-wm.bar.workspace.urgent.border.color       $i3-wm.bar.workspace.urgent.background.color    $i3-wm.bar.workspace.urgent.text.color
-  }
-}
-
-###############################################################################
 # External programs launched with i3
 ###############################################################################
 
@@ -675,6 +552,19 @@ exec --no-startup-id $i3-wm.program.2
 set_from_resource $i3-wm.program.3 i3-wm.program.3 :
 exec --no-startup-id $i3-wm.program.3
 
+
+###########################
+# Balaji's Customizations #
+###########################
+
+set $documentLauncher "document-launcher"
+set $clipboardManager "clipcat-menu"
+
+# Startup
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lockr --brighten 30 --blur 25 -- --nofork --ignore-empty-password
+exec --no-startup-id launch_polybar.sh
+exec --no-startup-id init-tilingwm
+
 # Scratchpads
 exec --no-startup-id keepassxc
 for_window [instance="keepassxc" title="^(?!Generate|Move|Unsaved|Open)"] floating enable;
@@ -691,3 +581,21 @@ bindsym $mod+o [class="Yubico Authenticator"] scratchpad show, resize set 800 60
 for_window [class="Nightly" title="Library"] floating enable
 for_window [class="Emacs" title="Ediff"] floating enable
 for_window [class="zoom"] floating enable
+
+set $exit_launcher "Exit: [l]ock, l[o]gout, [r]eboot, s[u]spend, [s]hutdown"
+mode $exit_launcher {
+  bindsym l exec i3lockr --brighten 30 --blur 25 -- --nofork --ignore-empty-password ; mode "default"
+  bindsym o exec i3-msg exit ; mode "default"
+  bindsym r exec systemctl reboot ; mode "default"
+  bindsym u exec systemctl suspend ; mode "default"
+  bindsym s exec shutdown -h now ; mode "default"
+  bindsym Escape mode "default"
+  bindsym Return mode "default"
+}
+bindsym $mod+x mode $exit_launcher
+
+# start document launcher
+bindsym $mod+d exec $documentLauncher
+
+# start clipboard manager
+bindsym $mod+y exec $clipboardManager

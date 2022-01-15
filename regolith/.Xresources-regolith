@@ -1,4 +1,5 @@
 #include "/etc/regolith/styles/root"
+
 i3-wm.binding.left: "j"
 i3-wm.binding.right: "semicolon"
 i3-wm.binding.up: "k"
@@ -8,3 +9,5 @@ i3-wm.binding.move_right: Shift+semicolon
 i3-wm.binding.move_up: Shift+k
 i3-wm.binding.move_down: Shift+l
 i3-wm.gaps.inner.size: 10
+i3-wm.binding.exit_app: BackSpace
+rofi.theme: /home/balaji/.config/rofi/config.rasi
