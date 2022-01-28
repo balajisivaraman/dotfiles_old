@@ -6,3 +6,6 @@ ssh_only = false
 format = "⟪[$hostname]($style)⟫ "
 trim_at = ".companyname.com"
 disabled = false
+
+[package]
+disabled = true
