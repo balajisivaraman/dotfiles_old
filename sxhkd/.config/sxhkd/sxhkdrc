@@ -1,0 +1,8 @@
+super + shift + space
+    rofi -matching fuzzy -modi combi -show combi -combi-modi drun,window
+
+super + shift + p
+    keepassxc
+
+super + shift + y
+    yubioath-desktop
