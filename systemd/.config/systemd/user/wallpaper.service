@@ -1,7 +1,0 @@
-[Unit]
-Description=Wallpaper Setter
-
-[Service]
-Type=simple
-Environment=DISPLAY=:0
-ExecStart=/home/balaji/bin/init-wallpaper

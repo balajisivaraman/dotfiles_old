@@ -1,9 +1,0 @@
-[Unit]
-Description=Set my wallpaper using feh on boot and in 30 second intervals
-
-[Timer]
-OnBootSec=0
-OnUnitActiveSec=30min
-
-[Install]
-WantedBy=timers.target
