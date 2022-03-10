@@ -5,8 +5,4 @@ set -e
 file_name=$(fd -FaLp '' ~/Documents/ | rofi -dmenu -i -p "Open File > ")
 rofi_exit=$?
 ext="${file_name##*.}"
-if [ "$ext" == "ods"  ] || [ "$ext" == "xlsx"  ]; then
-    libreoffice "$file_name"
-else
-    zathura "$file_name"
-fi
+mimeopen "$file_name"
