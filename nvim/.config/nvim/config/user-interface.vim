@@ -3,8 +3,11 @@ set termguicolors
 " Do not show mode since we're using Lightline
 set noshowmode
 
-colorscheme modus-vivendi
+colorscheme gruvbox
 set background=dark
+let g:lightline = {
+      \ 'colorscheme': 'gruvbox',
+      \ }
 highlight Normal     ctermbg=NONE guibg=NONE
 highlight LineNr     ctermbg=NONE guibg=NONE
 highlight SignColumn ctermbg=NONE guibg=NONE
