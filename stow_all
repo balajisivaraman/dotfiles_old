@@ -2,7 +2,14 @@
 
 set -e
 
-for dir in */ ; do
+mkdir -p ~/.config/nvim/
+mkdir -p ~/.config/fish/conf.d
+mkdir -p ~/.gnupg
+mkdir -p ~/.config/pulse
+mkdir -p ~/.config/systemd/user
+mkdir -p ~/.local/share/fonts
+
+for dir in alacritty bash bat cargo clipcat containers dunst fish fonts git gnupg gtk2 gtk3 i3 ideavim misc nvim picom pulseaudio rofi starship systemd tmux Xresources zathura zsh ; do
     dir=${dir%*/}
     stow -t ~ "$dir"
 done
