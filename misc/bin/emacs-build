@@ -1,0 +1,30 @@
+#!/bin/bash
+
+set -e
+
+pushd current
+  sudo make uninstall
+popd
+
+rm current
+
+yay -S --noconfirm jansson libgccjit harfbuzz imagemagick
+folder="$(date +'%b-%d-%Y')"
+if [ ! -d $folder ]; then
+  git clone --depth 1 --branch master git@github.com:emacs-mirror/emacs.git $folder
+fi
+pushd $folder
+  ./autogen.sh
+  if [ ${?} -eq 0  ]; then
+    ./configure --with-native-compilation --with-harfbuzz --with-imagemagick
+    if [ ${?} -eq 0  ]; then
+      make -j 16
+      sudo make install
+    else
+      exit 1
+    fi
+  else
+    exit 1
+  fi
+popd
+ln -sf ${folder} current
