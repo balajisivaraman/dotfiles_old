@@ -2,11 +2,12 @@
 
 set -e
 
-pushd current
-  sudo make uninstall
-popd
-
-rm current
+if [ -d current ]; then
+  pushd current
+    sudo make uninstall
+  popd
+  rm current
+fi
 
 yay -S --noconfirm jansson libgccjit harfbuzz imagemagick
 folder="$(date +'%b-%d-%Y')"
