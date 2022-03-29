@@ -4,6 +4,7 @@ set -e
 
 mkdir -p ~/.config/nvim/
 mkdir -p ~/.config/fish/conf.d
+mkdir -p ~/.config/gtk-3.0
 mkdir -p ~/.gnupg
 mkdir -p ~/.config/pulse
 mkdir -p ~/.config/systemd/user
