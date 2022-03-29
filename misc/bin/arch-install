@@ -34,16 +34,39 @@ userinit() {
 }
 
 systemd_boot_init() {
-  bootctl install
-  rootpartuuid="$(blkid | grep root | rev | cut -d'=' -f 1 | rev | sed 's/"//g')"
-  echo $rootpartuuid
-  {
-    echo "title	Arch Linux"
-    echo "linux	/vmlinuz-linux"
-    echo "initrd	/amd-ucode.img"
-    echo "initrd	/initramfs-linux.img"
-    echo "options	root=\"PARTUUID=$rootpartuuid\" rw"
-  } >> /boot/loader/entries/arch.conf
+  if [ $# != 1 ]; then
+    echo "Usage: $(basename "$0") x <work | home>" >&2
+    exit 1
+  fi
+  machine_type="$1"
+  case "$machine_type" in
+    work)
+      bootctl --esp-path=/efi --boot-path=/boot install
+      {
+          echo "title	Arch Linux"
+          echo "linux	/vmlinuz-linux"
+          echo "initrd	/intel-ucode.img"
+          echo "initrd	/initramfs-linux.img"
+          echo "options	root=\"/dev/mapper/root\" rw"
+      } >> /boot/loader/entries/arch.conf
+      ;;
+    home)
+      bootctl install
+      rootpartuuid="$(blkid | grep root | rev | cut -d'=' -f 1 | rev | sed 's/"//g')"
+      echo $rootpartuuid
+      {
+          echo "title	Arch Linux"
+          echo "linux	/vmlinuz-linux"
+          echo "initrd	/amd-ucode.img"
+          echo "initrd	/initramfs-linux.img"
+          echo "options	root=\"PARTUUID=$rootpartuuid\" rw"
+      } >> /boot/loader/entries/arch.conf
+      ;;
+    *)
+      echo "unrecognized machine type" >&2
+      exit 1
+      ;;
+  esac
 }
 
 laninit() {
@@ -52,8 +75,36 @@ laninit() {
   systemctl enable dhcpcd@$interface.service
 }
 
+wifinit() {
+  pacman --noconfirm -S networkmanager network-manager-applet
+  systemctl enable NetworkManager
+}
+
+bluetoothinit () {
+  yay --noconfirm -S bluez bluez-utils blueman pulseaudio-bluetooth
+  sudo systemctl enable bluetooth.service
+  sudo systemctl start bluetooth.service
+}
+
 x() {
-  pacman --noconfirm -S xorg xorg-xinit nvidia
+  if [ $# != 1 ]; then
+    echo "Usage: $(basename "$0") x <intel | nvidia>" >&2
+    exit 1
+  fi
+  driver="$1"
+  pacman --noconfirm -S xorg xorg-xinit
+  case "$driver" in
+    intel)
+      pacman --noconfirm -S xf86-video-intel
+      ;;
+    nvidia)
+      pacman --noconfirm -S nvidia
+      ;;
+    *)
+      echo "unrecognized graphics driver" >&2
+      exit 1
+      ;;
+  esac
 }
 
 pkgs() {
@@ -81,7 +132,7 @@ pkgs() {
     whois \
     youtube-dl \
     yubioath-desktop \
-    yubico-pam \
+    yubico-pam
   systemctl enable --now pcscd.service
 }
 
@@ -97,6 +148,7 @@ xpkgs() {
     i3status-rust \
     keepassxc \
     libnotify \
+    libreoffice-fresh \
     lightdm lightdm-gtk-greeter \
     lxsession \
     mpv \
@@ -104,7 +156,7 @@ xpkgs() {
     pcmanfm \
     perl-file-mimeinfo \
     picom \
-    pulseaudio pavucontrol \
+    pulseaudio pasystray pavucontrol \
     rofi \
     stow \
     udiskie \
@@ -173,7 +225,6 @@ yayxpkgs() {
     nerd-fonts-terminus \
     nordic-darker-theme-git \
     apple-fonts \
-    plane-icon-theme-git \
     ttfautohint
 }
 
@@ -210,11 +261,29 @@ podmaninit() {
   podman system migrate
 }
 
+workinit() {
+  sudo pacman -S --noconfirm \
+      arandr \
+      aws-cli \
+      aws-vault \
+      chmlib \
+      clojure \
+      extra/jdk11-openjdk \
+      globalprotect-openconnect \
+      pasystray \
+      pyenv \
+      terraform \
+      xf86-input-libinput
+  yay -S --noconfirm clj-kondo datagrip teams zoom
+}
+
 case "$1" in
   rootinit) shift ; rootinit "$@" ;;
   userinit) shift ; userinit "$@" ;;
   systemd_boot_init) shift ; systemd_boot_init "$@" ;;
   laninit) shift ; laninit "$@" ;;
+  wifinit) shift ; wifinit "$@" ;;
+  bluetoothinit) shift ; bluetoothinit "$@" ;;
   x) shift ; x "$@" ;;
   pkgs) shift ; pkgs "$@" ;;
   xpkgs) shift ; xpkgs "$@" ;;
@@ -226,6 +295,7 @@ case "$1" in
   i3lockinit) shift ; i3lockinit "$@" ;;
   fstab) shift ; fstab "$@" ;;
   podmaninit) shift ; podmaninit "$@" ;;
+  workinit) shift ; workinit "$@" ;;
   *)
     echo "unrecognized command" >&2
     exit 1
