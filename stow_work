@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+set -e
+
+mkdir -p ~/.config/nvim/
+mkdir -p ~/.config/fish/conf.d
+mkdir -p ~/.config/gtk-3.0
+mkdir -p ~/.gnupg
+mkdir -p ~/.config/pulse
+mkdir -p ~/.config/systemd/user
+mkdir -p ~/.local/share/fonts
+
+for dir in alacritty bash bat cargo containers fish fonts git gnupg gtk2 gtk3 ideavim misc nvim rofi starship tmux Xresources zathura zsh ; do
+    dir=${dir%*/}
+    stow -t ~ "$dir"
+done

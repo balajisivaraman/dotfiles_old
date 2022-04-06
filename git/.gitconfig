@@ -53,7 +53,7 @@
     editor = nvim
     pager = gitdiffer
 [commit]
-    gpgsign = true
+    #gpgsign = true
 [credential]
     helper = cache --timeout=3600
 [interactive]
@@ -66,3 +66,9 @@
     ff = only
 [init]
     defaultBranch = main
+[url "git@costa.github.com:CostaCrociere"]
+  insteadOf = git@github.com:CostaCrociere
+[url "git@costa.github.com:CostaCrociere"]
+  insteadOf = https://github.com/CostaCrociere
+[includeIf "gitdir:~/projects/costa/"]
+    path = ~/projects/costa/.gitconfig

@@ -2,14 +2,19 @@
 
 set -e
 
-if [ -d current ]; then
-  pushd current
-    sudo make uninstall
-  popd
-  rm current
-fi
+uninstall() {
+    if [ -d current ]; then
+      pushd current
+        sudo make uninstall
+      popd
+      rm current
+    fi
+}
 
-yay -S --noconfirm jansson libgccjit harfbuzz imagemagick
+setup() {
+    yay -S --noconfirm jansson libgccjit harfbuzz imagemagick
+}
+
 folder="$(date +'%b-%d-%Y')"
 if [ ! -d $folder ]; then
   git clone --depth 1 --branch master git@github.com:emacs-mirror/emacs.git $folder
