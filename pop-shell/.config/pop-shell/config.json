@@ -39,6 +39,9 @@
     {
       "class": "jetbrains-datagrip",
       "title": "Welcome to DataGrip"
+    },
+    {
+      "class": "flameshot"
     }
   ],
   "skiptaskbarhidden": [],
