@@ -1,2 +1,0 @@
-exec --no-startup-id blueman-applet
-exec --no-startup-id zoom

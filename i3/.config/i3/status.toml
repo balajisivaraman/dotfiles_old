@@ -21,7 +21,7 @@ format = "{min} min, {max} max, {average} avg"
 [[block]]
 block = "weather"
 format = "{weather} ({location}) {temp}°, {wind} m/s {direction}"
-service = { name = "openweathermap", api_key = "XXX", city_id = "1264527", units = "metric" }
+service = { name = "openweathermap", api_key = "b48b161466fed0c120a279c4819c1e47", city_id = "1264527", units = "metric" }
 
 [[block]]
 block = "sound"

@@ -1,5 +1,0 @@
-for_window [class="Blueman-manager"] floating enable
-for_window [class="Arandr"] floating enable
-for_window [class="zoom "] floating enable
-for_window [class="Pavucontrol"] floating enable
-for_window [class="^Microsoft Teams"] floating enable

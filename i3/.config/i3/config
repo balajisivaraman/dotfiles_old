@@ -28,13 +28,23 @@ exec --no-startup-id clipcatd
 exec --no-startup-id keepassxc
 exec --no-startup-id yubioath-desktop
 exec --no-startup-id init-keyboard
-include startup_`hostname`
+exec --no-startup-id protonmail-bridge
+exec --no-startup-id thunderbird
+exec --no-startup-id signal-desktop
 
 # scratchpads
-for_window [instance="keepassxc" title="^(?!Generate|Move|Unsaved|Open|Delete|KeePassXC: New)"] floating enable;
-for_window [instance="keepassxc" title="^(?!Generate|Move|Unsaved|Open|Delete|KeepassXC: New)"] move position 600px 200px;
-for_window [instance="keepassxc" title="^(?!Generate|Move|Unsaved|Open|Delete|KeepassXC: New)"] move scratchpad;
+for_window [instance="keepassxc" title="^(?!Generate|Move|Unsaved|Open|Delete|KeePassXC: New|Clone)"] floating enable;
+for_window [instance="keepassxc" title="^(?!Generate|Move|Unsaved|Open|Delete|KeepassXC: New|Clone)"] move position 600px 200px;
+for_window [instance="keepassxc" title="^(?!Generate|Move|Unsaved|Open|Delete|KeepassXC: New|Clone)"] move scratchpad;
 bindsym $mod+p [instance="keepassxc"] scratchpad show, resize set 1000 650
+for_window [class="Thunderbird"] floating enable;
+for_window [class="Thunderbird"] move position 80px 50px;
+for_window [class="Thunderbird" instance="Mail"] move scratchpad;
+bindsym $mod+t [class="Thunderbird" instance="Mail"] scratchpad show, resize set 1600 950
+for_window [class="Signal"] floating enable;
+for_window [class="Signal"] move position 80px 50px;
+for_window [class="Signal"] move scratchpad;
+bindsym $mod+n [class="Signal"] scratchpad show, resize set 1600 950
 for_window [class="Yubico Authenticator"] floating enable;
 for_window [class="Yubico Authenticator"] move position 1300px 400px;
 for_window [class="Yubico Authenticator"] move scratchpad;
@@ -44,7 +54,7 @@ bindsym $mod+o [class="Yubico Authenticator"] scratchpad show, resize set 800 60
 for_window [class="Nightly" title="Library"] floating enable
 for_window [class="Emacs" title="Ediff"] floating enable
 for_window [class="flameshot" title="Configuration"] floating enable
-include floating_`hostname`
+for_window [class="Proton Mail Bridge"] floating enable
 
 # settings
 focus_follows_mouse no
@@ -243,4 +253,17 @@ client.urgent           $darkgray  $red       $darkgray  $red      $red
 client.placeholder      #000000    #0c0c0c    $darkgray  #000000   #0c0c0c
 client.background       $darkgray
 
-include ~/.config/i3/bar_`hostname`
+bar {
+    font pango:TerminessTTF Nerd Font Mono 12
+    position top
+    status_command i3status-rs ~/.config/i3/status.toml
+    colors {
+        background $bg
+        statusline $yellow
+
+        focused_workspace    $aqua $aqua $darkgray
+        inactive_workspace   $darkgray $darkgray $yellow
+        active_workspace     $darkgray $darkgray $yellow
+        urgent_workspace     $red $red $bg
+    }
+}
