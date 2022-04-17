@@ -121,12 +121,14 @@ pkgs() {
     iputils inetutils \
     keepassxc \
     libfido2 \
+    libreoffice-fresh \
     linux-tools \
     nextcloud-client \
     ntfs-3g \
     openssh openssl \
     pdftk \
     strace \
+    thunderbird \
     unzip \
     vi vim \
     whois \
@@ -158,6 +160,7 @@ xpkgs() {
     picom \
     pulseaudio pasystray pavucontrol \
     rofi \
+    signal-desktop \
     stow \
     udiskie \
     xclip \
@@ -215,7 +218,9 @@ yaypkgs() {
     exa \
     fnm-bin \
     git-delta \
-    neovim-git python-neovim-git
+    hledger-bin \
+    neovim-git python-neovim-git \
+    protonmail-bridge
 }
 
 yayxpkgs() {
