@@ -41,10 +41,10 @@ for_window [class="Thunderbird"] floating enable;
 for_window [class="Thunderbird"] move position 80px 50px;
 for_window [class="Thunderbird" instance="Mail"] move scratchpad;
 bindsym $mod+t [class="Thunderbird" instance="Mail"] scratchpad show, resize set 1600 950
-for_window [class="Signal"] floating enable;
-for_window [class="Signal"] move position 80px 50px;
-for_window [class="Signal"] move scratchpad;
-bindsym $mod+n [class="Signal"] scratchpad show, resize set 1600 950
+for_window [class="Signal" window_role="^(?!GtkFileChooserDialog)"] floating enable;
+for_window [class="Signal" window_role="^(?!GtkFileChooserDialog)"] move position 80px 50px;
+for_window [class="Signal" window_role="^(?!GtkFileChooserDialog)"] move scratchpad;
+bindsym $mod+n [class="Signal" window_role="^(?!GtkFileChooserDialog)"] scratchpad show, resize set 1600 950
 for_window [class="Yubico Authenticator"] floating enable;
 for_window [class="Yubico Authenticator"] move position 1300px 400px;
 for_window [class="Yubico Authenticator"] move scratchpad;
@@ -229,6 +229,7 @@ bindsym $mod+r mode "resize"
 bindsym $mod+shift+period exec "volume-control inc 5"
 bindsym $mod+shift+comma exec "volume-control dec 5"
 bindsym $mod+shift+m exec "volume-control mute"
+bindsym $mod+shift+w exec "set_wacom_output"
 
 bindsym Print exec "flameshot gui"
 
