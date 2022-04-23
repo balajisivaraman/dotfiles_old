@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+set -e
+
+option=$(echo -e "1) Select Window\n2) Reset" | rofi -dmenu -i -p "Choose Option > ")
+
+case "$option" in
+    "2) Reset") xsetwacom --set 17 MapToOutput desktop ;;
+    "1) Select Window")
+        wininfo=$(xwininfo)
+        x="$(echo "$wininfo" | rg 'Absolute upper-left X:' | cut -d':' -f 2 | xargs)"
+        y="$(echo "$wininfo" | rg 'Absolute upper-left Y:' | cut -d':' -f 2 | xargs)"
+        width="$(echo "$wininfo" | rg 'Width:' | cut -d':' -f 2 | xargs)"
+        height="$(echo "$wininfo" | rg 'Height:' | cut -d':' -f 2 | xargs)"
+        xsetwacom --set 17 MapToOutput "$width"x"$height"+"$x"+"$y"
+        ;;
+esac
