@@ -1,17 +1,25 @@
-#!/usr/bin/env bash
+#!/usr/bin/env python
 
-set -e
+import os
+import re
 
-option=$(echo -e "1) Select Window\n2) Reset" | rofi -dmenu -i -p "Choose Option > ")
+def get_stylus_id():
+    stylus_output = os.popen('xsetwacom list devices | rg STYLUS')
+    return re.search(r'(\d+)', stylus_output.read()).group(1)
 
-case "$option" in
-    "2) Reset") xsetwacom --set 17 MapToOutput desktop ;;
-    "1) Select Window")
-        wininfo=$(xwininfo)
-        x="$(echo "$wininfo" | rg 'Absolute upper-left X:' | cut -d':' -f 2 | xargs)"
-        y="$(echo "$wininfo" | rg 'Absolute upper-left Y:' | cut -d':' -f 2 | xargs)"
-        width="$(echo "$wininfo" | rg 'Width:' | cut -d':' -f 2 | xargs)"
-        height="$(echo "$wininfo" | rg 'Height:' | cut -d':' -f 2 | xargs)"
-        xsetwacom --set 17 MapToOutput "$width"x"$height"+"$x"+"$y"
-        ;;
-esac
+def filter_wininfo_output(output, filter_string):
+    filtered_line = list(filter(lambda line: filter_string in line, output))[0]
+    return re.search(r'(\d+)', filtered_line).group(1)
+
+option = os.popen('echo -e "1) Select Window\n2) Reset" | rofi -dmenu -i -p "Choose Option > "')
+stylus_id = get_stylus_id()
+if option.read().strip() == '2) Reset':
+   os.popen('xsetwacom --set {id} MapToOutput desktop'.format(id = stylus_id)).read()
+else:
+    wininfo = os.popen('xwininfo').read().split('\n')
+    x = filter_wininfo_output(wininfo, "Absolute upper-left X:")
+    y = filter_wininfo_output(wininfo, "Absolute upper-left Y:")
+    width = filter_wininfo_output(wininfo, "Width:")
+    height = filter_wininfo_output(wininfo, "Height:")
+    cmd = 'xsetwacom --set {id} MapToOutput {width}x{height}+{x}+{y}'.format(id = stylus_id, width = width, height = height, x = x, y = y)
+    os.popen(cmd).read()
