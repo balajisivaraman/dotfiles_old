@@ -1,7 +1,7 @@
 #!/bin/sh
 
 if cmd-exists delta; then
-  exec delta --syntax-theme gruvbox-dark
+  exec delta --syntax-theme "TwoDark"
 else
   exec less
 fi
