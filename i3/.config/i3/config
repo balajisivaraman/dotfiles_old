@@ -27,7 +27,6 @@ exec --no-startup-id nextcloud
 exec --no-startup-id clipcatd
 exec --no-startup-id keepassxc
 exec --no-startup-id yubioath-desktop
-exec --no-startup-id init-keyboard
 exec --no-startup-id protonmail-bridge
 exec --no-startup-id thunderbird
 exec --no-startup-id signal-desktop
