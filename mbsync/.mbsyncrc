@@ -17,7 +17,7 @@ Inbox /media/backup/mail/personal/inbox
 Channel proton
 Far :proton-remote:
 Near :proton-local:
-Patterns *
+Patterns * !"All Mail"
 Create Both
 SyncState *
 
@@ -39,6 +39,6 @@ Inbox /media/backup/mail/tw/Inbox
 Channel twmail
 Far :twmail-remote:
 Near :twmail-local:
-Patterns * ![Gmail]* "[Gmail]/Sent Mail" "[Gmail]/Starred" "[Gmail]/All Mail" "[Gmail]/Trash"
+Patterns * ![Gmail]* "[Gmail]/Sent Mail" "[Gmail]/Starred" "[Gmail]/Trash"
 Create Both
 SyncState *
