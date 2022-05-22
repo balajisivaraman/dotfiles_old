@@ -1,0 +1,44 @@
+IMAPAccount proton
+Host 127.0.0.1
+Port 1143
+User balaji@balajisivaraman.com
+Pass "<FILL PASSWORD HERE>"
+SSLType NONE
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+IMAPStore proton-remote
+Account proton
+
+MaildirStore proton-local
+Subfolders Verbatim
+Path /media/backup/mail/personal/
+Inbox /media/backup/mail/personal/inbox
+
+Channel proton
+Far :proton-remote:
+Near :proton-local:
+Patterns *
+Create Both
+SyncState *
+
+IMAPAccount twmail
+Host imap.gmail.com
+User balajis@thoughtworks.com
+Pass "<FILL PASSWORD HERE>"
+SSLType IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+IMAPStore twmail-remote
+Account twmail
+
+MaildirStore twmail-local
+Subfolders Verbatim
+Path /media/backup/mail/tw/
+Inbox /media/backup/mail/tw/Inbox
+
+Channel twmail
+Far :twmail-remote:
+Near :twmail-local:
+Patterns * ![Gmail]* "[Gmail]/Sent Mail" "[Gmail]/Starred" "[Gmail]/All Mail" "[Gmail]/Trash"
+Create Both
+SyncState *
