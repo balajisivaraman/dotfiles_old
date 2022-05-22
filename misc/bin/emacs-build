@@ -17,7 +17,7 @@ fi
 pushd $folder
   ./autogen.sh
   if [ ${?} -eq 0  ]; then
-    ./configure --with-native-compilation --with-harfbuzz --with-imagemagick
+    ./configure --with-dbus --with-gif --with-jpeg --with-png --with-rsvg --with-tiff --with-xft --with-xpm --with-gpm=no --with-modules --with-native-compilation --with-pgtk --with-json --with-harfbuzz --with-imagemagick
     if [ ${?} -eq 0  ]; then
       make -j 16
       sudo make install
