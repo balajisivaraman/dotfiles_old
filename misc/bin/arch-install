@@ -148,6 +148,7 @@ xpkgs() {
     i3-gaps \
     i3lock \
     i3status-rust \
+    interception-dual-function-keys \
     keepassxc \
     libnotify \
     libreoffice-fresh \
@@ -219,8 +220,11 @@ yaypkgs() {
     fnm-bin \
     git-delta \
     hledger-bin \
+    mbsync \
+    mu \
     neovim-git python-neovim-git \
-    protonmail-bridge
+    protonmail-bridge \
+    zotero-bin
 }
 
 yayxpkgs() {
