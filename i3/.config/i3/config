@@ -50,7 +50,7 @@ for_window [class="Zotero" instance="Navigator"] move scratchpad;
 bindsym $mod+z [class="Zotero" instance="Navigator"] scratchpad show, resize set 1800 1000
 
 # enable floating for certain windows
-for_window [class="Nightly" title="Library"] floating enable
+for_window [class="firefox-nightly" title="Library"] floating enable
 for_window [class="Emacs" title="Ediff"] floating enable
 for_window [class="flameshot" title="Configuration"] floating enable
 for_window [class="Proton Mail Bridge"] floating enable
