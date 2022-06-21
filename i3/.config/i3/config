@@ -31,9 +31,9 @@ exec --no-startup-id protonmail-bridge
 exec --no-startup-id signal-desktop
 
 # scratchpads
-for_window [instance="keepassxc" title="^(?!Generate|Move|Unsaved|Open|Delete|KeePassXC: New|Clone|KeePassXC - Browser)"] floating enable;
-for_window [instance="keepassxc" title="^(?!Generate|Move|Unsaved|Open|Delete|KeepassXC: New|Clone|KeePassXC - Browser)"] move position 600px 200px;
-for_window [instance="keepassxc" title="^(?!Generate|Move|Unsaved|Open|Delete|KeepassXC: New|Clone|KeePassXC - Browser)"] move scratchpad;
+for_window [instance="keepassxc" title="^(?!Generate|Move|Unsaved|Open|Delete|KeePassXC: New|Clone|KeePassXC - Browser|Empty)"] floating enable;
+for_window [instance="keepassxc" title="^(?!Generate|Move|Unsaved|Open|Delete|KeepassXC: New|Clone|KeePassXC - Browser|Empty)"] move position 600px 200px;
+for_window [instance="keepassxc" title="^(?!Generate|Move|Unsaved|Open|Delete|KeepassXC: New|Clone|KeePassXC - Browser|Empty)"] move scratchpad;
 bindsym $mod+p [instance="keepassxc"] scratchpad show, resize set 1000 650
 for_window [class="Signal" window_role="^(?!GtkFileChooserDialog)"] floating enable;
 for_window [class="Signal" window_role="^(?!GtkFileChooserDialog)"] move position 80px 50px;
