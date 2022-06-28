@@ -165,6 +165,7 @@ xpkgs() {
     stow \
     udiskie \
     xclip \
+    xf86-input-wacom \
     xorg-xmodmap xcape \
     xsel \
     xsettingsd \
@@ -200,7 +201,8 @@ devpkgs() {
     starship \
     texlive-most \
     tmux \
-    wget
+    wget \
+    xournalpp
 }
 
 yayinit() {
