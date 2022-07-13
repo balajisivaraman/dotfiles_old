@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+set -e
+
+mkdir -p ~/.config/nvim/
+mkdir -p ~/.config/fish/conf.d
+mkdir -p ~/.gnupg
+
+for dir in alacritty bash bat cargo clipcat containers fish git gnupg ideavim karabiner mbsync misc nvim starship tmux zsh ; do
+    dir=${dir%*/}
+    stow -t ~ "$dir"
+done
