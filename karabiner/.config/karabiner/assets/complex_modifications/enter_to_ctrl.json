@@ -1,0 +1,35 @@
+{
+  "title": "Change Enter to Control when Pressed Down",
+  "rules": [
+    {
+      "description": "Change Enter to Control if pressed down (Send Enter when pressed alone)",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "return_or_enter",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "parameters": {
+            "basic.to_if_alone_timeout_milliseconds": 100,
+            "basic.to_if_held_down_threshold_milliseconds": 100
+          },
+          "to_if_held_down": [
+            {
+              "key_code": "right_control"
+            }
+          ],
+          "to_if_alone": [
+            {
+              "key_code": "return_or_enter"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

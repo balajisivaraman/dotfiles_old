@@ -1,0 +1,31 @@
+{
+  "title": "Change Backslash to Command",
+  "rules": [
+    {
+      "description": "Change Backslash to left_command if pressed with other keys (Post Backslash when pressed alone)",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "backslash",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "right_command"
+            }
+          ],
+          "to_if_alone": [
+            {
+              "key_code": "backslash"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

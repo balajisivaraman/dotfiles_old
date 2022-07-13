@@ -1,0 +1,35 @@
+{
+  "title": "Change Tab to Command when Pressed Down",
+  "rules": [
+    {
+      "description": "Use Tab as Command when pressed down (Send Tab when pressed and released)",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "tab",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "parameters": {
+            "basic.to_if_alone_timeout_milliseconds": 150,
+            "basic.to_if_held_down_threshold_milliseconds": 150
+          },
+          "to_if_held_down": [
+            {
+              "key_code": "left_command"
+            }
+          ],
+          "to_if_alone": [
+            {
+              "key_code": "tab"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
