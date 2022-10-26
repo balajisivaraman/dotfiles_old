@@ -1,0 +1,142 @@
+env:
+  TERM: xterm-256color
+  EDITOR: nvim
+
+window:
+  opacity: 0.96
+
+font:
+  size: 12.0
+
+schemes:
+  modus_vivendi: &modus_vivendi
+    primary:
+        background:        '#000000'
+        foreground:        '#ffffff'
+        bright_foreground: '#a8a8a8'
+        dim_foreground:    '#e0e6f0'
+    cursor:
+        text:   CellBackground
+        cursor: CellForeground
+    vi_mode_cursor:
+        text:   CellBackground
+        cursor: CellForeground
+    # search:
+    #   matches:
+    #     foreground: '#000000'
+    #     background: '#ffffff'
+    #   focused_match:
+    #    foreground: CellBackground
+    #    background: CellForeground
+    #   bar:
+    #     background: ''
+    #     foreground: ''
+    # line_indicator:
+    #   foreground: None
+    #   background: None
+    selection:
+        text:       CellBackground
+        background: CellForeground
+    bright:
+        black:   '#191a1b'
+        red:     '#fe6060'
+        green:   '#4fe42f'
+        yellow:  '#f0dd60'
+        blue:    '#4fafff'
+        magenta: '#ff62d4'
+        cyan:    '#3fdfd0'
+        white:   '#a8a8a8'
+    normal:
+        black:   '#000000'
+        red:     '#ff8059'
+        green:   '#44bc44'
+        yellow:  '#d0bc00'
+        blue:    '#2fafff'
+        magenta: '#feacd0'
+        cyan:    '#00d3d0'
+        white:   '#ffffff'
+    dim:
+        black:   '#100f10'
+        red:     '#ffa0a0'
+        green:   '#78bf78'
+        yellow:  '#d2b580'
+        blue:    '#82b0ec'
+        magenta: '#e0b2d6'
+        cyan:    '#90c4ed'
+        white:   '#e0e6f0'
+    # Indexed Colors
+    #
+    # The indexed colors include all colors from 16 to 256.
+    # When these are not set, they're filled with sensible defaults.
+    #
+    # Example:
+    #   `- { index: 16, color: '0xff00ff' }`
+    #
+    indexed_colors: []
+
+  modus_operandi: &modus_operandi
+    primary:
+        background:        '#ffffff'
+        foreground:        '#000000'
+        bright_foreground: '#505050'
+        dim_foreground:    '#282828'
+    cursor:
+        text:   CellBackground
+        cursor: CellForeground
+    vi_mode_cursor:
+        text:   CellBackground
+        cursor: CellForeground
+    # search:
+    #   matches:
+    #     foreground: '#000000'
+    #     background: '#ffffff'
+    #   focused_match:
+    #    foreground: CellBackground
+    #    background: CellForeground
+    #   bar:
+    #     background: ''
+    #     foreground: ''
+    # line_indicator:
+    #   foreground: None
+    #   background: None
+    selection:
+        text:       CellBackground
+        background: CellForeground
+    bright:
+        black:   '#505050'
+        red:     '#b60000'
+        green:   '#006800'
+        yellow:  '#605b00'
+        blue:    '#1f1fce'
+        magenta: '#a8007f'
+        cyan:    '#005f88'
+        white:   '#f0f0f0'
+    normal:
+        black:   '#000000'
+        red:     '#a60000'
+        green:   '#005e00'
+        yellow:  '#813e00'
+        blue:    '#0031a9'
+        magenta: '#712045'
+        cyan:    '#00538b'
+        white:   '#ffffff'
+    dim:
+        black:   '#282828'
+        red:     '#7f1010'
+        green:   '#104410'
+        yellow:  '#5f4400'
+        blue:    '#003497'
+        magenta: '#721045'
+        cyan:    '#00538b'
+        white:   '#f8f8f8'
+    # Indexed Colors
+    #
+    # The indexed colors include all colors from 16 to 256.
+    # When these are not set, they're filled with sensible defaults.
+    #
+    # Example:
+    #   `- { index: 16, color: '0xff00ff' }`
+    #
+    indexed_colors: []
+
+colors: *modus_vivendi
