@@ -3,11 +3,14 @@ set termguicolors
 " Do not show mode since we're using Lightline
 set noshowmode
 
-colorscheme modus-vivendi
+colorscheme dracula
 set background=dark
 highlight Normal     ctermbg=NONE guibg=NONE
 highlight LineNr     ctermbg=NONE guibg=NONE
 highlight SignColumn ctermbg=NONE guibg=NONE
+let g:lightline = {
+      \ 'colorscheme': 'dracula',
+      \ }
 
 " Basic UI Settings
 set relativenumber  " Show relative line numbers

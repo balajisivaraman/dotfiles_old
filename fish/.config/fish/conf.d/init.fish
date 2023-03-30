@@ -2,7 +2,8 @@ set -x GPG_TTY (tty)
 set -x PATH $HOME/.fzf/bin $PATH
 set -x PATH $HOME/.cargo/bin $PATH
 set -x PATH $HOME/.local/bin $PATH
+set -x PATH $HOME/.local/share/coursier/bin $PATH
 set -x PATH $HOME/go/bin $PATH
 set -x GOPATH $HOME/go
 set -x GOBIN $HOME/go/bin
-set -x FZF_DEFAULT_OPTS '--height 40% --layout=reverse --border --color=fg:#ffffff,bg:#121212,hl:#90c4ed --color=fg+:#ffffff,bg+:#3c3c3c,hl+:#00d3d0 --color=info:#c0c530,prompt:#f78fe7,pointer:#9f80ff --color=marker:#70b900,spinner:#feacd0,header:#6ae4b9'
+set -x FZF_DEFAULT_OPTS '--height 40% --layout=reverse --border --color=fg:#f8f8f2,bg:#282a36,hl:#bd93f9 --color=fg+:#f8f8f2,bg+:#44475a,hl+:#bd93f9 --color=info:#ffb86c,prompt:#50fa7b,pointer:#ff79c6 --color=marker:#ff79c6,spinner:#ffb86c,header:#6272a4'

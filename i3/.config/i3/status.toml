@@ -1,32 +1,40 @@
-icons = "awesome"
+[icons]
+icons = "awesome6"
 
 [theme]
-name = "gruvbox-dark"
+theme = "dracula"
 
 [[block]]
 block = "nvidia_gpu"
-label = "GTX 970"
-show_utilization = false
-show_memory = false
-show_clocks = false
-show_fan_speed = true
 interval = 1
 
 [[block]]
 block = "temperature"
-collapsed = false
 interval = 10
-format = "{min} min, {max} max, {average} avg"
+format = "$icon $min min, $max max, $average avg"
 
 [[block]]
 block = "weather"
-format = "{weather} ({location}) {temp}°, {wind} m/s {direction}"
-service = { name = "openweathermap", api_key = "b48b161466fed0c120a279c4819c1e47", city_id = "1264527", units = "metric" }
+format = "$icon $weather ($location) $temp, $wind m/s $direction"
+[block.service]
+name = "openweathermap"
+api_key = "XXX"
+city_id = "1264527"
+units = "metric"
 
 [[block]]
 block = "sound"
+driver = "pulseaudio"
+device_kind = "sink"
+format = " $icon $output_name{ $volume|} "
+[block.mappings]
+"alsa_input.usb-Sonix_Technology_Co.__Ltd._REDRAGON_Live_Camera_Audio_SN0001-02.analog-stereo" = "Webcam"
+"alsa_output.pci-0000_2b_00.1.hdmi-stereo" = "HDMI Speakers"
+"alsa_output.pci-0000_2d_00.4.iec958-stereo" = "Headphones"
 
 [[block]]
 block = "time"
 interval = 60
-format = "%a, %b %d, %R"
+[block.format]
+full = " $icon $timestamp.datetime(f:'%a, %b %d, %R')"
+short = " $icon $timestamp.datetime(f:%R) "

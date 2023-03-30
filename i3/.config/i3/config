@@ -232,38 +232,30 @@ bindsym $mod+shift+w exec "set_wacom_output"
 
 bindsym Print exec "flameshot gui"
 
-set $bg #282828
-set $red #cc241d
-set $green #98971a
-set $yellow #d79921
-set $blue #458588
-set $purple #b16286
-set $aqua #689d68
-set $gray #a89984
-set $darkgray #1d2021
-
 ################
-#ONE DARK THEME#
+#DRACULA THEME#
 ################
 # Window borders        #border    #BG        #Text      #Indic.   #Child Border
-client.focused          $blue      $blue      $darkgray  $purple   $blue
-client.focused_inactive $darkgray  $darkgray  $yellow    $purple   $darkgray
-client.unfocused        $darkgray  $darkgray  $yellow    $purple   $darkgray
-client.urgent           $darkgray  $red       $darkgray  $red      $red
-client.placeholder      #000000    #0c0c0c    $darkgray  #000000   #0c0c0c
-client.background       $darkgray
+# class                 border  bground text    indicator child_border
+client.focused          #6272A4 #6272A4 #F8F8F2 #6272A4   #6272A4
+client.focused_inactive #44475A #44475A #F8F8F2 #44475A   #44475A
+client.unfocused        #282A36 #282A36 #BFBFBF #282A36   #282A36
+client.urgent           #44475A #FF5555 #F8F8F2 #FF5555   #FF5555
+client.placeholder      #282A36 #282A36 #F8F8F2 #282A36   #282A36
 
 bar {
     font pango:TerminessTTF Nerd Font Mono 12
     position top
     status_command i3status-rs ~/.config/i3/status.toml
     colors {
-        background $bg
-        statusline $yellow
+        background #282A36
+        statusline #F8F8F2
+        separator  #44475A
 
-        focused_workspace    $aqua $aqua $darkgray
-        inactive_workspace   $darkgray $darkgray $yellow
-        active_workspace     $darkgray $darkgray $yellow
-        urgent_workspace     $red $red $bg
+        focused_workspace  #44475A #44475A #F8F8F2
+        active_workspace   #282A36 #44475A #F8F8F2
+        inactive_workspace #282A36 #282A36 #BFBFBF
+        urgent_workspace   #FF5555 #FF5555 #F8F8F2
+        binding_mode       #FF5555 #FF5555 #F8F8F2
     }
 }
